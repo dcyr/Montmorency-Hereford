@@ -1,0 +1,11 @@
+LandisData Ecoregions
+
+no 0 none "non active cells"
+yes 18 18 "active landtype"
+yes 19 19 "active landtype"
+yes 20 20 "active landtype"
+yes 21 21 "active landtype"
+yes 69 69 "active landtype"
+yes 70 70 "active landtype"
+yes 71 71 "active landtype"
+yes 72 72 "active landtype"

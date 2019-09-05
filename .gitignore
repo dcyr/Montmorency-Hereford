@@ -1,0 +1,12 @@
+.Rhistory
+[0-9]*
+outputs
+temp
+test
+*.Rmd
+*.html
+*~
+*.rds
+*.html
+wc5
+
