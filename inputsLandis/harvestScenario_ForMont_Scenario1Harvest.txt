@@ -1,8 +1,7 @@
 LandisData "Biomass Harvest" 
 Timestep  10 
-ManagementAreas "U:\YBoulanger\LANDIS\Quebec\ForMont\managementAreas_ForMont_Scenario1Harvest.tif" 
-Stands "U:\YBoulanger\LANDIS\Quebec\ForMont\standMap_ForMont.tif" 
-
+ManagementAreas mgmt-areas.tif
+Stands stand-map.tif 
 
 Prescription 20000_CPI 
 StandRanking Economic 

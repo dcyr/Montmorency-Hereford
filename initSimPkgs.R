@@ -1,6 +1,6 @@
 ################################################################################
 ################################################################################
-### Preparation Forest Carbon Succession inputs
+### Preparation of Forcs simulation file packages
 ### Dominic Cyr
 #############
 rm(list = ls())
@@ -11,75 +11,18 @@ wwd <- paste(getwd(), Sys.Date(), sep = "/")
 dir.create(wwd)
 setwd(wwd)
 rm(wwd)
-require(raster)
-require(sp)
-require(rgdal)
-require(ggplot2)
-require(broom)
-require(dplyr)
-require(maptools)
-require(RCurl)
+# require(raster)
+# require(sp)
+# require(rgdal)
+# require(ggplot2)
+# require(broom)
+# require(dplyr)
+# require(maptools)
+# require(RCurl)
 
-
-################################################################################
-### input paths (CBM)
-inputPathGIS <- paste(home, "Sync/Travail/ECCC/GIS", sep = "/")
-inputPathAIDB <- paste(home, "Sync/Travail/ECCC/CBM/AIDB", sep = "/")
 ### input path (LANDIS)
-inputPathLandis <- paste(home, "Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis", sep = "/")
-### script path
-scriptPath <- paste(home, "Sync/Travail/ECCC/CBM/CBMtoLANDIS/scripts", sep = "/")
-
-################################################################################
-#### Sourcing scripts
-source(paste(scriptPath, "CBMtoLANDIS_fnc.R", sep = "/"))
-source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
-
-################################################################################
-landisInputs <- list.files(inputPathLandis)
-### experiment specifics
-area <- "ForMont"
-scenario <- NULL
-spinup <- T
-
-# might want to create loops here, or a function
-
-
-### fetch species.txt
-species <- landisInputs[grep("species", landisInputs)]
-species <- species[grep(area, species)]
-species <- read.table(paste(inputPathLandis, species, sep = "/"),
-                      skip = 1, comment.char = ">")
-### fetching landtypes
-landtypes <- landisInputs[grep("landtypes", landisInputs)]
-landtypes <- landtypes[grep(area, landtypes)]
-landtypes_AT <- landtypes[grep("txt", landtypes)]
-landtypes_AT <- read.table(paste(inputPathLandis, landtypes_AT, sep = "/"),
-                                 skip = 1, comment.char = ">")
-landtypes <- landtypes[grep("tif", landtypes)]
-landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
-
-landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
-
-### fetching succession extensions inputs and template
-if(Sys.info()["sysname"] == "Windows") {
-    bsMainInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
-    bsDynInput <-  "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
-    forCSInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
-    
-} else {
-    bsMainInput <- "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
-    bsDynInput <-  "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
-    forCSInput <- "~/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
-}
-
-
-
-
-### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
-initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT)
-
-### copying initial communities
+inputPathLandis <- "../inputsLandis"
+spinup = F
 
 ### Generates simulation packages for LANDIS-II 
 #############
@@ -140,10 +83,19 @@ for (i in 1:nrow(simInfo)) {
     ### Succession extension
     
     # ForC-succession
-    file.copy(paste0(inputDir, "/forCS-input_",
-                     areaName, ".txt"),
-              paste0(simID, "/forCS-input.txt"),
-              overwrite = T)
+    
+    if(spinup) {
+        file.copy(paste0(inputDir, "/forCS-input_",
+                         areaName, "_spinup.txt"),
+                  paste0(simID, "/forCS-input.txt"),
+                  overwrite = T)
+    } else {
+        file.copy(paste0(inputDir, "/forCS-input_",
+                         areaName, ".txt"),
+                  paste0(simID, "/forCS-input.txt"),
+                  overwrite = T)
+    }
+    
     
     # Climate inputs
     file.copy(paste0(inputDir, "/forCS-climate_",
@@ -157,35 +109,40 @@ for (i in 1:nrow(simInfo)) {
     ###############################################
     ### Disturbances
     if(!spinup) {
-        ### Harvesting
-        # stand map
-        file.copy(paste0(inputDir, "/stand-map_",
-                         areaName, ".tif"),
-                  paste0(simID, "/stand-map.tif"),
-                  overwrite = T)
-        # management areas
-        file.copy(paste0(inputDir, "/management-areas_",
-                         areaName, ".tif"),
-                  paste0(simID, "/management-areas.tif"),
-                  overwrite = T)
+        # ### Harvesting
+        # # stand map
+        # file.copy(paste0(inputDir, "/stand-map_",
+        #                  areaName, ".tif"),
+        #           paste0(simID, "/stand-map.tif"),
+        #           overwrite = T)
+        # # management areas
+        # file.copy(paste0(inputDir, "/management-areas_",
+        #                  areaName, ".tif"),
+        #           paste0(simID, "/management-areas.tif"),
+        #           overwrite = T)
+        # 
+        # # base-harvest.txt
+        # file.copy(paste0(inputDir, "/base-harvest_",
+        #                  areaName, "_", treatment, "_", timestep, "yrTS.txt"),
+        #           paste0(simID, "/base-harvest.txt"),
+        #           overwrite = T)
         
-        # base-harvest.txt
-        file.copy(paste0(inputDir, "/base-harvest_",
-                         areaName, "_", treatment, "_", timestep, "yrTS.txt"),
-                  paste0(simID, "/base-harvest.txt"),
+        ### Wind
+        file.copy(paste0(inputDir, "/base-wind_",
+                         areaName, ".txt"),
+                  paste0(simID, "/base-wind.txt"),
                   overwrite = T)
-    }
-    
-    
-    ###############################################
-    ### scenario.txt
-    if(spinup) {
-        file.copy(paste0(inputDir, "/scenario_spinup.txt"),
-                  paste0(simID, "/scenario.txt"),
-                  overwrite = T)
-    } else {
+        ###############################################
+        ### scenario.txt
         file.copy(paste0(inputDir, "/scenario.txt"),
                   simID,
+                  overwrite = T)
+        
+    } else {
+        ###############################################
+        ### scenario.txt
+        file.copy(paste0(inputDir, "/scenario_spinup.txt"),
+                  paste0(simID, "/scenario.txt"),
                   overwrite = T)
     }
     

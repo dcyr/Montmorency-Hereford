@@ -1,0 +1,7617 @@
+LandisData "Initial Communities"
+ 
+MapCode 0
+
+MapCode 2060
+ABIE.BAL       30
+ACER.RUB       80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 2198
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       30  40
+
+MapCode 2272
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+
+MapCode 2315
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 2339
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40
+FAGU.GRA       30  40
+
+MapCode 2354
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  70  80
+BETU.ALL       60
+FAGU.GRA       30  40
+TSUG.CAN       50
+
+MapCode 2395
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50
+FAGU.GRA       30  40
+
+MapCode 2405
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30  40
+
+MapCode 2407
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 2412
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70
+FAGU.GRA       30  40
+
+MapCode 2414
+ABIE.BAL       30
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 2484
+ABIE.BAL       30
+ACER.RUB       40  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50
+BETU.PAP       10
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 2485
+ABIE.BAL       30
+ACER.RUB       40  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 2491
+ABIE.BAL       30
+ACER.RUB       40  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 2493
+ABIE.BAL       30
+ACER.RUB       40  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 2870
+ABIE.BAL       30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       30  40
+
+MapCode 2923
+ABIE.BAL       30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       30  40
+
+MapCode 2957
+ABIE.BAL       30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.MAR       30
+
+MapCode 2959
+ABIE.BAL       30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 2973
+ABIE.BAL       30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.PAP       20
+FAGU.GRA       20  30  40
+
+MapCode 3479
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30
+PICE.GLA       30
+THUJ.SPP.ALL       50
+
+MapCode 3810
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+QUER.RUB       30  40
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 4066
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30  40
+THUJ.SPP.ALL       50
+
+MapCode 4252
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       30  40
+
+MapCode 4518
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       30  40
+
+MapCode 4618
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+QUER.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 4622
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+QUER.RUB       30  40
+TSUG.CAN       50
+
+MapCode 4788
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+PICE.GLA       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 5033
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 5593
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  70  80
+BETU.ALL       40  60
+FAGU.GRA       30  40
+
+MapCode 5672
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 5916
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  80
+FAGU.GRA       30  50
+
+MapCode 5920
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  50
+PICE.RUB       30
+
+MapCode 5921
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 5950
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  80
+FAGU.GRA       30  40
+POPU.TRE       70
+
+MapCode 5998
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       20  50  80
+BETU.PAP       10
+FAGU.GRA       30  40  50
+PICE.GLA       30
+
+MapCode 6007
+ABIE.BAL       30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       20  40  50  80
+BETU.PAP       10
+FAGU.GRA       30  40  50
+PICE.GLA       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 6359
+ABIE.BAL       30
+ACER.RUB       30  40  70  90
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  60  70  80  90  100
+FAGU.GRA       20  30  40  50
+POPU.TRE       80
+TSUG.CAN       190
+
+MapCode 6761
+ABIE.BAL       30
+ACER.RUB       30  40  50
+ACER.SAH       40
+BETU.ALL       40  50
+BETU.PAP       10
+PICE.GLA       20  30
+POPU.TRE       10  20
+QUER.RUB       20
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 7691
+ABIE.BAL       30
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+LARI.LAR       20
+PICE.GLA       20  30  50
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 8066
+ABIE.BAL       30
+ACER.RUB       30  40  50
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       40  60  70  80  90
+BETU.PAP       70
+FAGU.GRA       30  40  60
+
+MapCode 9296
+ABIE.BAL       30
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       30  40
+
+MapCode 9314
+ABIE.BAL       30
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       30  40
+
+MapCode 9323
+ABIE.BAL       30
+ACER.SAH       30  40
+BETU.ALL       40
+FAGU.GRA       30  40
+
+MapCode 9332
+ABIE.BAL       30
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       30  40
+
+MapCode 9370
+ABIE.BAL       30
+ACER.SAH       30  40  70  80
+BETU.ALL       60
+FAGU.GRA       30  40
+
+MapCode 9403
+ABIE.BAL       30
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+FAGU.GRA       30  40  50
+
+MapCode 12887
+ABIE.BAL       30  50  60  70
+ACER.RUB       40  70  80
+ACER.SAH       30  40  50  70
+BETU.ALL       50  80  90  100
+FAGU.GRA       30  40
+POPU.TRE       10  20
+THUJ.SPP.ALL       80
+
+MapCode 13218
+ABIE.BAL       30  40
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30  40
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 13227
+ABIE.BAL       30  40
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50
+BETU.PAP       10
+PICE.GLA       30
+TSUG.CAN       50
+
+MapCode 15146
+ABIE.BAL       30  40
+LARI.LAR       20
+PICE.MAR       20  30  40  50
+THUJ.SPP.ALL       50  60
+
+MapCode 15652
+ABIE.BAL       30  40  70
+ACER.RUB       30  40
+PICE.GLA       30  50
+POPU.TRE       20  30
+THUJ.SPP.ALL       50
+
+MapCode 15814
+ABIE.BAL       30  40  50
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  40
+PICE.GLA       30  40  50
+POPU.TRE       30
+
+MapCode 15815
+ABIE.BAL       30  40  50
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  40
+PICE.GLA       30  40  50
+POPU.TRE       10  30
+
+MapCode 15816
+ABIE.BAL       30  40  50
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  20  40
+PICE.GLA       30  40  50
+POPU.TRE       30
+
+MapCode 15818
+ABIE.BAL       30  40  50
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       10  20  40
+PICE.GLA       30  40  50
+POPU.TRE       30
+
+MapCode 16895
+ABIE.BAL       30  40  50  60  70
+ACER.RUB       30  80
+ACER.SAH       40  50
+BETU.ALL       60  80
+BETU.PAP       80
+FAGU.GRA       30
+PICE.GLA       20  30  60  80  90
+POPU.TRE       20  30
+THUJ.SPP.ALL       50  60  80  90  100  110  120  130  140
+TSUG.CAN       50  60
+
+MapCode 16968
+ABIE.BAL       30  40  50  60  70
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       20  30
+LARI.LAR       20  30
+PICE.GLA       20  30  50
+PICE.MAR       30  40
+POPU.TRE       10  20
+THUJ.SPP.ALL       50  130
+
+MapCode 17348
+ABIE.BAL       20
+ACER.RUB       30
+ACER.SAH       30
+PICE.GLA       20  30
+POPU.TRE       10
+
+MapCode 17380
+ABIE.BAL       20
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 17510
+ABIE.BAL       20
+ACER.RUB       30
+BETU.PAP       10  20
+FAGU.GRA       20
+POPU.TRE       10
+
+MapCode 17720
+ABIE.BAL       20
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       20  30  40
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 18054
+ABIE.BAL       20
+ACER.RUB       30  40
+ACER.SAH       30  40
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 18275
+ABIE.BAL       20
+ACER.RUB       30  40  60
+ACER.SAH       30  40  60  70  80
+BETU.ALL       60
+FAGU.GRA       10  20  30  40  50  60  70
+POPU.TRE       10
+TSUG.CAN       50  90
+
+MapCode 18930
+ABIE.BAL       20
+ACER.SAH       30  40
+FAGU.GRA       30  40
+
+MapCode 21008
+ABIE.BAL       20  30
+ACER.RUB       80  90
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       50
+FAGU.GRA       30  40
+
+MapCode 21458
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 21469
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30
+BETU.PAP       20
+THUJ.SPP.ALL       50
+
+MapCode 21530
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30
+THUJ.SPP.ALL       50
+
+MapCode 21706
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 22011
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+TSUG.CAN       50
+
+MapCode 22015
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 22111
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 22347
+ABIE.BAL       20  30
+ACER.RUB       40
+ACER.SAH       30  40  50
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+TSUG.CAN       50
+
+MapCode 22576
+ABIE.BAL       20  30
+ACER.RUB       40
+BETU.ALL       60
+BETU.PAP       20
+PICE.RUB       30
+
+MapCode 22941
+ABIE.BAL       20  30
+ACER.RUB       40
+BETU.PAP       20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 22952
+ABIE.BAL       20  30
+ACER.RUB       40
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 23485
+ABIE.BAL       20  30
+ACER.RUB       40  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50
+FAGU.GRA       20  30  40  50  60  70
+
+MapCode 23779
+ABIE.BAL       20  30
+ACER.RUB       40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50  60  70
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+TSUG.CAN       50
+
+MapCode 23791
+ABIE.BAL       20  30
+ACER.RUB       40  50  60
+ACER.SAH       30  40  50  60  70  100
+BETU.ALL       50  60  70
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40  50  60  70
+TSUG.CAN       50
+
+MapCode 23798
+ABIE.BAL       20  30
+ACER.RUB       40  50  60
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  60  70  80  100
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+POPU.TRE       80
+
+MapCode 24342
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       50
+BETU.PAP       10  20
+
+MapCode 24877
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 24884
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+
+MapCode 24971
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+
+MapCode 24988
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 25030
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30
+PICE.GLA       30
+THUJ.SPP.ALL       50
+
+MapCode 25083
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.MAR       30
+PINU.STR       30
+
+MapCode 25109
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.MAR       30
+POPU.TRE       10
+
+MapCode 25110
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.MAR       30
+
+MapCode 25113
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+
+MapCode 25229
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.MAR       30
+
+MapCode 25386
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 25390
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 25406
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 25664
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+LARI.LAR       20  30
+PICE.GLA       20
+PICE.MAR       50
+THUJ.SPP.ALL       50
+
+MapCode 25681
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 25682
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 25721
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 25805
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       30  40
+POPU.TRE       10
+
+MapCode 26016
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 26084
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+
+MapCode 26088
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 26332
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40
+FAGU.GRA       20  30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 26589
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 26708
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       50
+
+MapCode 26859
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 26868
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30
+
+MapCode 26870
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 26901
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+
+MapCode 26941
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 27018
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 27035
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+
+MapCode 27085
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.MAR       30
+
+MapCode 27209
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30
+
+MapCode 27235
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30  40
+
+MapCode 27243
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       20
+THUJ.SPP.ALL       40  50
+
+MapCode 27328
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.MAR       30
+PINU.STR       30
+
+MapCode 27369
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 27476
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+PINU.STR       30
+THUJ.SPP.ALL       50
+
+MapCode 27519
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+THUJ.SPP.ALL       40
+
+MapCode 27538
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 27639
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+PICE.RUB       20  30
+
+MapCode 27642
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+
+MapCode 27649
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 27654
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       20
+
+MapCode 27680
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 27690
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 27855
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 27864
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.GLA       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 27997
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 28099
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40
+FAGU.GRA       20  30  40
+
+MapCode 28215
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  80
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PINU.STR       30
+POPU.TRE       10  70
+
+MapCode 28250
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30  60
+
+MapCode 28781
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       20  30
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 28817
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       20  30
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 29043
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+BETU.PAP       10
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 29424
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       20  30  40  50  60  70  100  110  120  130
+BETU.ALL       50  70
+BETU.PAP       20
+FAGU.GRA       30  40
+POPU.TRE       10  20
+TSUG.CAN       90
+
+MapCode 29438
+ABIE.BAL       20  30
+ACER.RUB       30
+ACER.SAH       20  30  40  50  60  70  80  100
+BETU.ALL       40  70  80  90
+FAGU.GRA       20  30  50
+PICE.RUB       30
+
+MapCode 29501
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       60
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30  40
+THUJ.SPP.ALL       50
+
+MapCode 29538
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 29674
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       50
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 29765
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20  30
+POPU.TRE       10  20
+
+MapCode 29902
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 29923
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 30285
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       40  60
+BETU.PAP       10  20
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 30361
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       40
+
+MapCode 30390
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 30484
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 31149
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       30
+PINU.STR       30
+POPU.TRE       10  20
+
+MapCode 31474
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+POPU.TRE       10
+
+MapCode 31507
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30  40
+
+MapCode 31558
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.GLA       30
+
+MapCode 31745
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+POPU.TRE       10
+
+MapCode 31862
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.MAR       20
+THUJ.SPP.ALL       40
+
+MapCode 31997
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 32207
+ABIE.BAL       20  30
+ACER.RUB       30
+BETU.PAP       10  20  30
+PICE.MAR       20  30  40
+PICE.RUB       30
+
+MapCode 32523
+ABIE.BAL       20  30
+ACER.RUB       30  70  80  90  100  110
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       40  50  60  70
+BETU.PAP       20
+FAGU.GRA       30  40  50
+
+MapCode 32749
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       50
+BETU.PAP       10
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 33266
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.MAR       20
+PICE.RUB       30
+PINU.STR       20
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 33321
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 33407
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50
+BETU.PAP       10  20  30
+LARI.LAR       10
+PICE.GLA       30
+PICE.MAR       20  30
+PINU.BAN       10
+POPU.TRE       10  20
+THUJ.SPP.ALL       60
+TSUG.CAN       50  60
+
+MapCode 33497
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       20  30
+THUJ.SPP.ALL       60
+
+MapCode 33643
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.ALL       40  50  60
+LARI.LAR       20
+PICE.GLA       20  30
+PINU.STR       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 33679
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50  60
+
+MapCode 33806
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       40
+BETU.PAP       10
+PICE.GLA       20
+PICE.MAR       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 34081
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       20  30
+POPU.TRE       10
+
+MapCode 34084
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       20  30
+POPU.TRE       10  20
+
+MapCode 34281
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       20  30
+THUJ.SPP.ALL       40
+
+MapCode 34293
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 34402
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       60
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 34855
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+
+MapCode 34930
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PINU.STR       30
+
+MapCode 35183
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50
+LARI.LAR       10
+PICE.MAR       20  30
+PINU.BAN       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 35221
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 35233
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 35420
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+THUJ.SPP.ALL       40  50
+
+MapCode 35609
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50  60
+FAGU.GRA       20  30
+PINU.STR       30
+POPU.TRE       10
+
+MapCode 35715
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40
+BETU.PAP       20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 35869
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 35900
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       20  30
+
+MapCode 36194
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       20
+
+MapCode 36759
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.MAR       30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 36867
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 36889
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+
+MapCode 36987
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 37003
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+POPU.TRE       10
+
+MapCode 37025
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.MAR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40
+
+MapCode 37052
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 37075
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+POPU.TRE       20
+THUJ.SPP.ALL       40
+
+MapCode 37078
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       40
+
+MapCode 37357
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+PINU.STR       30
+QUER.RUB       20
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 37506
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30
+PICE.GLA       30
+THUJ.SPP.ALL       50
+
+MapCode 37610
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.MAR       30
+PINU.STR       30
+POPU.TRE       10
+
+MapCode 37615
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.RUB       30
+PINU.RES       20
+PINU.STR       30
+
+MapCode 37707
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20  30
+LARI.LAR       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       20  30
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 37905
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       20  30
+PICE.RUB       30
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 37980
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 37993
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+
+MapCode 38036
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 38041
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 38051
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 38078
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 38410
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 38540
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+LARI.LAR       20  30
+PICE.GLA       20  30
+PICE.MAR       50
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 38604
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 38606
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 38607
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 38609
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 38722
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 38725
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 38741
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 38743
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 38744
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 38866
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 39172
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 39436
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10  20
+PICE.MAR       20  30
+POPU.TRE       10
+
+MapCode 39452
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 39488
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 39492
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       10  20
+POPU.TRE       10
+
+MapCode 39698
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+LARI.LAR       20  30
+PICE.GLA       20  30
+PICE.MAR       50
+THUJ.SPP.ALL       50
+
+MapCode 39702
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+LARI.LAR       20  30
+PICE.MAR       50
+THUJ.SPP.ALL       50
+
+MapCode 39738
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+PICE.GLA       30
+THUJ.SPP.ALL       50
+
+MapCode 39844
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30
+THUJ.SPP.ALL       50
+
+MapCode 39885
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       40
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 40323
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       20
+
+MapCode 40433
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       40
+
+MapCode 40531
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       30  40
+
+MapCode 40684
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 40693
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       60
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 40792
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       20
+PICE.RUB       30
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 40891
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       20
+FAGU.GRA       20  40
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 40926
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       20
+FAGU.GRA       20  30
+PICE.GLA       30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 41139
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 41206
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 41316
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10
+FAGU.GRA       20  30  40
+LARI.LAR       10
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 41533
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+FAGU.GRA       20
+PICE.GLA       30
+POPU.TRE       10  20
+QUER.RUB       30
+
+MapCode 41611
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 41807
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+
+MapCode 41873
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20
+POPU.TRE       10
+
+MapCode 41981
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 42011
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+POPU.TRE       10
+
+MapCode 42154
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+TSUG.CAN       40  50
+
+MapCode 42237
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       30  40
+
+MapCode 42360
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30
+PICE.GLA       30
+PINU.STR       30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 42429
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 42535
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30  40
+PICE.GLA       30
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 42586
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30  40
+PICE.RUB       30  40
+THUJ.SPP.ALL       50
+TSUG.CAN       40  60
+
+MapCode 42605
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       20  30  40
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 42658
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+PICE.GLA       30
+PICE.MAR       20
+TSUG.CAN       50  60
+
+MapCode 42700
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+PICE.GLA       20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 42789
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       60
+
+MapCode 42792
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 42803
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+POPU.TRE       10
+
+MapCode 42871
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.RUB       30
+
+MapCode 42909
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 42937
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 42942
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 43005
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       20  30
+PICE.GLA       30
+TSUG.CAN       50
+
+MapCode 43115
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+PICE.GLA       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 43420
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.MAR       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 43431
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 43717
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 43719
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 43741
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+
+MapCode 43756
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 43805
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.MAR       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 43845
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 43884
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       40
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 43962
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+PINU.STR       30
+QUER.RUB       30  40
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 43995
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       30  40
+
+MapCode 44024
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 44096
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       20  30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 44282
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 44299
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+TSUG.CAN       50
+
+MapCode 44545
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+BETU.PAP       20
+LARI.LAR       20
+PICE.MAR       20  30
+PINU.STR       20  30
+POPU.TRE       20
+
+MapCode 45198
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40
+
+MapCode 45327
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+BETU.PAP       10  20  30
+FAGU.GRA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 45331
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+BETU.PAP       10  20  30
+FAGU.GRA       30
+PICE.RUB       30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 45449
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+FAGU.GRA       30  40
+
+MapCode 45517
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40
+FAGU.GRA       20  30  40
+PICE.GLA       30
+POPU.TRE       10
+TSUG.CAN       40
+
+MapCode 45644
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 45684
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       20
+FAGU.GRA       20  30
+PICE.GLA       30
+PINU.STR       30
+QUER.RUB       20
+TSUG.CAN       60
+
+MapCode 45796
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       20
+PINU.STR       30
+POPU.TRE       10  20
+QUER.RUB       20
+THUJ.SPP.ALL       50
+TSUG.CAN       60
+
+MapCode 45958
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       20  30
+
+MapCode 46088
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       30  40
+POPU.TRE       10  20
+
+MapCode 46092
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       30  40
+
+MapCode 46153
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  60
+FAGU.GRA       20  30  40
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 46323
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.RUB       30  40
+PINU.STR       20
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 46325
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.RUB       30  40
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 46327
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+POPU.TRE       10
+
+MapCode 46333
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 46346
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       20
+
+MapCode 46439
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+THUJ.SPP.ALL       40
+TSUG.CAN       50
+
+MapCode 46446
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+
+MapCode 46825
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       30
+
+MapCode 46884
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.MAR       20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50  60
+
+MapCode 46939
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+POPU.TRE       10  20
+
+MapCode 47049
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 47089
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       20
+PICE.GLA       30
+POPU.TRE       10  20
+
+MapCode 47208
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       20  30  40
+LARI.LAR       10
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 47248
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       20  30  40
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 47353
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10
+THUJ.SPP.ALL       40
+
+MapCode 47540
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       30
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 47556
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.RUB       30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 47636
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       30  40
+POPU.TRE       20
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 47853
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+LARI.LAR       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 47905
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 47924
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 47959
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.RUB       30
+THUJ.SPP.ALL       40
+
+MapCode 48365
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+PINU.RES       20
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 48387
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+THUJ.SPP.ALL       40
+
+MapCode 48444
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       30
+PICE.RUB       20  30
+POPU.TRE       10
+
+MapCode 48508
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40
+
+MapCode 48511
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+
+MapCode 48680
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20  30
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.MAR       20
+PICE.RUB       20  30
+
+MapCode 48870
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+PICE.GLA       30
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 48929
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+POPU.TRE       10
+
+MapCode 48945
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+
+MapCode 48996
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20
+POPU.TRE       20
+THUJ.SPP.ALL       50
+
+MapCode 49180
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30
+PICE.RUB       20  30
+
+MapCode 49247
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+PICE.GLA       30
+PICE.RUB       30
+TSUG.CAN       40  50
+
+MapCode 49392
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+QUER.RUB       20
+THUJ.SPP.ALL       40
+TSUG.CAN       40  50
+
+MapCode 49396
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+QUER.RUB       20
+
+MapCode 49408
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+TSUG.CAN       50
+
+MapCode 49566
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+POPU.TRE       10
+
+MapCode 49689
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.MAR       30
+TSUG.CAN       50
+
+MapCode 49712
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.RUB       30
+
+MapCode 49733
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+TSUG.CAN       50
+
+MapCode 49735
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30
+
+MapCode 49781
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       20  30
+
+MapCode 49804
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 49805
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+TSUG.CAN       60
+
+MapCode 49847
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 49880
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 49923
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+
+MapCode 50016
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       20  30
+PICE.RUB       30
+PINU.STR       30
+QUER.RUB       20
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 50364
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+PINU.RES       20
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 50430
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20  30
+PICE.GLA       20
+
+MapCode 50485
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       30
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 50645
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+FAGU.GRA       20  30  40
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 50732
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       40  50
+
+MapCode 50807
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       40
+PICE.GLA       20  30
+PICE.RUB       20  30
+
+MapCode 50895
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.RUB       20  30
+
+MapCode 50963
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.RUB       20  40
+POPU.TRE       20
+
+MapCode 50999
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.MAR       30
+TSUG.CAN       50
+
+MapCode 51052
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.RUB       20  30
+
+MapCode 51074
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+TSUG.CAN       50
+
+MapCode 51129
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       20  30
+
+MapCode 51147
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.GLA       20
+PICE.RUB       30
+
+MapCode 51326
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20  30
+LARI.LAR       10
+PICE.GLA       30
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10
+QUER.RUB       20
+THUJ.SPP.ALL       50  60
+
+MapCode 51365
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       30
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10  20
+QUER.RUB       20
+THUJ.SPP.ALL       50  60
+
+MapCode 51427
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       20  30
+PICE.MAR       20  30
+POPU.TRE       10
+
+MapCode 51471
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.MAR       20  30
+POPU.TRE       10
+
+MapCode 51882
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PINU.RES       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 51883
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PINU.RES       20
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 52024
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+
+MapCode 52031
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+POPU.TRE       10  20
+
+MapCode 52042
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+
+MapCode 52059
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.MAR       30
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 52096
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.MAR       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 52103
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 52135
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 52157
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 52192
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+
+MapCode 52219
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20  30
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.MAR       20
+PICE.RUB       30
+
+MapCode 52408
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+PICE.MAR       30
+TSUG.CAN       50
+
+MapCode 52442
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 52471
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+TSUG.CAN       50
+
+MapCode 52473
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30
+TSUG.CAN       40  50
+
+MapCode 52485
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+QUER.RUB       40
+
+MapCode 52489
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+
+MapCode 52509
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 52534
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       20  30
+
+MapCode 52548
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.RUB       30
+QUER.RUB       40
+TSUG.CAN       50
+
+MapCode 52558
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.RUB       30
+
+MapCode 52577
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+QUER.RUB       40
+TSUG.CAN       50
+
+MapCode 52589
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 52594
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20
+PICE.GLA       30
+PINU.STR       30
+POPU.TRE       10  20
+
+MapCode 52781
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30
+POPU.TRE       10
+QUER.RUB       30
+TSUG.CAN       50
+
+MapCode 52899
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+PICE.RUB       30
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 52911
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+PICE.RUB       30
+THUJ.SPP.ALL       40
+TSUG.CAN       40  50
+
+MapCode 52912
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 52938
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 52966
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+TSUG.CAN       50
+
+MapCode 53030
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 53035
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+PICE.GLA       30
+POPU.TRE       10  20
+
+MapCode 53058
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+PICE.GLA       20
+
+MapCode 53066
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+PICE.GLA       20  30
+PICE.RUB       20
+
+MapCode 53283
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       20  40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20
+PICE.GLA       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 53339
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       20  40  50  60
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.RUB       30
+
+MapCode 53731
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       20
+FAGU.GRA       20  40
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 54105
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.GLA       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 54156
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.MAR       20
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 54266
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.RUB       20  30
+
+MapCode 54543
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 54823
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       30
+PICE.RUB       30  40
+PINU.STR       30
+QUER.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       40  60
+
+MapCode 55082
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10  20
+
+MapCode 55114
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       20  30
+PICE.MAR       20  30
+PICE.RUB       30
+PINU.STR       20  30
+POPU.TRE       10  20
+
+MapCode 55149
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.MAR       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 55150
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.MAR       20  30
+PICE.RUB       30
+PINU.STR       30
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 55336
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 55449
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20
+PICE.RUB       30
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       50  60
+
+MapCode 55473
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 55613
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.MAR       20  30
+PICE.RUB       30  40
+PINU.BAN       10
+PINU.RES       20
+POPU.TRE       10
+THUJ.SPP.ALL       50  60
+
+MapCode 55664
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 55733
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+POPU.TRE       10
+
+MapCode 55736
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 55738
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+POPU.TRE       10  20
+
+MapCode 55758
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20  30
+LARI.LAR       20
+PICE.GLA       20  30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 55818
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+FAGU.GRA       40
+PICE.GLA       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 56051
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+FAGU.GRA       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+TSUG.CAN       40  50
+
+MapCode 56545
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+POPU.TRE       10
+
+MapCode 56562
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40
+TSUG.CAN       50
+
+MapCode 56763
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       60
+FAGU.GRA       30
+POPU.TRE       10  20
+
+MapCode 56767
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       60
+PICE.GLA       20
+POPU.TRE       10  20
+
+MapCode 56770
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       60
+
+MapCode 56833
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       50
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 56852
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 56905
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       50  60
+FAGU.GRA       30  40
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 56949
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       20
+PICE.RUB       20  30
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 56962
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       30  40
+PICE.GLA       30
+
+MapCode 56984
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50
+BETU.ALL       40  50
+FAGU.GRA       30  40
+PICE.GLA       30
+TSUG.CAN       50
+
+MapCode 57328
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  50
+PICE.RUB       30
+
+MapCode 57329
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 57482
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  80
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PINU.STR       30
+POPU.TRE       70
+
+MapCode 57507
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  80
+BETU.PAP       10  20
+FAGU.GRA       30
+POPU.TRE       10  70
+
+MapCode 57711
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       50  60  70
+BETU.PAP       20
+FAGU.GRA       50
+PICE.RUB       30
+
+MapCode 57718
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       50  60  70
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 57742
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       50  60  70  80
+FAGU.GRA       30  40  50
+PICE.RUB       60
+
+MapCode 57756
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       40  50  60  80  90
+FAGU.GRA       30  40
+
+MapCode 57815
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       20  40  50  80
+FAGU.GRA       30  40  50
+TSUG.CAN       50
+
+MapCode 57997
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  40
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 58386
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30
+BETU.ALL       40  50  60
+BETU.PAP       10
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 59001
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20  30
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 59180
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 59181
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+PICE.RUB       30
+
+MapCode 59191
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+PICE.GLA       20
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 59232
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       20  30  40
+POPU.TRE       10  20
+TSUG.CAN       40  50
+
+MapCode 60093
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40  50  60  70  100  110  120  130
+BETU.ALL       50  70
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+TSUG.CAN       90
+
+MapCode 60122
+ABIE.BAL       20  30
+ACER.RUB       30  40
+ACER.SAH       20  30  40  50  60  70  100  110  120  130
+BETU.ALL       40  50  70
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       10  20
+TSUG.CAN       90
+
+MapCode 60256
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       30
+PICE.MAR       30  40
+PICE.RUB       30  40
+THUJ.SPP.ALL       50
+
+MapCode 60264
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       20  30
+POPU.TRE       10  20
+
+MapCode 60280
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       20
+PICE.GLA       30
+PICE.MAR       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 60317
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       20
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 60523
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 60747
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 60923
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       30
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 61008
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10  20
+
+MapCode 61059
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 61383
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.MAR       20
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 61532
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 61535
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 61600
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 61675
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+POPU.TRE       10  20
+
+MapCode 61812
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 61983
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 62042
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40
+
+MapCode 62091
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 62222
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.MAR       20  30
+THUJ.SPP.ALL       40
+
+MapCode 62614
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       30
+PINU.BAN       20
+POPU.TRE       10
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 62628
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 62797
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       20  30
+PINU.STR       20  30
+POPU.TRE       10
+
+MapCode 62889
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 62949
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.RUB       20  30
+
+MapCode 63250
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 63558
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       20  30
+PINU.STR       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 63647
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       30
+THUJ.SPP.ALL       40  50
+
+MapCode 63791
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20  30
+PICE.GLA       20
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 63949
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.ALL       20  40  50  60
+BETU.PAP       10  20
+FAGU.GRA       20
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 64038
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       20
+FAGU.GRA       20  40
+PICE.GLA       20
+PICE.RUB       30
+POPU.TRE       10
+
+MapCode 64183
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 64333
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 64368
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       20
+THUJ.SPP.ALL       50
+
+MapCode 64370
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       20
+
+MapCode 64597
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10
+PICE.GLA       20  30
+PICE.MAR       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 64894
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       20  30  40
+PICE.RUB       30
+
+MapCode 65170
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10  20
+
+MapCode 65232
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 65325
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+THUJ.SPP.ALL       50
+
+MapCode 65416
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 65450
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       30
+THUJ.SPP.ALL       40  50  60
+
+MapCode 65561
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.RUB       30
+
+MapCode 65755
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       20  30
+POPU.TRE       10  20
+
+MapCode 66036
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 66037
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 66251
+ABIE.BAL       20  30
+ACER.RUB       30  40
+BETU.PAP       10  20  30
+PICE.GLA       20  30
+PICE.MAR       20  30
+POPU.TRE       20
+
+MapCode 66548
+ABIE.BAL       20  30
+ACER.RUB       30  40
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 66660
+ABIE.BAL       20  30
+ACER.RUB       30  40
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 66661
+ABIE.BAL       20  30
+ACER.RUB       30  40
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 66738
+ABIE.BAL       20  30
+ACER.RUB       30  40  110
+ACER.SAH       20  30  40  60  70  90  100  110
+BETU.ALL       40  50
+BETU.PAP       10
+FAGU.GRA       10  20  30  40  60
+PICE.RUB       30
+
+MapCode 66896
+ABIE.BAL       20  30
+ACER.RUB       30  40  90
+ACER.SAH       20  30  40  60  70  80  90
+BETU.ALL       60  100
+FAGU.GRA       10  20  30  40  50  60
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 67368
+ABIE.BAL       20  30
+ACER.RUB       30  40  60
+ACER.SAH       30  40  60
+BETU.ALL       40  60  80
+PICE.GLA       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50  70  80  100  110  120  130
+
+MapCode 68140
+ABIE.BAL       20  30
+ACER.RUB       30  40  60  70
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  70  90
+FAGU.GRA       10  20  30
+PICE.RUB       30
+
+MapCode 68144
+ABIE.BAL       20  30
+ACER.RUB       30  40  60  70
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  70  90
+FAGU.GRA       10  20  30
+
+MapCode 68288
+ABIE.BAL       20  30
+ACER.RUB       30  40  60  70  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  70  80  100
+BETU.PAP       20  40  50  60
+FAGU.GRA       30
+PICE.GLA       20
+PICE.RUB       30
+
+MapCode 68776
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       30
+FAGU.GRA       40
+POPU.TRE       10  20
+
+MapCode 68813
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 68814
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 68818
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       20
+POPU.TRE       10
+THUJ.SPP.ALL       50  70
+TSUG.CAN       50
+
+MapCode 69468
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.PAP       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       60
+
+MapCode 69740
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       50  70  80  90
+BETU.PAP       70
+FAGU.GRA       30  40  60
+POPU.TRE       10
+
+MapCode 69741
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       50  70  80  90
+BETU.PAP       70
+FAGU.GRA       30  40  60
+
+MapCode 69751
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80  90
+BETU.PAP       10  70
+FAGU.GRA       30  40  60
+QUER.RUB       30
+
+MapCode 69786
+ABIE.BAL       20  30
+ACER.RUB       30  40  50
+BETU.ALL       60
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 70064
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       40  50  60  70
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30
+PICE.GLA       20  30
+POPU.TRE       10  30  40  50
+TSUG.CAN       50
+
+MapCode 70171
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50  60  70
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+TSUG.CAN       50
+
+MapCode 70177
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50  60  70
+BETU.PAP       20  30  40  50  60
+FAGU.GRA       30  40
+QUER.RUB       30
+TSUG.CAN       50
+
+MapCode 70207
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60  70
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+POPU.TRE       10
+
+MapCode 70209
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60  70
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+
+MapCode 70225
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60  70
+BETU.PAP       10  20  30  40  50  60
+FAGU.GRA       30  40
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 70808
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       30
+QUER.RUB       50  60  70
+THUJ.SPP.ALL       40  50  60
+TSUG.CAN       30  50  70
+
+MapCode 71457
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       60  80
+FAGU.GRA       20
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71463
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       60  80
+FAGU.GRA       20  30  40
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71467
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       60  80
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71519
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       40  50  80
+FAGU.GRA       20  30  40
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71526
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       40  50  60  80
+FAGU.GRA       20
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71534
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  80
+BETU.ALL       40  50  60  80
+FAGU.GRA       20  30  40
+POPU.TRE       10
+TSUG.CAN       50  60  90  110
+
+MapCode 71583
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50  60  70
+FAGU.GRA       30  40  50  60
+POPU.TRE       10
+
+MapCode 71810
+ABIE.BAL       20  30
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  70  80
+FAGU.GRA       30  40  50
+POPU.TRE       70
+
+MapCode 73499
+ABIE.BAL       20  30
+ACER.RUB       20  30
+ACER.SAH       30
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       40
+
+MapCode 73685
+ABIE.BAL       20  30
+ACER.RUB       20  30
+ACER.SAH       30  40
+BETU.ALL       40  60
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 73710
+ABIE.BAL       20  30
+ACER.RUB       20  30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 73981
+ABIE.BAL       20  30
+ACER.RUB       20  30
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40
+
+MapCode 76903
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       30
+PICE.RUB       30  40
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 76916
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 77097
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 77307
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       40  50
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 78218
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.ALL       40
+PICE.GLA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40
+
+MapCode 78407
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+FAGU.GRA       30  40
+PICE.MAR       20
+PICE.RUB       20  30
+PINU.STR       30
+POPU.TRE       10
+
+MapCode 79090
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 79118
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40
+
+MapCode 79403
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PINU.STR       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40
+
+MapCode 79478
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10  20
+
+MapCode 80225
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.RUB       30
+
+MapCode 80230
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30
+BETU.ALL       50  60
+BETU.PAP       10  20
+
+MapCode 80358
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30
+BETU.ALL       40
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       20
+TSUG.CAN       50  60
+
+MapCode 81316
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+BETU.ALL       40
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       20
+TSUG.CAN       50  60
+
+MapCode 81383
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       30
+POPU.TRE       20
+THUJ.SPP.ALL       50
+TSUG.CAN       60
+
+MapCode 81845
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+PICE.RUB       30  40
+POPU.TRE       20
+TSUG.CAN       50
+
+MapCode 82306
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 82551
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 82606
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       20  40  60  70  80  100
+BETU.PAP       10  20
+FAGU.GRA       30  40
+POPU.TRE       10  80
+
+MapCode 82627
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       60
+BETU.PAP       20
+PICE.RUB       30
+
+MapCode 82859
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10
+
+MapCode 82881
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.RUB       20  30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 82917
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10
+THUJ.SPP.ALL       40  50
+
+MapCode 82941
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 83154
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.MAR       30
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 83342
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       30
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 83412
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40
+
+MapCode 83804
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.GLA       20
+PICE.MAR       20  30
+PICE.RUB       30
+PINU.STR       20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 83832
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.MAR       20  30
+PICE.RUB       20  30
+PINU.STR       30
+POPU.TRE       10  20
+
+MapCode 83915
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.PAP       10  20
+PICE.GLA       30
+POPU.TRE       10
+
+MapCode 83920
+ABIE.BAL       20  30
+ACER.RUB       20  30  40
+BETU.PAP       10  20
+PICE.GLA       30
+THUJ.SPP.ALL       40  50
+
+MapCode 85701
+ABIE.BAL       20  30
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.RUB       30
+
+MapCode 85806
+ABIE.BAL       20  30
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 85807
+ABIE.BAL       20  30
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 85919
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       60
+FAGU.GRA       30  40
+
+MapCode 85940
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       50
+FAGU.GRA       30  40
+
+MapCode 85980
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       50  60
+FAGU.GRA       30  40
+
+MapCode 86024
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       40  60
+BETU.PAP       10  20
+FAGU.GRA       40
+PICE.GLA       30
+PICE.RUB       20  30
+
+MapCode 86081
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       40  50
+FAGU.GRA       30  40
+
+MapCode 86176
+ABIE.BAL       20  30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       30  40
+
+MapCode 86246
+ABIE.BAL       20  30
+ACER.SAH       30  40
+FAGU.GRA       30  40
+
+MapCode 86389
+ABIE.BAL       20  30
+ACER.SAH       20  30
+BETU.ALL       50
+BETU.PAP       20
+
+MapCode 86694
+ABIE.BAL       20  30
+BETU.ALL       50
+BETU.PAP       20
+PICE.GLA       20
+PICE.MAR       20
+PICE.RUB       30
+
+MapCode 86712
+ABIE.BAL       20  30
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       40
+
+MapCode 86733
+ABIE.BAL       20  30
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+
+MapCode 86778
+ABIE.BAL       20  30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 86780
+ABIE.BAL       20  30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.MAR       20
+PICE.RUB       30
+
+MapCode 87592
+ABIE.BAL       20  30
+BETU.PAP       20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 89008
+ABIE.BAL       20  30
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       20  30  40
+PICE.RUB       30
+
+MapCode 90160
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       20  30  40
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 90200
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 90344
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       40
+
+MapCode 90435
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30  40
+THUJ.SPP.ALL       50  60
+
+MapCode 90506
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+THUJ.SPP.ALL       40
+
+MapCode 90627
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.MAR       20
+PICE.RUB       30
+THUJ.SPP.ALL       50
+
+MapCode 90739
+ABIE.BAL       20  30
+BETU.PAP       10  20
+PICE.MAR       20  30  40
+THUJ.SPP.ALL       50  60
+
+MapCode 91440
+ABIE.BAL       20  30
+BETU.PAP       10  20  30
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       20  30
+THUJ.SPP.ALL       40  50
+
+MapCode 92635
+ABIE.BAL       20  30  70
+ACER.RUB       40  50  60  70  90  100
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       50  60  70  90  100
+BETU.PAP       20  60  70
+FAGU.GRA       30  40  50
+POPU.TRE       10  20  70
+THUJ.SPP.ALL       50
+
+MapCode 92756
+ABIE.BAL       20  30  70
+ACER.RUB       30  40  50  60  70
+ACER.SAH       20  30  40  50  80  100
+BETU.ALL       50  60  70  90  100
+BETU.PAP       10  20  60  70
+FAGU.GRA       30  40
+POPU.TRE       10  20  70
+
+MapCode 93345
+ABIE.BAL       20  30  60
+ACER.RUB       30  40  50
+ACER.SAH       30  50  70  80  90
+BETU.ALL       40  50  60  70  80
+BETU.PAP       10  20
+FAGU.GRA       50
+LARI.LAR       10
+PICE.MAR       20  30
+PINU.BAN       10
+POPU.TRE       10  20  30
+THUJ.SPP.ALL       50
+
+MapCode 93378
+ABIE.BAL       20  30  60
+ACER.RUB       30  40  50
+ACER.SAH       30  40  50  70  80  90
+BETU.ALL       40  60  70  80
+BETU.PAP       10  20
+FAGU.GRA       50
+LARI.LAR       10
+PICE.MAR       20  30
+PINU.BAN       10
+POPU.TRE       10  20  30
+THUJ.SPP.ALL       60
+
+MapCode 95303
+ABIE.BAL       20  30  50
+ACER.RUB       80  90
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       50  80
+FAGU.GRA       30  40  60
+PICE.RUB       30
+
+MapCode 95394
+ABIE.BAL       20  30  50
+ACER.RUB       60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95405
+ABIE.BAL       20  30  50
+ACER.RUB       60  70  80  90
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       50  80  100
+FAGU.GRA       20  30  40
+PICE.RUB       30
+POPU.TRE       10  60  80
+
+MapCode 95562
+ABIE.BAL       20  30  50
+ACER.RUB       40  60  70
+ACER.SAH       30  40  60  70  80  90
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95563
+ABIE.BAL       20  30  50
+ACER.RUB       40  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95654
+ABIE.BAL       20  30  50
+ACER.RUB       30  60  70
+ACER.SAH       30  40  60  70  80  90
+BETU.ALL       40  50
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95659
+ABIE.BAL       20  30  50
+ACER.RUB       30  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50
+FAGU.GRA       40  50
+PICE.RUB       30
+
+MapCode 95661
+ABIE.BAL       20  30  50
+ACER.RUB       30  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95664
+ABIE.BAL       20  30  50
+ACER.RUB       30  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  60
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 95786
+ABIE.BAL       20  30  50
+ACER.RUB       30  40
+ACER.SAH       30  40  60  70  80  90  100
+BETU.ALL       60  80
+FAGU.GRA       60
+
+MapCode 95952
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  70  100
+ACER.SAH       30  40  50  60  70  80  90  100  110
+BETU.ALL       50  60  80  110
+FAGU.GRA       30  40
+
+MapCode 96047
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       20
+FAGU.GRA       30  40
+PICE.GLA       30  50  60
+PICE.RUB       80
+PINU.STR       30  40  50  60  70
+POPU.TRE       40
+QUER.RUB       30  40
+THUJ.SPP.ALL       50
+TSUG.CAN       50
+
+MapCode 96088
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60  70
+ACER.SAH       30  60  70  80  90
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 96101
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 96111
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60  70
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  60
+BETU.PAP       20
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 96116
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60  70
+ACER.SAH       30  40  50  60  70  80  90  100
+BETU.ALL       50  60  70
+FAGU.GRA       30  40  50
+PICE.RUB       30
+
+MapCode 96195
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  60  70  80  90  100
+ACER.SAH       20  30  40  60  70  90
+BETU.ALL       30  40  60  70  80  90  100
+BETU.PAP       40  50  60  80
+PICE.GLA       50
+PICE.RUB       30
+POPU.TRE       10  50  60  70  80
+
+MapCode 96591
+ABIE.BAL       20  30  50
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       20
+LARI.LAR       10  20
+PINU.STR       30
+POPU.TRE       10  20  30  40
+QUER.RUB       20
+THUJ.SPP.ALL       50
+
+MapCode 96903
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+ACER.SAH       40  50
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10
+TSUG.CAN       50
+
+MapCode 96905
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+ACER.SAH       40  50
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10  20
+TSUG.CAN       50
+
+MapCode 96906
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+ACER.SAH       40  50
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10  20
+
+MapCode 96917
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10  20
+
+MapCode 96932
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10  20
+
+MapCode 96936
+ABIE.BAL       20  30  50
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30  50
+PINU.RES       50  60
+POPU.TRE       10
+
+MapCode 99199
+ABIE.BAL       20  30  50  60
+ACER.RUB       30  40  60  70  100
+ACER.SAH       20  30  40  60  70  90
+BETU.ALL       30  40  60  70  80  90
+BETU.PAP       40  50  60  80
+FAGU.GRA       30
+PICE.GLA       50
+POPU.TRE       10  40  50  60  70
+THUJ.SPP.ALL       90  110  130  140
+
+MapCode 100348
+ABIE.BAL       20  30  50  60
+ACER.RUB       30  40  50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30  50  60  70
+PICE.RUB       30
+PINU.STR       70
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 101253
+ABIE.BAL       20  30  50  60
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       20  30  40
+BETU.ALL       40  50  70  80
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.RUB       30
+PINU.RES       20
+POPU.TRE       10
+
+MapCode 101564
+ABIE.BAL       20  30  50  60
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       20  30  40  50  70
+BETU.ALL       40  50
+BETU.PAP       10  40  50  60
+FAGU.GRA       30
+PICE.GLA       20  30
+TSUG.CAN       50  80  90  100  110
+
+MapCode 102739
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  60  70  80  90
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  70  80  90  100  120
+BETU.PAP       70
+FAGU.GRA       30  40  50
+PICE.RUB       30  40  60
+
+MapCode 103101
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  70  80
+ACER.SAH       30  40  70
+BETU.ALL       50  80  90  100
+BETU.PAP       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       80
+
+MapCode 103136
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  70  80
+ACER.SAH       30  40  70
+BETU.ALL       40  80  90  100
+BETU.PAP       20
+PICE.GLA       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       80
+
+MapCode 103209
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  70  80
+ACER.SAH       30  40  50  70
+BETU.ALL       80  90  100
+FAGU.GRA       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       80
+
+MapCode 103222
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  70  80
+ACER.SAH       30  40  50  70
+BETU.ALL       50  80  90  100
+BETU.PAP       10  20
+POPU.TRE       10  20
+THUJ.SPP.ALL       80
+
+MapCode 103254
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  70  80
+ACER.SAH       30  40  50  70
+BETU.ALL       40  80  90  100
+PICE.GLA       20  30
+POPU.TRE       10  20
+THUJ.SPP.ALL       80
+
+MapCode 104302
+ABIE.BAL       20  30  50  60  70
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       20  30  40  50  70  80  100
+BETU.ALL       50  60  70  80  90  100
+BETU.PAP       20  60  70
+FAGU.GRA       40
+PICE.RUB       30
+POPU.TRE       10  20  70
+THUJ.SPP.ALL       80
+
+MapCode 105511
+ABIE.BAL       20  30  40
+ACER.RUB       80  90  100
+ACER.SAH       20  30  40  50  60  70  80  90  100
+BETU.ALL       40  50
+FAGU.GRA       20  30  40
+
+MapCode 106131
+ABIE.BAL       20  30  40
+ACER.RUB       40  50
+BETU.PAP       10  20
+PICE.GLA       30  40
+PICE.RUB       50
+THUJ.SPP.ALL       40  50  60  70
+TSUG.CAN       50
+
+MapCode 106590
+ABIE.BAL       20  30  40
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 106593
+ABIE.BAL       20  30  40
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 107277
+ABIE.BAL       20  30  40
+ACER.RUB       30
+BETU.PAP       20  30
+PICE.GLA       20  30  40
+PICE.MAR       20  30  40
+PICE.RUB       20  30  40
+
+MapCode 107540
+ABIE.BAL       20  30  40
+ACER.RUB       30
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30  40
+PICE.RUB       30  40
+THUJ.SPP.ALL       40  50
+
+MapCode 108458
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40
+BETU.PAP       10  20  30
+LARI.LAR       20  30
+PICE.GLA       20  30
+PICE.MAR       20  30  40
+THUJ.SPP.ALL       40  50
+
+MapCode 108574
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20
+PICE.GLA       20
+PICE.MAR       20  30
+PICE.RUB       30
+
+MapCode 108663
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20  30
+PICE.GLA       20  30  40
+PICE.MAR       20
+PICE.RUB       30  40
+POPU.TRE       20
+
+MapCode 109121
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+FAGU.GRA       30  40
+LARI.LAR       20
+PICE.GLA       30
+PICE.MAR       30  40
+
+MapCode 109365
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+LARI.LAR       20  30
+PICE.MAR       40
+PICE.RUB       30
+PINU.STR       30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50  60
+
+MapCode 109567
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+FAGU.GRA       40
+LARI.LAR       20  30
+PICE.MAR       30  40
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+TSUG.CAN       50
+
+MapCode 109609
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50
+BETU.PAP       20
+PICE.GLA       20  40
+PICE.RUB       20  30
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50  60
+
+MapCode 109948
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.MAR       20  30
+PICE.RUB       30
+
+MapCode 110226
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.PAP       10  20
+FAGU.GRA       30
+LARI.LAR       10  20
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 110956
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+FAGU.GRA       20  30
+PICE.GLA       20
+PICE.MAR       20
+PICE.RUB       20  30
+PINU.STR       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 111476
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+BETU.PAP       10  20
+LARI.LAR       20
+PICE.MAR       30  40
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 111713
+ABIE.BAL       20  30  40
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.MAR       30  40
+PICE.RUB       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 112285
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+ACER.SAH       30
+BETU.ALL       60
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       50  60
+
+MapCode 112372
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+ACER.SAH       30
+PICE.GLA       30
+THUJ.SPP.ALL       50
+
+MapCode 112460
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 112520
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30  40
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 112637
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+PICE.GLA       20  50
+THUJ.SPP.ALL       50  70
+TSUG.CAN       50
+
+MapCode 112781
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30  40
+THUJ.SPP.ALL       50
+
+MapCode 112782
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30  40
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 112862
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30  40
+POPU.TRE       10  20
+THUJ.SPP.ALL       50
+
+MapCode 112993
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+BETU.PAP       10  20
+LARI.LAR       20  30
+PICE.MAR       30  40  50
+PICE.RUB       50
+PINU.STR       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 113052
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+LARI.LAR       20  30
+PICE.RUB       50
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 113055
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50
+LARI.LAR       20  30
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 113234
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60
+BETU.ALL       40  50  60  70  80
+BETU.PAP       20  50
+FAGU.GRA       30  40
+POPU.TRE       10  20  30  40  50
+
+MapCode 113247
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60
+BETU.ALL       40  50  60  70  80
+BETU.PAP       10  20  50
+FAGU.GRA       30  40
+POPU.TRE       20  30  40  50
+
+MapCode 113265
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  70
+BETU.ALL       50  60  70  80
+BETU.PAP       30  40  50  60
+FAGU.GRA       30  40
+POPU.TRE       20  30  40  50
+
+MapCode 113294
+ABIE.BAL       20  30  40
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40  50  60  70
+BETU.ALL       40  50  60  70  80
+BETU.PAP       10  20  30  40  50  60
+FAGU.GRA       30  40
+PICE.RUB       30
+POPU.TRE       20  30  40  50
+
+MapCode 113986
+ABIE.BAL       20  30  40
+ACER.RUB       20  30
+ACER.SAH       20  30  40
+BETU.ALL       50
+BETU.PAP       10  20
+PICE.MAR       20
+PICE.RUB       20  30
+POPU.TRE       10  20
+
+MapCode 114358
+ABIE.BAL       20  30  40
+ACER.RUB       20  30  40
+ACER.SAH       30
+BETU.ALL       60
+BETU.PAP       10  20
+POPU.TRE       10  20
+
+MapCode 115010
+ABIE.BAL       20  30  40
+ACER.RUB       20  30  40
+ACER.SAH       20  30
+BETU.ALL       40  60
+BETU.PAP       10  20
+PICE.RUB       20  30
+PINU.STR       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 115441
+ABIE.BAL       20  30  40
+ACER.RUB       20  30  40
+ACER.SAH       20  30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.GLA       20
+POPU.TRE       10  20
+THUJ.SPP.ALL       50  60
+TSUG.CAN       50
+
+MapCode 115731
+ABIE.BAL       20  30  40
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       20  30
+POPU.TRE       10  20
+
+MapCode 115742
+ABIE.BAL       20  30  40
+ACER.RUB       20  30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30  40
+PICE.MAR       20  30  40
+PICE.RUB       20  30
+POPU.TRE       10  20
+THUJ.SPP.ALL       40  50
+
+MapCode 116859
+ABIE.BAL       20  30  40
+BETU.PAP       20
+LARI.LAR       20  30
+PICE.GLA       30
+PICE.MAR       20  30  40
+PICE.RUB       20  30  40
+THUJ.SPP.ALL       40  50
+
+MapCode 119791
+ABIE.BAL       20  30  40
+BETU.PAP       10  20  30
+LARI.LAR       20  30
+PICE.GLA       30
+PICE.MAR       20  30  40
+PICE.RUB       30
+THUJ.SPP.ALL       40  50
+
+MapCode 121774
+ABIE.BAL       20  30  40  60
+ACER.RUB       20  30  40  70
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+FAGU.GRA       30
+PICE.MAR       20  40  50
+PICE.RUB       50
+POPU.TRE       10
+THUJ.SPP.ALL       50  60
+
+MapCode 121999
+ABIE.BAL       20  30  40  60
+BETU.PAP       10  30  50  60
+LARI.LAR       30  60  70
+PICE.GLA       20
+PICE.MAR       40  50
+PICE.RUB       30  50
+THUJ.SPP.ALL       40  50  60  70  80  90  100  110  120  130  140
+TSUG.CAN       60
+
+MapCode 122006
+ABIE.BAL       20  30  40  60
+BETU.PAP       10  30  50  60
+LARI.LAR       20  30  60  70
+PICE.GLA       20
+PICE.MAR       50
+PICE.RUB       30
+THUJ.SPP.ALL       40  50  60  70  80  90  100  110  120  130  140
+TSUG.CAN       60
+
+MapCode 123062
+ABIE.BAL       20  30  40  50
+ACER.RUB       40
+ACER.SAH       30
+LARI.LAR       30  50  70
+PICE.MAR       40  50  70  80  90  110
+PICE.RUB       30  50
+THUJ.SPP.ALL       40  50  60  70  80  90  100  110  120  130  140  150  160  170
+TSUG.CAN       60
+
+MapCode 123073
+ABIE.BAL       20  30  40  50
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+BETU.PAP       20
+FAGU.GRA       30  50
+PICE.RUB       30
+
+MapCode 123078
+ABIE.BAL       20  30  40  50
+ACER.RUB       40
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       40  50  60  70  80
+BETU.PAP       20
+FAGU.GRA       30
+PICE.RUB       30
+
+MapCode 123350
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  40
+PICE.GLA       30  40  50
+POPU.TRE       10  30
+
+MapCode 123421
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+BETU.PAP       20
+FAGU.GRA       30  50
+PICE.RUB       30
+
+MapCode 123424
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+FAGU.GRA       30  50
+
+MapCode 123632
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40
+BETU.PAP       10  20  30
+PICE.GLA       20
+PICE.MAR       20  30  40
+PICE.RUB       20  30
+POPU.TRE       10  20
+
+MapCode 124163
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  80  90
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10  60  70
+THUJ.SPP.ALL       50
+TSUG.CAN       40  50
+
+MapCode 124171
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  80  90
+ACER.SAH       30  40
+BETU.ALL       60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30  40
+POPU.TRE       10  20  60  70
+THUJ.SPP.ALL       50
+
+MapCode 124253
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  80  90
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30  40
+POPU.TRE       10  20  60  70
+THUJ.SPP.ALL       50
+
+MapCode 124713
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       30  60  70  80
+BETU.ALL       50  60  70  80
+BETU.PAP       10  20  60
+FAGU.GRA       20  70
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 124719
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       30  60  70  80
+BETU.ALL       50  60  70  80
+BETU.PAP       10  20  60
+FAGU.GRA       20  70
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+
+MapCode 124854
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  70  80  90
+ACER.SAH       30
+BETU.ALL       50  60  70
+BETU.PAP       10  20  40
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50
+TSUG.CAN       40  50
+
+MapCode 124856
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  70  80  90
+ACER.SAH       30
+BETU.ALL       50  60  70
+BETU.PAP       10  20  40
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+TSUG.CAN       40  50
+
+MapCode 125138
+ABIE.BAL       20  30  40  50
+ACER.RUB       30  40  50  60  70  80  90
+ACER.SAH       30  40
+BETU.ALL       40  50  60  70
+BETU.PAP       10  20  40
+PICE.RUB       30
+THUJ.SPP.ALL       50
+TSUG.CAN       40  50
+
+MapCode 125481
+ABIE.BAL       20  30  40  50
+ACER.SAH       30  40  60
+BETU.ALL       40  50
+BETU.PAP       30  40
+LARI.LAR       30  50  70
+PICE.GLA       40
+PICE.MAR       70  80  90  110
+THUJ.SPP.ALL       40  50  60  70  80  90  100  110  120  130  140  150  160  170
+
+MapCode 125487
+ABIE.BAL       20  30  40  50
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       60  70  80
+FAGU.GRA       30  50
+
+MapCode 125494
+ABIE.BAL       20  30  40  50
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+FAGU.GRA       30  50
+
+MapCode 125495
+ABIE.BAL       20  30  40  50
+ACER.SAH       30  40  50  60  70  80  90
+BETU.ALL       50  60  70  80
+FAGU.GRA       30  40
+
+MapCode 125517
+ABIE.BAL       20  30  40  50
+BETU.ALL       40  50
+BETU.PAP       30
+LARI.LAR       30
+PICE.GLA       40
+PICE.MAR       70  80  90  110
+THUJ.SPP.ALL       40  50  60  70  90  100  110  120  130
+TSUG.CAN       60
+
+MapCode 125521
+ABIE.BAL       20  30  40  50
+BETU.ALL       40  50
+BETU.PAP       30
+LARI.LAR       30  50  70
+PICE.GLA       40
+PICE.MAR       70  80  90  110
+THUJ.SPP.ALL       40  50  60  70  80  90  100  110  120  130  140  150  160  170
+TSUG.CAN       60
+
+MapCode 128208
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40
+ACER.SAH       30  40  50  60  80  90  100
+BETU.ALL       60  130
+FAGU.GRA       30
+PICE.RUB       40
+THUJ.SPP.ALL       50
+TSUG.CAN       50  80
+
+MapCode 129235
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50
+BETU.ALL       40  50  60  70
+BETU.PAP       20
+PICE.GLA       30
+PICE.RUB       30
+POPU.TRE       20  30
+
+MapCode 129330
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  110
+ACER.SAH       20  30  40  50  60  70  80  100
+BETU.ALL       40  50  60  70
+BETU.PAP       10
+FAGU.GRA       20  30  40
+PICE.RUB       30
+
+MapCode 129348
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  110
+ACER.SAH       20  30  40  50  60  70  80  100
+BETU.ALL       40  50  60  70
+BETU.PAP       10  20
+FAGU.GRA       20  30  40
+POPU.TRE       10  20
+
+MapCode 130896
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60
+BETU.ALL       40  50  60  70  90
+BETU.PAP       20
+PICE.GLA       30  50
+PICE.RUB       30  50  60
+POPU.TRE       20  30  50
+THUJ.SPP.ALL       30  70  80
+
+MapCode 131360
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30  40
+BETU.ALL       50  60  70  80
+FAGU.GRA       30
+POPU.TRE       50
+
+MapCode 131703
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70
+BETU.ALL       60
+BETU.PAP       20
+LARI.LAR       20  30
+PICE.MAR       30
+POPU.TRE       20
+THUJ.SPP.ALL       50  80  90  110
+TSUG.CAN       50
+
+MapCode 131762
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70
+BETU.ALL       60
+LARI.LAR       20  30
+PICE.GLA       30
+PICE.MAR       20
+PICE.RUB       50
+POPU.TRE       20
+THUJ.SPP.ALL       50  60  80  90  110
+TSUG.CAN       50
+
+MapCode 131778
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70
+BETU.ALL       60
+PICE.MAR       30
+POPU.TRE       20
+THUJ.SPP.ALL       50  60  80  90  110
+
+MapCode 132036
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       30  40
+BETU.ALL       50  60  70
+FAGU.GRA       20  30
+PICE.RUB       30  50  90
+POPU.TRE       20
+TSUG.CAN       50  80  110  130  150
+
+MapCode 132199
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       20  30  40  50  60  80  90  100
+BETU.ALL       50  130
+BETU.PAP       10  40  50  60
+FAGU.GRA       30  40
+PICE.GLA       20
+QUER.RUB       30  40
+TSUG.CAN       50  80
+
+MapCode 133322
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       20  30  40  60  70  80
+ACER.SAH       20  30  40  50  60  70  80
+BETU.ALL       20  40  50  60  70  80  90  100
+BETU.PAP       20  40  50  60
+PICE.GLA       20
+PICE.RUB       30
+
+MapCode 133324
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       20  30  40  60  70  80
+ACER.SAH       20  30  40  50  60  70  80
+BETU.ALL       20  40  50  60  70  80  90  100
+BETU.PAP       20  40  50  60
+PICE.RUB       30
+
+MapCode 134130
+ABIE.BAL       20  30  40  50  60
+ACER.RUB       20  30  40  50  60  70
+ACER.SAH       30  40
+BETU.PAP       10  20  50
+PICE.GLA       50
+PICE.RUB       30
+POPU.TRE       10  20
+
+MapCode 136358
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       40  60  70
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       50  60
+PICE.RUB       30
+THUJ.SPP.ALL       50  60  70  80  90  100
+TSUG.CAN       50
+
+MapCode 136361
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       40  60  70
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       50  60
+PICE.RUB       30  40
+THUJ.SPP.ALL       50  60  70  80  90  100
+TSUG.CAN       50
+
+MapCode 136369
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       40  60  70
+ACER.SAH       30
+BETU.PAP       20
+PICE.GLA       20  50  60
+PICE.RUB       30  40
+THUJ.SPP.ALL       50  60  70  80  90  100
+TSUG.CAN       50
+
+MapCode 136401
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       40  60  70
+ACER.SAH       30
+LARI.LAR       30
+PICE.GLA       20  50  60
+PICE.MAR       40  50
+PICE.RUB       30  50
+THUJ.SPP.ALL       40  50  60  70  80  90  100
+TSUG.CAN       60
+
+MapCode 136973
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  60
+ACER.SAH       30  40
+BETU.ALL       100
+BETU.PAP       20  40  50
+PICE.GLA       30  50  90
+POPU.TRE       10
+THUJ.SPP.ALL       50  70  80  100  110  140
+
+MapCode 136996
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  60
+BETU.ALL       100
+BETU.PAP       20  40  50
+PICE.GLA       30  50  90
+PICE.RUB       30
+POPU.TRE       10
+THUJ.SPP.ALL       50  70  80  100  110  140
+
+MapCode 137194
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40
+BETU.PAP       10  20
+PICE.GLA       20  30  50  70
+PICE.MAR       10  20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50
+
+MapCode 137322
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  80  90  100
+ACER.SAH       20  30  90
+BETU.ALL       40  50  70  80  90
+BETU.PAP       50  60  70
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       40  110
+
+MapCode 137410
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  80  90  100
+ACER.SAH       20  30  40  90
+BETU.ALL       20  40  50  60  70  80  90
+BETU.PAP       10  20  50  60  70
+FAGU.GRA       20  30  40
+PICE.GLA       30
+PICE.RUB       30
+THUJ.SPP.ALL       50  110
+
+MapCode 137687
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  60
+BETU.ALL       100
+BETU.PAP       20  30  40  50
+PICE.GLA       30  50  90
+POPU.TRE       10
+THUJ.SPP.ALL       50  70  80  100  110  140
+
+MapCode 138117
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20  60
+FAGU.GRA       30
+PICE.GLA       50  60
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 138119
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50
+ACER.SAH       30
+BETU.ALL       40  50
+BETU.PAP       10  20  60
+FAGU.GRA       30
+PICE.GLA       50  60
+PICE.RUB       30
+
+MapCode 138305
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20  60
+FAGU.GRA       30  40
+PICE.GLA       50  60
+PICE.MAR       30
+POPU.TRE       10
+
+MapCode 138349
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20  60
+PICE.GLA       50  60
+POPU.TRE       10
+
+MapCode 138935
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50  60  80  90
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20  60
+PICE.GLA       50  60
+PICE.RUB       30  40
+POPU.TRE       60  70
+THUJ.SPP.ALL       50
+
+MapCode 138938
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50  60  80  90
+ACER.SAH       30  40
+BETU.ALL       50  60
+BETU.PAP       10  20  60
+PICE.GLA       50  60
+PICE.RUB       30  40
+POPU.TRE       60  70
+
+MapCode 139266
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50  60  70
+ACER.SAH       30
+BETU.ALL       40  50  60  70  80
+BETU.PAP       20  60
+FAGU.GRA       30  40
+PICE.GLA       50  60
+POPU.TRE       30
+
+MapCode 139697
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       30  40  50  60  70  80
+BETU.ALL       40  50  60  70  80  100
+BETU.PAP       20  40  50  60
+FAGU.GRA       30
+PICE.GLA       20  50  60
+PICE.RUB       30
+
+MapCode 141185
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       20  30  40  60  70
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       20  80
+LARI.LAR       10  20  30
+PICE.GLA       20  30  90
+PICE.MAR       20  30  40  50
+PICE.RUB       20  30  50
+PINU.BAN       10  20
+PINU.STR       30
+POPU.TRE       10  20  30  40  50  70  80
+THUJ.SPP.ALL       50
+
+MapCode 141279
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       20  30  40  60  70  80  90  110
+ACER.SAH       20  30  60
+BETU.ALL       40
+BETU.PAP       10  20
+FAGU.GRA       40  50
+PICE.GLA       20  30  90
+PICE.MAR       20  30  40
+PICE.RUB       20  30
+POPU.TRE       10  20  30  40
+THUJ.SPP.ALL       50
+
+MapCode 141956
+ABIE.BAL       20  30  40  50  60  70
+ACER.RUB       20  30  40  50  60  70  90  100
+ACER.SAH       10  20  30  40  50  120
+BETU.ALL       40  50  60  70  100
+BETU.PAP       10  20  40  50  60  70  80  100
+FAGU.GRA       20  30
+PICE.GLA       20  30  60  70  90  100
+PICE.RUB       20  30
+PINU.STR       90
+POPU.TRE       10  30  40  60  70
+THUJ.SPP.ALL       40  50
+
+MapCode 144051
+ABIE.BAL       20  30  40  50  60  70  80
+ACER.RUB       20  30  40  70  80
+ACER.SAH       20  30  40  60  100
+BETU.ALL       60  90
+BETU.PAP       20
+FAGU.GRA       30  40
+POPU.TRE       10
+
+MapCode 144879
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 144881
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+
+MapCode 144888
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+PICE.RUB       10
+
+MapCode 144921
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 144922
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 144923
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+POPU.TRE       10
+TSUG.CAN       10
+
+MapCode 144924
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+POPU.TRE       10
+
+MapCode 144929
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 144931
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.GLA       10
+TSUG.CAN       10
+
+MapCode 144987
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.RUB       10
+POPU.TRE       10
+
+MapCode 144994
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.RUB       10
+TSUG.CAN       10
+
+MapCode 144995
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+PICE.RUB       10
+
+MapCode 145029
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145030
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145031
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+POPU.TRE       10
+TSUG.CAN       10
+
+MapCode 145032
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+POPU.TRE       10
+
+MapCode 145039
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+TSUG.CAN       10
+
+MapCode 145040
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+FAGU.GRA       10
+
+MapCode 145183
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+PINU.STR       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145189
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145194
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+
+MapCode 145215
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+
+MapCode 145235
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145236
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145238
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+
+MapCode 145240
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+
+MapCode 145242
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+
+MapCode 145277
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145278
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145280
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+
+MapCode 145283
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+THUJ.SPP.ALL       10
+
+MapCode 145285
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+
+MapCode 145326
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145327
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145334
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.RUB       10
+
+MapCode 145358
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145359
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145367
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+BETU.PAP       10
+
+MapCode 145505
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+POPU.TRE       10
+QUER.RUB       10
+TSUG.CAN       10
+
+MapCode 145508
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145509
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+POPU.TRE       10
+TSUG.CAN       10
+
+MapCode 145514
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145516
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+TSUG.CAN       10
+
+MapCode 145517
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+FAGU.GRA       10
+
+MapCode 145629
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145635
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.ALL       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 145902
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145905
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+
+MapCode 145920
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145922
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+
+MapCode 145954
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 145956
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.RUB       10
+POPU.TRE       10
+
+MapCode 146058
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+FAGU.GRA       10
+POPU.TRE       10
+
+MapCode 146067
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+LARI.LAR       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 146106
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 146107
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+
+MapCode 146117
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 146121
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+PICE.GLA       10
+THUJ.SPP.ALL       10
+TSUG.CAN       10
+
+MapCode 146122
+ABIE.BAL       10
+ACER.RUB       10
+ACER.SAH       10
+PICE.GLA       10
+THUJ.SPP.ALL       10
+
+MapCode 146283
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 146284
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+PICE.RUB       10
+POPU.TRE       10
+
+MapCode 146301
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+
+MapCode 146310
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 146313
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+
+MapCode 146323
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 146324
+ABIE.BAL       10
+ACER.RUB       10
+BETU.ALL       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+
+MapCode 146495
+ABIE.BAL       10
+ACER.RUB       10
+BETU.PAP       10
+LARI.LAR       10
+PICE.GLA       10
+PICE.MAR       10
+
+MapCode 146576
+ABIE.BAL       10
+ACER.RUB       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+THUJ.SPP.ALL       10
+
+MapCode 146597
+ABIE.BAL       10
+ACER.RUB       10
+BETU.PAP       10
+PICE.GLA       10
+POPU.TRE       10
+
+MapCode 146622
+ABIE.BAL       10
+ACER.RUB       10
+BETU.PAP       10
+PICE.MAR       10
+POPU.TRE       10
+
+MapCode 146625
+ABIE.BAL       10
+ACER.RUB       10
+BETU.PAP       10
+PICE.MAR       10
+
+MapCode 146716
+ABIE.BAL       10
+ACER.RUB       10
+PICE.GLA       10
+THUJ.SPP.ALL       10
+
+MapCode 146749
+ABIE.BAL       10
+ACER.RUB       10
+
+MapCode 146806
+ABIE.BAL       10
+ACER.SAH       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.RUB       10
+THUJ.SPP.ALL       10
+
+MapCode 146903
+ABIE.BAL       10
+BETU.PAP       10
+LARI.LAR       10
+PICE.MAR       10
+
+MapCode 146916
+ABIE.BAL       10
+BETU.PAP       10
+PICE.GLA       10
+PICE.MAR       10
+POPU.TRE       10
+THUJ.SPP.ALL       10
+
+MapCode 146946
+ABIE.BAL       10
+BETU.PAP       10
+PICE.MAR       10
+THUJ.SPP.ALL       10
+
+MapCode 148188
+ABIE.BAL       10  20  30
+ACER.RUB       30
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       10
+THUJ.SPP.ALL       40  50
+
+MapCode 150094
+ABIE.BAL       10  20  30
+ACER.RUB       30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       10
+THUJ.SPP.ALL       40  50
+
+MapCode 150597
+ABIE.BAL       10  20  30
+ACER.RUB       30  40
+BETU.PAP       10  20
+LARI.LAR       10  20
+PICE.MAR       20  30
+THUJ.SPP.ALL       50
+
+MapCode 151850
+ABIE.BAL       10  20  30
+ACER.RUB       20  30
+BETU.PAP       20
+LARI.LAR       20
+PICE.GLA       30
+PICE.MAR       20  30  40
+PICE.RUB       20  30
+
+MapCode 153511
+ABIE.BAL       10  20  30
+ACER.RUB       20  30  40
+BETU.ALL       40
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.MAR       20
+POPU.TRE       10  20
+
+MapCode 156936
+ABIE.BAL       10  20  30  50  60  70  80
+ACER.RUB       20  30  40  50  60  70  80  90  100
+ACER.SAH       30  40
+BETU.ALL       40  50  60  70
+BETU.PAP       10  20  40  80
+FAGU.GRA       20  30
+PICE.GLA       30
+PICE.MAR       20  30
+PICE.RUB       20  30  70
+POPU.TRE       10  20
+
+MapCode 158283
+ABIE.BAL       10  20  30  40
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       20  30
+POPU.TRE       20
+THUJ.SPP.ALL       30  40  50  60
+TSUG.CAN       50
+
+MapCode 158483
+ABIE.BAL       10  20  30  40
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+BETU.PAP       10  20
+PICE.GLA       20  30
+PICE.RUB       30
+POPU.TRE       20
+THUJ.SPP.ALL       30  40  50  60
+TSUG.CAN       50
+
+MapCode 164653
+ABIE.BAL       10  20  30  40  50  60
+ACER.RUB       30  40  50  60  70  80
+ACER.SAH       30
+BETU.PAP       10  20  90
+PICE.GLA       20
+PICE.MAR       20  30  40  50  60  80  90  100  110
+PICE.RUB       20
+PINU.STR       30
+THUJ.SPP.ALL       30  40  50  60  70  80  90  100  110  120  130  140  150
+
+MapCode 167461
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       30  40  80  90  100
+ACER.SAH       20  30  40  90
+BETU.ALL       40  50  60  70  80  90
+BETU.PAP       10  20  50  60  70
+FAGU.GRA       20  30
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       110
+
+MapCode 167714
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       30  40  50  60
+ACER.SAH       20  30  50  60  70
+BETU.ALL       60  70
+BETU.PAP       10  20
+FAGU.GRA       20  30  40
+POPU.TRE       10
+THUJ.SPP.ALL       50  70
+
+MapCode 168896
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       20  30  40  100
+BETU.ALL       20  60  70  80  90  100
+BETU.PAP       10  20  60  70  90
+FAGU.GRA       30
+PICE.GLA       20  30
+PICE.MAR       30
+PICE.RUB       30  140  150
+PINU.STR       20
+THUJ.SPP.ALL       40  50  110  120  130
+
+MapCode 169527
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       20  30  40  50  60  70  80
+BETU.ALL       60
+BETU.PAP       10  20
+PINU.STR       30
+POPU.TRE       10
+THUJ.SPP.ALL       30  40  50  80  90  110  120  130  160
+
+MapCode 169551
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       20  30  40  50  60  70  80
+BETU.ALL       50  60
+BETU.PAP       10  20
+PICE.GLA       30
+PICE.MAR       30
+PICE.RUB       20  30
+THUJ.SPP.ALL       30  40  50  80  90  110  120  130  160
+
+MapCode 169601
+ABIE.BAL       10  20  30  40  50  60  70
+ACER.RUB       20  30  40  50  60  70  80
+BETU.ALL       40  50  60
+BETU.PAP       10
+PICE.GLA       20  30
+PICE.RUB       20
+THUJ.SPP.ALL       30  40  50  80  90  110  120  130  160
+
+MapCode 175219
+ACER.RUB       40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+
+MapCode 175434
+ACER.RUB       30
+ACER.SAH       30
+BETU.PAP       10  20
+PICE.GLA       20  30
+POPU.TRE       10
+
+MapCode 175509
+ACER.RUB       30
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+PICE.RUB       30
+TSUG.CAN       50
+
+MapCode 175688
+ACER.RUB       30  40
+ACER.SAH       30
+BETU.PAP       20
+
+MapCode 175711
+ACER.RUB       30  40
+ACER.SAH       30
+PICE.GLA       20  30
+POPU.TRE       10
+
+MapCode 176105
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+LARI.LAR       20
+PICE.GLA       20  30
+PINU.STR       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 176117
+ACER.RUB       30  40
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+PICE.GLA       20  30
+PINU.STR       20  30
+POPU.TRE       10
+THUJ.SPP.ALL       40  50  60
+
+MapCode 176461
+ACER.RUB       30  40
+ACER.SAH       30  40
+POPU.TRE       10  20
+QUER.RUB       20
+THUJ.SPP.ALL       40  50
+
+MapCode 177764
+ACER.RUB       20  30  50  60
+ACER.SAH       20  30  40  50  60  70
+BETU.ALL       40  50  60  70  80
+FAGU.GRA       10  20  30  40  50  60
+PICE.RUB       30
+TSUG.CAN       50  90  110
+
+MapCode 178072
+ACER.RUB       10
+ACER.SAH       10
+BETU.PAP       10
+
+MapCode 178229
+ACER.SAH       30  40
+BETU.ALL       40  50  60
+FAGU.GRA       20  30  40
+
+MapCode 178294
+ACER.SAH       20  30  40  50  60  70  80  90
+BETU.ALL       60
+FAGU.GRA       30  40

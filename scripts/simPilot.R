@@ -22,7 +22,7 @@ foreach(i = 1:length(simDir)) %dopar% { # length(simDir)
     setwd(paste(wwd, simDir[i], sep ="/"))
     sink(file = "README.txt", append = T)
     
-    x <- as.character(shell("landis-extensions.cmd list", intern = T))
+    x <- as.character(shell("landis-ii-extensions.cmd list", intern = T))
     cat("\n")
     cat("#######################################################################\n")
     cat("########### Installed LANDIS-II extensions\n")
@@ -38,7 +38,7 @@ foreach(i = 1:length(simDir)) %dopar% { # length(simDir)
                     quote = F, col.names = F))
     sink()
     
-    shell("landis scenario.txt", wait = T)
+    shell("landis-ii-7.cmd scenario.txt", wait = T)
 }
 
 stopCluster(cl)
