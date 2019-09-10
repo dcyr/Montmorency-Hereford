@@ -23,7 +23,7 @@ CellLength  250 << meters
 >>   "Dynamic Fire System"  	fire-DFFS.txt
 
 >>   "Biomass Harvest"	        biomassHarvest.txt
->>   "Base Fire"		    	base-fire_v2.txt
+	"Base Fire"		    	base-fire.txt
 	"Base Wind"		    	base-wind.txt
 >>   "Base BDA"		    		BDA-input.txt
 >> DisturbancesRandomOrder  no  << optional parameter; default = no

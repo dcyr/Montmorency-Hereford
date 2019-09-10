@@ -32,14 +32,14 @@ inputDir <- inputPathLandis
 
 
 timestep <- 1
-expDesign <- list(scenario = "baseline",
-                  area = c("ForMont"),
-                  treatment = c("spinUp"),
+expDesign <- list(area = c("ForMont"),
+                  fire = c("baseline", "RCP45", "RCP85"),
+                  spinup = F,
                   nrep = 1)
 
 simInfo <- expand.grid(areaName = expDesign$area,
-                       scenario = expDesign$scenario, 
-                       treatment = expDesign$treatment,
+                       fire = expDesign$fire, 
+                       spinup = expDesign$spinup,
                        replicate = 1:expDesign$nrep)
 
 sID <- (1:nrow(simInfo))-1
@@ -51,7 +51,8 @@ for (i in 1:nrow(simInfo)) {
     
     simID <- as.character(simInfo[i,"simID"])
     areaName <- as.character(simInfo[i,"areaName"])
-    treatment <- as.character(simInfo[i,"treatment"])
+    fire <- as.character(simInfo[i,"fire"])
+    spinup <- simInfo[i,"spinup"]
     replicate <- as.character(simInfo[i,"replicate"])
     
     dir.create(simID)
@@ -132,6 +133,22 @@ for (i in 1:nrow(simInfo)) {
                          areaName, ".txt"),
                   paste0(simID, "/base-wind.txt"),
                   overwrite = T)
+        
+        ### Fire
+        file.copy(paste0(inputDir, "/base-fire_",
+                         areaName, "_", fire, ".txt"),
+                  paste0(simID, "/base-fire.txt"),
+                  overwrite = T)
+        for (y in c(0,10,40,70)) {
+            file.copy(paste0(inputDir, "/fire-regions_",
+                             areaName, "_", fire, "_", y, ".tif"),
+                      paste0(simID, "/fire-regions_",
+                             y, ".tif"),
+                      overwrite = T)
+        }
+        
+        
+        
         ###############################################
         ### scenario.txt
         file.copy(paste0(inputDir, "/scenario.txt"),
