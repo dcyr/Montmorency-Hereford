@@ -1,0 +1,85 @@
+################################################################################
+################################################################################
+### Preparation Forest Carbon Succession inputs
+### Dominic Cyr
+#############
+rm(list = ls())
+home <- path.expand("~")
+home <- gsub("/Documents", "", home) # necessary on my Windows machine
+setwd(paste(home, "Sync/Travail/ECCC/Landis-II/Montmorency-Hereford", sep ="/"))
+wwd <- paste(getwd(), Sys.Date(), sep = "/")
+dir.create(wwd)
+setwd(wwd)
+rm(wwd)
+require(raster)
+require(sp)
+require(rgdal)
+require(ggplot2)
+require(broom)
+require(dplyr)
+require(maptools)
+require(RCurl)
+
+
+################################################################################
+### script path
+scriptPath <- paste(home, "Sync/Travail/ECCC/CBM/CBMtoLANDIS/scripts", sep = "/")
+### input paths (CBM)
+inputPathGIS <- paste(home, "Sync/Travail/ECCC/GIS", sep = "/")
+inputPathAIDB <- paste(home, "Sync/Travail/ECCC/CBM/AIDB", sep = "/")
+inputPathSPU <- paste(home, "Sync/Travail/ECCC/CBM/spatial", sep = "/")
+### input path (LANDIS)
+inputPathLandis <- "../inputsLandis"
+
+aidbURL <- inputPathAIDB
+spuURL <- inputPathSPU
+################################################################################
+#### Sourcing scripts
+source(paste(scriptPath, "CBMtoLANDIS_fnc.R", sep = "/"))
+source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
+
+################################################################################
+landisInputs <- list.files(inputPathLandis)
+### experiment specifics
+area <- "ForMont"
+scenario <- NULL
+spinup <- F
+
+
+################################################################################
+# might want to create loops here, or a function
+
+
+### fetch species.txt
+species <- landisInputs[grep("species", landisInputs)]
+species <- species[grep(area, species)]
+species <- read.table(paste(inputPathLandis, species, sep = "/"),
+                      skip = 1, comment.char = ">")
+### fetching landtypes
+landtypes <- landisInputs[grep("landtypes", landisInputs)]
+landtypes <- landtypes[grep(area, landtypes)]
+landtypes_AT <- landtypes[grep("txt", landtypes)]
+landtypes_AT <- read.table(paste(inputPathLandis, landtypes_AT, sep = "/"),
+                           skip = 1, comment.char = ">")
+landtypes <- landtypes[grep("tif", landtypes)]
+landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
+
+landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
+
+### fetching succession extensions inputs and template
+if(Sys.info()["sysname"] == "Windows") {
+    bsMainInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
+    bsDynInput <-  "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
+    forCSInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+    
+} else {
+    bsMainInput <- "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
+    bsDynInput <-  "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
+    forCSInput <- "~/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+}
+
+
+
+
+### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
+initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT, climate = F)
