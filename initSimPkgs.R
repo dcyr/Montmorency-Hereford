@@ -22,7 +22,9 @@ rm(wwd)
 
 ### input path (LANDIS)
 inputPathLandis <- "../inputsLandis"
+inputPathScripts <- "../scripts"
 spinup = F
+source("../scripts/initBaseHarvest_fnc.R")
 
 ### Generates simulation packages for LANDIS-II 
 #############
@@ -32,13 +34,16 @@ inputDir <- inputPathLandis
 
 
 timestep <- 1
+
 expDesign <- list(area = c("ForMont"),
                   fire = c("baseline", "RCP45", "RCP85"),
+                  harvest = c("0", "1", "2.1"),
                   spinup = F,
-                  nrep = 1)
+                  nrep = 5)
 
 simInfo <- expand.grid(areaName = expDesign$area,
-                       fire = expDesign$fire, 
+                       fire = expDesign$fire,
+                       harvest = expDesign$harvest,
                        spinup = expDesign$spinup,
                        replicate = 1:expDesign$nrep)
 
@@ -52,6 +57,7 @@ for (i in 1:nrow(simInfo)) {
     simID <- as.character(simInfo[i,"simID"])
     areaName <- as.character(simInfo[i,"areaName"])
     fire <- as.character(simInfo[i,"fire"])
+    harvest <- as.character(simInfo[i,"harvest"])
     spinup <- simInfo[i,"spinup"]
     replicate <- as.character(simInfo[i,"replicate"])
     
@@ -111,23 +117,22 @@ for (i in 1:nrow(simInfo)) {
     ### Disturbances
     if(!spinup) {
         # ### Harvesting
-        # # stand map
-        # file.copy(paste0(inputDir, "/stand-map_",
-        #                  areaName, ".tif"),
-        #           paste0(simID, "/stand-map.tif"),
-        #           overwrite = T)
-        # # management areas
-        # file.copy(paste0(inputDir, "/management-areas_",
-        #                  areaName, ".tif"),
-        #           paste0(simID, "/management-areas.tif"),
-        #           overwrite = T)
-        # 
-        # # base-harvest.txt
-        # file.copy(paste0(inputDir, "/base-harvest_",
-        #                  areaName, "_", treatment, "_", timestep, "yrTS.txt"),
-        #           paste0(simID, "/base-harvest.txt"),
-        #           overwrite = T)
+        # stand map
+        file.copy(paste0(inputDir, "/stand-map_",
+                         areaName, ".tif"),
+                  paste0(simID, "/stand-map.tif"),
+                  overwrite = T)
+        # management areas
+        file.copy(paste0(inputDir, "/mgmt-areas_",
+                         areaName, "_", harvest, ".tif"),
+                  paste0(simID, "/mgmt-areas.tif"),
+                  overwrite = T)
+        # base-harvest.txt
+        input <- paste0(inputDir, "/biomass-harvest_",
+                                      areaName, "_", harvest, ".txt")
+        initBaseHarvest(input, writeToFile = paste0(simID, "/base-harvest.txt"))
         
+      
         ### Wind
         file.copy(paste0(inputDir, "/base-wind_",
                          areaName, ".txt"),

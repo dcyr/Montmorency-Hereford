@@ -17,15 +17,10 @@ CellLength  250 << meters
 
 >> Disturbance Extensions   Initialization File
 >> ----------------------   -------------------
->>   "Base Harvest"	        	base-harvest.txt
-
->>   "Dynamic Fuel System"    	fuels-DFFS.txt
->>   "Dynamic Fire System"  	fire-DFFS.txt
-
->>   "Biomass Harvest"	        biomassHarvest.txt
+	"Base Harvest"	        base-harvest.txt
 	"Base Fire"		    	base-fire.txt
 	"Base Wind"		    	base-wind.txt
->>   "Base BDA"		    		BDA-input.txt
+>> "Base BDA"		    		BDA-input.txt
 >> DisturbancesRandomOrder  no  << optional parameter; default = no
 
 

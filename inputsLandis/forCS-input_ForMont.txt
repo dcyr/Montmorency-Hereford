@@ -17,7 +17,7 @@ ForCSOutput
 >>	Output interval
 >>	Biomass		DOM Pools	Flux	Summary
 >>  -------     ---------   ----	-------
-1	1	1	1
+5	5	1	1
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -3428,6 +3428,8 @@ DisturbOtherTransferDOM
 >> 3. Other wood
 >> 5. Coarse Root
 >> 6. Fine Root
+harvest	8	0	1	0
+harvest	9	0	1	0
 wind	8	0	1	0
 wind	9	0	1	0
 
@@ -3475,6 +3477,11 @@ DisturbOtherTransferBiomass
 >>  Disturbance     From        To      To      To
 >>  Type            Biomass     Air     FPS     DOM
 >>  -----------     -------     ----    -----   -----
+harvest	1	0	0.97	0.03
+harvest	2	0	0	1
+harvest	3	0	0	1
+harvest	5	0	0	1
+harvest	6	0	0	1
 wind	1	0	0	1
 wind	2	0	0	1
 wind	3	0	0	1
