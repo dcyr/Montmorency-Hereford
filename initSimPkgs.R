@@ -52,7 +52,16 @@ simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),
                       simInfo)
 
-for (i in 1:nrow(simInfo)) {
+
+require(parallel)
+require(doSNOW)
+n <- floor(detectCores() * 0.5)
+
+# #######
+cl = makeCluster(n, outfile = "") ## 
+registerDoSNOW(cl)
+
+foreach(i = 1:nrow(simInfo)) %dopar% { 
     
     simID <- as.character(simInfo[i,"simID"])
     areaName <- as.character(simInfo[i,"areaName"])
@@ -152,6 +161,14 @@ for (i in 1:nrow(simInfo)) {
                       overwrite = T)
         }
         
+        ### BDA - Budworm
+        file.copy(paste0(inputDir, "/base-bda.txt"),
+                  paste0(simID),
+                  overwrite = T)
+        file.copy(paste0(inputDir, "/base-bda_budworm.txt"),
+                  paste0(simID, "/base-bda_budworm.txt"),
+                  overwrite = T)
+        
         
         
         ###############################################
@@ -178,6 +195,7 @@ for (i in 1:nrow(simInfo)) {
                 quote = F, col.names = F)
     
 }
+stopCluster(cl)
 
 write.csv(simInfo, file = "simInfo.csv", row.names = F)
 
