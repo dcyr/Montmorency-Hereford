@@ -1,6 +1,6 @@
-# df <- DOMPool_fetch(x = "C:/Users/cyrdo/Desktop/2019-09-06/0/log_Pools.csv",
-#               ltTxt = "C:/Users/cyrdo/Desktop/2019-09-06/0/landtypes.txt")
-# write.csv(df, file = "DOM-initPools_ForMont.csv", row.names = F)
+# df <- DOMPool_fetch(x = "C:/Users/cyrdo/Desktop/2019-09-17/0/log_Pools.csv",
+#               ltTxt = "C:/Users/cyrdo/Desktop/2019-09-17/0/landtypes.txt")
+# write.csv(df, file = "DOM-initPools_Hereford.csv", row.names = F)
 
 DOMPool_fetch <- function(x = "log_Pools.csv",
                           ltTxt = "landtypes.txt") {
@@ -17,7 +17,7 @@ DOMPool_fetch <- function(x = "log_Pools.csv",
                   
     
     lt <- read.table(ltTxt, skip = 1, comment.char = ">")
-    lt <- landtypes_AT[which(landtypes_AT$V1 %in% c("yes", "y", "Yes","Y", 1)),2]
+    lt <- lt[which(lt$V1 %in% c("yes", "y", "Yes","Y", 1)),2]
     lt <- data.frame(landtypeName = lt,
                      landtype = 1:length(lt)) %>%
         slice(rep(row_number(), length(domNames))) %>%

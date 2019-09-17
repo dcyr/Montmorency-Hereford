@@ -41,9 +41,10 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
 ################################################################################
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
-area <- "ForMont"
-scenario <- NULL
+scenario <- c("baseline", "RCP45", "RCP85")
+area <-  c("Hereford")#, "Hereford")
 spinup <- F
+climate <- F
 
 
 ################################################################################
@@ -66,20 +67,31 @@ landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
 
 landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
 
-### fetching succession extensions inputs and template
-if(Sys.info()["sysname"] == "Windows") {
-    bsMainInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
-    bsDynInput <-  "C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
-    forCSInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
-    
-} else {
-    bsMainInput <- "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_ForMont_baseline.txt"
-    bsDynInput <-  "~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_ForMont_baseline_BiasCorrected.txt"
-    forCSInput <- "~/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+
+
+for(a in area) {
+    for(s in scenario) {
+        
+        ### fetching succession extensions inputs and template
+        if(Sys.info()["sysname"] == "Windows") {
+            bsMainInput <- paste0("C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
+                                  a,"_", s, ".txt")
+            bsDynInput <-  paste0("C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
+                                  a, "_", s, "_BiasCorrected.txt")
+            forCSInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+            
+        } else {
+            bsMainInput <- paste0("~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
+                                  a,"_", s, ".txt")
+            bsDynInput <-  paste0("~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
+                                  a, "_", s, "_BiasCorrected.txt")
+            forCSInput <- "~/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+        }
+        
+        ### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
+        initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT,
+                  spinup = spinup,
+                  climate = climate)
+    }
 }
 
-
-
-
-### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
-initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT, climate = F)

@@ -35,16 +35,23 @@ inputDir <- inputPathLandis
 
 timestep <- 1
 
+
 expDesign <- list(#area = c("ForMont", "Hereford"),
-                  scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(ForMont = c("0",
-                                          "1",
-                                          "2.1", "2.2", "2.3",
-                                          "3.1", "3.2", "3.3",
-                                          "4.1", "4.2", "4.3"),
-                              Hereford = c("1", "2", "3", "4")),
-                  spinup = F,
-                  nrep = 1)
+  scenario = c("baseline"),
+  mgmt = list(Hereford = c("1")),
+  spinup = T,
+  nrep = 1)
+
+# expDesign <- list(#area = c("ForMont", "Hereford"),
+#                   scenario = c("baseline", "RCP45", "RCP85"),
+#                   mgmt = list(ForMont = c("0",
+#                                           "1",
+#                                           "2.1", "2.2", "2.3",
+#                                           "3.1", "3.2", "3.3",
+#                                           "4.1", "4.2", "4.3"),
+#                               Hereford = c("1", "2", "3", "4")),
+#                   spinup = F,
+#                   nrep = 1)
 
 simInfo <- list()
 for (a in names(expDesign$mgmt)) {
@@ -74,8 +81,8 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     
     simID <- as.character(simInfo[i,"simID"])
     areaName <- as.character(simInfo[i,"areaName"])
-    fire <- as.character(simInfo[i,"fire"])
-    harvest <- as.character(simInfo[i,"harvest"])
+    scenario <- as.character(simInfo[i,"scenario"])
+    mgmt <- as.character(simInfo[i,"mgmt"])
     spinup <- simInfo[i,"spinup"]
     replicate <- as.character(simInfo[i,"replicate"])
     
@@ -124,7 +131,7 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     
     # Climate inputs
     file.copy(paste0(inputDir, "/forCS-climate_",
-                     areaName, ".txt"),
+                     areaName, "_", scenario, ".txt"),
               paste0(simID, "/forCS-climate.txt"),
               overwrite = T)
     # Biomass succession
@@ -142,12 +149,12 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
                   overwrite = T)
         # management areas
         file.copy(paste0(inputDir, "/mgmt-areas_",
-                         areaName, "_", harvest, ".tif"),
+                         areaName, "_", mgmt, ".tif"),
                   paste0(simID, "/mgmt-areas.tif"),
                   overwrite = T)
         # base-harvest.txt
         input <- paste0(inputDir, "/biomass-harvest_",
-                                      areaName, "_", harvest, ".txt")
+                                      areaName, "_", mgmt, ".txt")
         initBaseHarvest(input, writeToFile = paste0(simID, "/base-harvest.txt"))
         
       
@@ -159,12 +166,12 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
         
         ### Fire
         file.copy(paste0(inputDir, "/base-fire_",
-                         areaName, "_", fire, ".txt"),
+                         areaName, "_", scenario, ".txt"),
                   paste0(simID, "/base-fire.txt"),
                   overwrite = T)
         for (y in c(0,10,40,70)) {
             file.copy(paste0(inputDir, "/fire-regions_",
-                             areaName, "_", fire, "_", y, ".tif"),
+                             areaName, "_", scenario, "_", y, ".tif"),
                       paste0(simID, "/fire-regions_",
                              y, ".tif"),
                       overwrite = T)
