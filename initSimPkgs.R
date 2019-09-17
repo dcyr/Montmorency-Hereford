@@ -35,15 +35,20 @@ inputDir <- inputPathLandis
 
 timestep <- 1
 
-expDesign <- list(area = c("ForMont"),
-                  fire = c("baseline", "RCP45", "RCP85"),
-                  harvest = c("0", "1", "2.1"),
+expDesign <- list(area = c("ForMont", "Hereford"),
+                  fire = c("baseline", "RCP85"),
+                  harvest = c(ForMont = c("0",
+                                          "1",
+                                          "2.1", "2.2", "2.3",
+                                          "3.1", "3.2", "3.3",
+                                          "4.1", "4.2", "4.3"),
+                              Hereford = c("1", "2", "3", "4")),
                   spinup = F,
-                  nrep = 5)
+                  nrep = 1)
 
 simInfo <- expand.grid(areaName = expDesign$area,
                        fire = expDesign$fire,
-                       harvest = expDesign$harvest,
+                       #harvest = expDesign$harvest,
                        spinup = expDesign$spinup,
                        replicate = 1:expDesign$nrep)
 
