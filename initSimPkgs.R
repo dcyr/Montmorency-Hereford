@@ -29,15 +29,15 @@ source("../scripts/initBaseHarvest_fnc.R")
 ### Generates simulation packages for LANDIS-II 
 #############
 require(stringr)
-
+require(dplyr)
 inputDir <- inputPathLandis
 
 
 timestep <- 1
 
-expDesign <- list(area = c("ForMont", "Hereford"),
-                  fire = c("baseline", "RCP85"),
-                  harvest = c(ForMont = c("0",
+expDesign <- list(#area = c("ForMont", "Hereford"),
+                  scenario = c("baseline", "RCP45", "RCP85"),
+                  mgmt = list(ForMont = c("0",
                                           "1",
                                           "2.1", "2.2", "2.3",
                                           "3.1", "3.2", "3.3",
@@ -46,17 +46,21 @@ expDesign <- list(area = c("ForMont", "Hereford"),
                   spinup = F,
                   nrep = 1)
 
-simInfo <- expand.grid(areaName = expDesign$area,
-                       fire = expDesign$fire,
-                       #harvest = expDesign$harvest,
-                       spinup = expDesign$spinup,
-                       replicate = 1:expDesign$nrep)
-
+simInfo <- list()
+for (a in names(expDesign$mgmt)) {
+  simInfo[[a]] <- expand.grid(areaName = a,
+                              scenario = expDesign$scenario,
+                              mgmt = expDesign$mgmt[[a]],
+                              spinup = expDesign$spinup,
+                              replicate = 1:expDesign$nrep)
+  
+}
+simInfo <- do.call("rbind", simInfo)
 sID <- (1:nrow(simInfo))-1
 simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),
                       simInfo)
-
+row.names(simInfo) <- 1:nrow(simInfo)
 
 require(parallel)
 require(doSNOW)
