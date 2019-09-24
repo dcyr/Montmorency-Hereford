@@ -5,12 +5,12 @@
 ### Dominic Cyr
 #############
 
-# input <- paste(inputPathLandis, "harvestScenario_ForMont_Scenario0Harvest.txt", sep = "/")
+# input <- paste(inputPathLandis, "biomass-harvest_Hereford_1.txt", sep = "/")
 # timestepOutput = 1
 # harvestExtensionOut <- "Base Harvest" ## either 'Base Harvest' or ,Biomass Harvest'
 # writeToFile = "base-harvest.txt"
 # 
-# initBaseHarvest(input = paste(inputPathLandis, "harvestScenario_ForMont_Scenario0Harvest.txt", sep = "/"),
+# initBaseHarvest(input = paste(inputPathLandis, "biomass-harvest_Hereford_1.txt", sep = "/"),
 #                 writeToFile = T)
 
 initBaseHarvest <-  function(input,
@@ -18,6 +18,7 @@ initBaseHarvest <-  function(input,
                              writeToFile = T) {
 
 
+    
     if(is.logical(writeToFile)) {
         if(writeToFile) {
             outFile <- "base-harvest.txt"
@@ -35,7 +36,7 @@ initBaseHarvest <-  function(input,
 
     valueSingleFlags <- grep(paste(valuesSingleAll, collapse = "|"), x)
     prescriptFlags <- grep("Prescription ", x)
-    HarvestImplFlags <- grep("HarvestImplementations ", x)
+    HarvestImplFlags <- grep("HarvestImplementations", x)
     
     
     flagsAll <- c(valueSingleFlags, prescriptFlags, HarvestImplFlags)
@@ -150,30 +151,34 @@ initBaseHarvest <-  function(input,
         if(grepl("CohortsRemoved", tmp)) {
             flag <- T
         }
+        if(grepl("Plant", tmp)) {
+            flag <- F
+        }
         if(flag) {
-            if(grepl("%",tmp)) {
-                sp <- strsplit(tmp, " ")[[1]][1]
-                target <-  strsplit(tmp, " ")[[1]][2]
-                ageClass <- strsplit(target, "\\(")[[1]][1]
-                prop <- strsplit(target, "\\(")[[1]][2]
-                prop <-as.numeric(gsub("%)", "", prop))
-                if(prop == 100) {
-                    tmp <- paste(sp, ageClass)
-                } else {
-                    if(prop>50) {
-                        stop("Don't know what to do when we want to harvest > 50% but less than 100%")
+            if(substr(tmp, 1, 1) != ">") {
+                if(grepl("%",tmp)) {
+                    sp <- strsplit(tmp, " ")[[1]][1]
+                    target <-  strsplit(tmp, " ")[[1]][2]
+                    ageClass <- strsplit(target, "\\(")[[1]][1]
+                    prop <- strsplit(target, "\\(")[[1]][2]
+                    prop <-as.numeric(gsub("%)", "", prop))
+                    if(prop == 100) {
+                        tmp <- paste(sp, ageClass)
+                    } else {
+                        if(prop>50) {
+                            stop("Don't know what to do when we want to harvest > 50% but less than 100%")
+                        }
+                        tmp <- paste0(sp, " 1/", floor(100/prop))
                     }
-                    tmp <- paste0(sp, " 1/", floor(100/prop))
-                }
-               
+                    
+                } 
             }
-            
         }
         
         if(grepl("Prescription", tmp)) {
             cat(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
         }
-        if(grepl("MinimumTimeSinceLastHarvest|StandRanking|SiteSelection|CohortsRemoved", tmp)) {
+        if(grepl("MinimumTimeSinceLastHarvest|StandRanking|SiteSelection|CohortsRemoved|Plant", tmp)) {
             cat(">>>>>>>>>>>>>>>>>>>>\n")
         }
         cat(paste0(tmp, "\n"))

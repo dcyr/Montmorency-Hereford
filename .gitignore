@@ -8,5 +8,6 @@ test
 *~
 *.rds
 *.html
-wc5
+wc*
+documentation
 

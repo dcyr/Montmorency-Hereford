@@ -1,5 +1,7 @@
 #rm(list =ls())
 # wwd <- setwd("D:/Landis_ForCS_test")
+# wwd <- "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2019-09-24"
+# setwd(wwd)
 wwd <- getwd()
 
 simInfo <- read.csv("simInfo.csv", colClasses = c(simID = "character"))
@@ -18,11 +20,24 @@ foreach(i = 1:length(simDir)) %dopar% { # length(simDir)
     #     ### trying to access the same file at the same time (if necessary)
     #     Sys.sleep(runif(1)*2)
     # }
+
+    setwd(paste(wwd, simInfo[i, "simID"], sep = "/"))
     
-    setwd(paste(wwd, simDir[i], sep ="/"))
-    sink(file = "README.txt", append = T)
+    readmeOld <- readLines("README.txt")
+    readmeOld <- readmeOld[1:which(grepl(tail(colnames(simInfo), 1), readmeOld))]
     
     x <- as.character(shell("landis-ii-extensions.cmd list", intern = T))
+    
+    sink(file = "README.txt")
+    
+    for(l in seq_along(readmeOld)) {
+        cat(readmeOld[l])
+        cat("\n") 
+    }
+    
+    sink()
+    
+    sink(file = "README.txt", append = T)
     cat("\n")
     cat("#######################################################################\n")
     cat("########### Installed LANDIS-II extensions\n")

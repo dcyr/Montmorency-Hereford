@@ -42,7 +42,7 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
 scenario <- c("baseline", "RCP45", "RCP85")
-area <-  c("Hereford")#, "Hereford")
+area <-  c("Hereford", "ForMont")
 spinup <- F
 climate <- F
 
@@ -50,35 +50,33 @@ climate <- F
 ################################################################################
 # might want to create loops here, or a function
 
-
-### fetch species.txt
-species <- landisInputs[grep("species", landisInputs)]
-species <- species[grep(area, species)]
-species <- read.table(paste(inputPathLandis, species, sep = "/"),
-                      skip = 1, comment.char = ">")
-### fetching landtypes
-landtypes <- landisInputs[grep("landtypes", landisInputs)]
-landtypes <- landtypes[grep(area, landtypes)]
-landtypes_AT <- landtypes[grep("txt", landtypes)]
-landtypes_AT <- read.table(paste(inputPathLandis, landtypes_AT, sep = "/"),
-                           skip = 1, comment.char = ">")
-landtypes <- landtypes[grep("tif", landtypes)]
-landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
-
-landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
-
-
-
 for(a in area) {
+        
+    ### fetch species.txt
+    species <- landisInputs[grep("species", landisInputs)]
+    species <- species[grep(a, species)]
+    species <- read.table(paste(inputPathLandis, species, sep = "/"),
+                          skip = 1, comment.char = ">")
+    ### fetching landtypes
+    landtypes <- landisInputs[grep("landtypes", landisInputs)]
+    landtypes <- landtypes[grep(a, landtypes)]
+    landtypes_AT <- landtypes[grep("txt", landtypes)]
+    landtypes_AT <- read.table(paste(inputPathLandis, landtypes_AT, sep = "/"),
+                               skip = 1, comment.char = ">")
+    landtypes <- landtypes[grep("tif", landtypes)]
+    landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
+    
+    landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
+
     for(s in scenario) {
         
         ### fetching succession extensions inputs and template
         if(Sys.info()["sysname"] == "Windows") {
-            bsMainInput <- paste0("C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
+            bsMainInput <- paste0(home, "/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
                                   a,"_", s, ".txt")
-            bsDynInput <-  paste0("C:/Users/cyrdo/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
+            bsDynInput <-  paste0(home, "/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
                                   a, "_", s, "_BiasCorrected.txt")
-            forCSInput <- "C:/Users/cyrdo/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
+            forCSInput <- paste0(home, "/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt")
             
         } else {
             bsMainInput <- paste0("~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
@@ -91,7 +89,8 @@ for(a in area) {
         ### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
         initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT,
                   spinup = spinup,
-                  climate = climate)
+                  climate = climate,
+                  scenario = s)
     }
 }
 

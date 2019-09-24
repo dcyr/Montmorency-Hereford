@@ -36,22 +36,24 @@ inputDir <- inputPathLandis
 timestep <- 1
 
 
-expDesign <- list(#area = c("ForMont", "Hereford"),
-  scenario = c("baseline"),
-  mgmt = list(Hereford = c("1")),
-  spinup = T,
-  nrep = 1)
-
 # expDesign <- list(#area = c("ForMont", "Hereford"),
-#                   scenario = c("baseline", "RCP45", "RCP85"),
-#                   mgmt = list(ForMont = c("0",
-#                                           "1",
-#                                           "2.1", "2.2", "2.3",
-#                                           "3.1", "3.2", "3.3",
-#                                           "4.1", "4.2", "4.3"),
-#                               Hereford = c("1", "2", "3", "4")),
-#                   spinup = F,
-#                   nrep = 1)
+#   scenario = c("baseline", "RCP45", "RCP85"),
+#   mgmt = list(ForMont = c(),
+#     Hereford = c("1")),
+#   spinup = T,
+#   nrep = 1)
+
+expDesign <- list(#area = c("ForMont", "Hereford"),
+                  scenario = c("baseline", "RCP85"),
+                  mgmt = list(Hereford = c("1", "2", "3", "4"),
+                              ForMont = c("0",
+                                          "1")#,
+                                          # "2.1", #"2.2", "2.3",
+                                          # "3.1", #"3.2", "3.3",
+                                          # "4.1")#, "4.2", "4.3"),
+                              ),
+                  spinup = F,
+                  nrep = 1)
 
 simInfo <- list()
 for (a in names(expDesign$mgmt)) {
@@ -123,7 +125,7 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
                   overwrite = T)
     } else {
         file.copy(paste0(inputDir, "/forCS-input_",
-                         areaName, ".txt"),
+                         areaName,"_", scenario, ".txt"),
                   paste0(simID, "/forCS-input.txt"),
                   overwrite = T)
     }
