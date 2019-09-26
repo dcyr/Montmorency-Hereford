@@ -43,17 +43,31 @@ timestep <- 1
 #   spinup = T,
 #   nrep = 1)
 
+
+### 2019-09-25
 expDesign <- list(#area = c("ForMont", "Hereford"),
-                  scenario = c("baseline", "RCP85"),
+                  scenario = c("baseline", "RCP45", "RCP85"),
                   mgmt = list(Hereford = c("1", "2", "3", "4"),
                               ForMont = c("0",
-                                          "1")#,
-                                          # "2.1", #"2.2", "2.3",
-                                          # "3.1", #"3.2", "3.3",
-                                          # "4.1")#, "4.2", "4.3"),
-                              ),
+                                          "1",
+                                          "2.1", "2.2", "2.3",
+                                          "3.1", "3.2", "3.3",
+                                          "4.1", "4.2", "4.3")),
                   spinup = F,
-                  nrep = 1)
+                  rep = 1:2)
+
+# ### 2019-09-24
+# expDesign <- list(#area = c("ForMont", "Hereford"),
+#                   scenario = c("baseline", "RCP85"),
+#                   mgmt = list(Hereford = c("1", "2", "3", "4"),
+#                               ForMont = c("0",
+#                                           "1")#,
+#                                           # "2.1", #"2.2", "2.3",
+#                                           # "3.1", #"3.2", "3.3",
+#                                           # "4.1")#, "4.2", "4.3"),
+#                               ),
+#                   spinup = F,
+#                   nrep = 1)
 
 simInfo <- list()
 for (a in names(expDesign$mgmt)) {
@@ -61,7 +75,7 @@ for (a in names(expDesign$mgmt)) {
                               scenario = expDesign$scenario,
                               mgmt = expDesign$mgmt[[a]],
                               spinup = expDesign$spinup,
-                              replicate = 1:expDesign$nrep)
+                              replicate = expDesign$rep)
   
 }
 simInfo <- do.call("rbind", simInfo)

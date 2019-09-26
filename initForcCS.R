@@ -23,7 +23,7 @@ require(RCurl)
 
 ################################################################################
 ### script path
-scriptPath <- paste(home, "Sync/Travail/ECCC/CBM/CBMtoLANDIS/scripts", sep = "/")
+scriptPath <- paste("../scripts", sep = "/")
 ### input paths (CBM)
 inputPathGIS <- paste(home, "Sync/Travail/ECCC/GIS", sep = "/")
 inputPathAIDB <- paste(home, "Sync/Travail/ECCC/CBM/AIDB", sep = "/")
@@ -71,21 +71,13 @@ for(a in area) {
     for(s in scenario) {
         
         ### fetching succession extensions inputs and template
-        if(Sys.info()["sysname"] == "Windows") {
-            bsMainInput <- paste0(home, "/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
-                                  a,"_", s, ".txt")
-            bsDynInput <-  paste0(home, "/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
-                                  a, "_", s, "_BiasCorrected.txt")
-            forCSInput <- paste0(home, "/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt")
+        bsMainInput <- paste0("../inputsLandis/biomass-succession-main-inputs_",
+                              a,"_", s, ".txt")
+        bsDynInput <-  paste0("../inputsLandis/biomass-succession-dynamic-inputs_",
+                              a, "_", s, "_BiasCorrected.txt")
+        forCSInput <- paste0("../inputsLandis/forCS-input_template.txt")
             
-        } else {
-            bsMainInput <- paste0("~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-main-inputs_",
-                                  a,"_", s, ".txt")
-            bsDynInput <-  paste0("~/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/inputsLandis/biomass-succession-dynamic-inputs_",
-                                  a, "_", s, "_BiasCorrected.txt")
-            forCSInput <- "~/Sync/Travail/ECCC/CBM/CBMtoLANDIS/templates/CFORC-succession.txt"
-        }
-        
+
         ### Preparing 'forCS-input.txt' and 'forCS-climate.txt'
         initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT,
                   spinup = spinup,
