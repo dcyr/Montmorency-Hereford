@@ -361,7 +361,7 @@ POPU.TRE 1-999(100%)
 QUER.RUB 1-999(100%)
 THUJ.SPP.ALL 1-999(100%)
 TSUG.CAN 1-999(100%)
-Plant PICE.MAR
+plant PICE.MAR
 
 Prescription 40000_CPI 
 StandRanking Economic 
