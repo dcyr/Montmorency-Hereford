@@ -54,7 +54,7 @@ expDesign <- list(#area = c("ForMont", "Hereford"),
                                           "3.1", "3.2", "3.3",
                                           "4.1", "4.2", "4.3")),
                   spinup = F,
-                  rep = 1:2)
+                  rep = 1:3)
 
 # ### 2019-09-24
 # expDesign <- list(#area = c("ForMont", "Hereford"),
@@ -78,7 +78,9 @@ for (a in names(expDesign$mgmt)) {
                               replicate = expDesign$rep)
   
 }
-simInfo <- do.call("rbind", simInfo)
+simInfo <- do.call("rbind", simInfo) %>%
+  arrange(replicate)
+
 sID <- (1:nrow(simInfo))-1
 simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),

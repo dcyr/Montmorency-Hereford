@@ -10,4 +10,5 @@ test
 *.html
 wc*
 documentation
-
+*agbTotal_*
+*ageMax_*
