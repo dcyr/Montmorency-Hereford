@@ -24,11 +24,14 @@ This repository contains input files, documentation and compiled simulation outp
 
 ![](figures/pools_Summary_Hereford.png)
 
-  
+-----------  
+
+
    
 ![](figures/fluxes_Summary.png)
 
-  
+-----------  
+
 
 ![](figures/Tmean_Estrie.png)
 
