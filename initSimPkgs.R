@@ -33,7 +33,7 @@ require(dplyr)
 inputDir <- inputPathLandis
 
 
-timestep <- 1
+#timestep <- 1
 
 
 # expDesign <- list(#area = c("ForMont", "Hereford"),
