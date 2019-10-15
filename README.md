@@ -32,6 +32,7 @@ This repository contains input files, documentation and compiled simulation outp
 
 -----------  
 
+### Projected mean temperature - Forêt Hereford
 
 ![](figures/Tmean_Estrie.png)
 
