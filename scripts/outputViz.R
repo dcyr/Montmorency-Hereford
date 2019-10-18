@@ -15,7 +15,15 @@ unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
 # outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
 a <- "Hereford"
 outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
+### rename mgmt scenario...
+mgmtLevels <- c("1" = "Intensif",
+                "3" = "Servitude",
+                "4" = "Nouveau zonage",
+                "2" = "Conservation")
 
+outputSummary$mgmtScenario <- factor(mgmtLevels[as.character(outputSummary$mgmtScenario)],
+                                     levels = mgmtLevels)
+fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
 
 require(ggplot2)
 require(dplyr)
@@ -24,7 +32,7 @@ require(tidyr)
 ### pools
 df <- outputSummary %>%
     filter(Time >=1,
-           #scenario == "baseline",
+           mgmtID >= 10000,
            #tenure == "PrivÃ©",
            variable %in% c("ABio",  "BBio", "TotalDOM")) %>%
     group_by(areaName, scenario, mgmtScenario, mgmtID, Time, variable) %>%
@@ -36,8 +44,6 @@ df <- outputSummary %>%
     mutate(value = valueTotal/mgmtArea_ha)
     
     
-
-
 png(filename= paste0("pools_Summary_", a, ".png"),
     width = 7, height = 5, units = "in", res = 600, pointsize=10)
 
@@ -46,7 +52,7 @@ ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
               colour = as.factor(mgmtScenario))) +
     theme_dark() +
     facet_grid(variable ~ scenario, scale = "free_y") +
-    scale_color_manual(name = "Scénario\nd'aménagement",
+    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
                        values = c("red", "lightblue", "orange", "green"))+
     #facet_wrap(~ variable  ) +
     geom_line() +
@@ -121,7 +127,7 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
     geom_hline(yintercept = 0, linetype = 1, color = "grey35", size = 0.35) +
     #stat_summary(fun.y="mean", geom="area", position = "stack") +
     geom_line() +
-    scale_color_manual(name = "Scénario\nd'aménagement",
+    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
                        values = c("red", "lightblue", "orange", "green"))+
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of global fluxes",
@@ -139,79 +145,50 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
 
 dev.off()
 
-# 
-# ### focus on NEP (with firewood harvesting minus without firewood harvesting)
-# 
-# ### fluxes
-# df <- outputSummaryLandscape %>%
-#     filter(tenure == "Privé",
-#            Time >=5,
-#            variable %in% c("NEP", "NBP"),
-#            treatment %in% c("firewoodSinglePass", "noFirewood"))
-# 
-# dfArea <- distinct(df[, c("MRC", "tenure", "area_ha")])
-# 
-# dfFW <- df %>%
-#     spread(variable, value) %>%
-#     mutate(toFPS = NBP - NEP) %>%
-#     spread(treatment, toFPS) %>%
-#     group_by(MRC, Time) %>%
-#     summarise(firewoodBurning = -(max(firewoodSinglePass, na.rm = T)
-#               - max(noFirewood, na.rm = T))) %>%
-#     mutate(firewoodBurning = ifelse(firewoodBurning <= 0, 0, firewoodBurning))
-# 
-# dfEmissions <- df %>%
-#     filter(variable == "NEP") %>%
-#     group_by(MRC, Time) %>%
-#     summarize(NEPgain = value[which(treatment == "noFirewood")] -
-#                   value[which(treatment == "firewoodSinglePass")]) %>%
-#     
-#     merge(dfFW) %>%
-#     #mutate(NEPgain = ifelse(firewoodBurning <= 0, 0, NEPgain)) %>%
-#     gather(key = "variable", value = "value", -MRC, -Time)
-# 
-# dfEmissions <- dfEmissions %>%
-#     spread(variable, value) %>%
-#     mutate(netEmissions = firewoodBurning + NEPgain) %>%
-#     gather(key = "variable", value = "value", -MRC, -Time, -netEmissions) %>%
-#     merge(dfArea)
-# 
-# 
-# varLvls <- c(firewoodBurning = "Firewood burning",
-#              NEPgain = "NEP gain")
-# dfEmissions$variable  <- factor(varLvls[match(dfEmissions$variable, names(varLvls))], levels = varLvls)
-# labDf <- distinct(dfEmissions[,c("MRC", "area_ha")])
-# labDf[,"lab"] <- paste("Total area (private tenure) :", labDf$area_ha, "ha")
-# 
-# 
-# #####################
-# png(filename= paste0("emissions_Firewood.png"),
-#     width = 10, height = 5, units = "in", res = 600, pointsize=10)
-# 
-# options(scipen=999)
-# 
-# ggplot() + 
-#     stat_summary(data = dfEmissions,
-#                  aes(x = Time, y = value*unitConvFact*area_ha,
-#                      fill = variable),
-#                  fun.y="sum", geom="area", position = "stack") +
-#     scale_fill_manual("", values = c("firebrick2", "darkolivegreen2")) +
-#     facet_wrap(~ MRC, ncol = 3) +
-#     #ylim(-50000, 120000) +
-#     geom_line(data = dfEmissions,
-#               aes(x = Time, y = netEmissions*unitConvFact*area_ha,
-#                   colour = tenure)) +
-#     scale_colour_manual("", values = "white", label = "Net emissions") +
-#     theme_dark() +
-#     geom_text(data = labDf, aes(x = 100,
-#                                 y = 35000, #max(dfEmissions$value * unitConvFact* dfEmissions$area_ha),
-#                                 label = lab),
-#               hjust = 1, size = 2) +
-#     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
-#           axis.text = element_text(size = rel(.75))) +
-#     labs(title = "Carbon emissions associated with residential firewood",
-#          #subtitle = "*Firewood harvesting is estimated",
-#          x = "",
-#          y = expression(paste("Emissions (tonnes C", " y"^"-1", ")", "\n")))
-# dev.off()
 
+
+
+### to PFS
+df <- fps %>%
+    filter(mgmtScenario != 2) %>%
+    group_by(areaName, scenario, mgmtScenarioName, Time, species) %>%
+    summarise(BioToFPS_tonnesCTotal = mean(BioToFPS_tonnesCTotal),
+              areaManagedTotal_ha = unique(areaManagedTotal_ha),
+              areaHarvestedTotal_ha = mean(areaHarvestedTotal_ha))
+
+labdf <- df %>%
+    group_by(areaName, scenario, mgmtScenarioName) %>%
+    summarise(areaManagedTotal_ha = unique(areaManagedTotal_ha),
+              areaHarvestedTotal_ha = mean(areaHarvestedTotal_ha)) 
+
+yMax <- df %>%
+    group_by(areaName, scenario, mgmtScenarioName, Time) %>%
+    summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) %>%
+    group_by() %>%
+    summarise(yMax = max(BioToFPS_tonnesCTotal))
+yMax <- as.numeric(yMax)
+
+
+require(RColorBrewer)
+colourCount = length(unique(df$species))
+getPalette = colorRampPalette(brewer.pal(8, "Set1"))
+
+### stacked (total)
+png(filename= paste0("fps_Stacked_", a, ".png"),
+    width = 8, height = 5, units = "in", res = 600, pointsize=10)
+
+ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
+    stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
+    facet_grid(scenario ~ mgmtScenarioName) +
+    scale_fill_manual(values = getPalette(colourCount)) +
+    theme_dark() +
+    theme(plot.caption = element_text(size = rel(.5), hjust = 0),
+          axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(title = "Transfers vers les produits forestiers",
+         x = "",
+         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n"))) +
+    geom_text(data = labdf, aes(label = paste(areaManagedTotal_ha, "ha"),
+                                y = yMax, x = 2010),
+              hjust = 0, vjust = 1, size = 2)
+    
+dev.off()

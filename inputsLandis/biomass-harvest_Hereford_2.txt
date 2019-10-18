@@ -442,9 +442,6 @@ TSUG.CAN 11-999(100%)
 >> Initial proportions of deciduous stands are : 42.8%
 
 HarvestImplementations 
-10000 10000_JARD_F 5.13%
-10000 10000_JARD_M 5.9%
-10000 10000_JARD_R 0.78%
 142 142_CPRS 7.5%
 143 143_CPRS 7.5%
 154 154_CPRS 7.5%

@@ -15,7 +15,7 @@ setwd(wwd)
 
 
 ### fetching outputs
-simDir <- "D:/ForCS - Montmorency-Hereford/prelimEnsemble"
+simDir <- "/media/dcyr/Seagate Data/2019-10-16"
 #simDir <- "D:/ForCS - Montmorency-Hereford/2019-09-25"
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
                     colClasses=c("simID"="character"))
@@ -31,7 +31,11 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("ageMax")#"summary", "agbTotal")#, "agbTotal", "ageMax")# c("agbTotal", "ageMax", "agbAgeClasses","summary")
+logs <- c("FPS") #"ageMax", "summary", "agbTotal", "FPS") #, "agbTotal", "ageMax")# c("agbTotal", "ageMax", "agbAgeClasses","summary")
+mgmtLevels <- c("1" = "Intensif",
+                "3" = "Servitude",
+                "4" = "Nouveau zonage",
+                "2" = "Conservation")
 
 if("summary" %in% logs) {
     source("../scripts/fetchHarvestImplementationFnc.R")
@@ -51,7 +55,11 @@ for (a in c("Hereford")) {#, "ForMont"
     dirIndex <- which(simInfo$simID %in% x &
                           simInfo$areaName == a)
     
+    #output <- list()
     output <- foreach(i = dirIndex) %dopar% { #dopar% {#index
+    #for (i in dirIndex) {
+        
+    
         require(dplyr)
         require(raster)
         require(reshape2)
@@ -67,6 +75,10 @@ for (a in c("Hereford")) {#, "ForMont"
         areaName <- simInfo[i, "areaName"]
         scenario <- simInfo[i, "scenario"]
         mgmtScenario  <- simInfo[i, "mgmt"]
+        mgmtScenarioName <- factor(mgmtLevels[as.character(mgmtScenario)],
+                                             levels = mgmtLevels)
+        
+        
         replicate <- simInfo[i, "replicate"]
         ###
         sppLvls <- read.table(paste(sDir, "species.txt", sep = "/"),
@@ -151,6 +163,7 @@ for (a in c("Hereford")) {#, "ForMont"
                           areaName = areaName,
                           scenario = scenario,
                           mgmtScenario  = mgmtScenario,
+                          mgmtScenarioName  = mgmtScenarioName,
                           replicate = replicate,
                           ABio = mean(ABio),
                           BBio = mean(BBio),
@@ -225,6 +238,7 @@ for (a in c("Hereford")) {#, "ForMont"
                                          areaName = areaName,
                                          scenario = scenario,
                                          mgmtScenario  = mgmtScenario,
+                                         mgmtScenarioName  = mgmtScenarioName,
                                          replicate = replicate,
                                          agbSummary[, c("Time", "landtype", "species", "ageClass",
                                                         "agb_tonnesTotal", "ltArea_ha", "agb_tonnesPerHa")])
@@ -250,6 +264,7 @@ for (a in c("Hereford")) {#, "ForMont"
                                        areaName = areaName,
                                        scenario = scenario,
                                        mgmtScenario  = mgmtScenario,
+                                       mgmtScenarioName  = mgmtScenarioName,
                                        replicate = replicate,
                                        agbTotal)
     
@@ -274,8 +289,74 @@ for (a in c("Hereford")) {#, "ForMont"
             }
     
             rm(agb)
+            
         }
+        
+        if("FPS"  %in% logs) {
+            ### fetching targetted mgmt-areas
+            ### fetching landtypes
+            mgmtAreas <- raster(paste(sDir, "mgmt-areas.tif", sep = "/"))
+            mgmtAreas <- mgmtAreas >= 10000
+            
+            r <- mgmtAreas
+            r[] <- 1:ncell(r)
+            xy <- as.data.frame(zonal(mgmtAreas, r))
+            xy <- cbind(xy,
+                        row = rowFromCell(mgmtAreas,xy$zone),
+                        column = colFromCell(mgmtAreas,xy$zone)) %>%
+                filter(mean == 1)
+            xy <- xy[, c("row", "column")]
+            totalArea <- as.data.frame(zonal(mgmtAreas, mgmtAreas, sum))
+            totalArea <- filter(totalArea, zone == 1)[,2] * prod(res(mgmtAreas))/10000
+            
+            ####
+            FluxBio <- fread(file = paste(sDir, "log_FluxBio.csv", sep = "/"))
+            ## correcting error in file format
+            cNames <- c(colnames(FluxBio)[-1], "V1")
+            colnames(FluxBio) <- cNames
+            FluxBio <- FluxBio[,c(1:17)]
+            
+            ## focusing on targetted area
+            FluxBio <- merge(FluxBio, xy, all.y = F)
+            ### summarizing FPS
+            
+            toFPS <- FluxBio %>%
+                group_by(Time, species) %>%
+                summarize(BioToFPS_tonnesCTotal = round(prod(res(mgmtAreas))/10000 * sum(BioToFPS)/100,2)) %>%
+                mutate(areaManagedTotal_ha = totalArea)
+            
+            areaHarvested <-  FluxBio %>%
+                filter(BioToFPS > 0) %>%
+                distinct(Time, row, column) %>%
+                group_by(Time) %>%
+                summarise(areaHarvestedTotal_ha = prod(res(mgmtAreas))/10000 * n())
+
+            if(nrow(areaHarvested) > 0) {
+                toFPS <- merge(toFPS, areaHarvested)
+            } else {
+                toFPS[,"areaHarvestedTotal_ha"] <- 0
+            }
+            
+            
+            
+            toFPS$species <- factor(toFPS$species, levels = sppLvls)
+            
+            toFPS <- data.frame(simID = as.character(simID),
+                                areaName = areaName,
+                                scenario = scenario,
+                                mgmtScenario  = mgmtScenario,
+                                mgmtScenarioName = mgmtScenarioName,
+                                replicate = replicate,
+                                toFPS)
+            
+            output[["FPS"]] <- toFPS
+            rm(toFPS)
+            
+        }
+        
+        print(paste('Done with simulation', simID))
         return(output)
+        
     }
     
     if("summary"  %in% logs ) {
@@ -297,15 +378,20 @@ for (a in c("Hereford")) {#, "ForMont"
             
         }
         output_agbAgeClasses <- do.call("rbind", output_agbAgeClasses)
-        save(output_agbAgeClasses, file = paste0("output_agbAgeClasses_", a, ".RData"))
+        save(output_agbAgeClasses, file = paste0("output_bio_", a, ".RData"))
+    }
+    if("FPS"  %in% logs ) {
+        ### summary
+        outputSummary <- list()
+        for(i in seq_along(output)) {
+            outputSummary[[i]] <- output[[i]][["FPS"]]
+            
+        }
+        outputSummary <-do.call("rbind", outputSummary)
+        write.csv(outputSummary, file = paste0("output_BioToFPS_", a, ".csv"), row.names = F)
+        #save(outputSummary, file = paste0("output_BioToFPS_", a, ".RData"))
     }
 }
-
-##########
-### reformating and saving
-
-
-
 
 
 

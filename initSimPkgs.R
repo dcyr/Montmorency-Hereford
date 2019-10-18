@@ -56,6 +56,8 @@ expDesign <- list(#area = c("ForMont", "Hereford"),
                   spinup = F,
                   rep = 1:3)
 
+cropped  <- T
+
 # ### 2019-09-24
 # expDesign <- list(#area = c("ForMont", "Hereford"),
 #                   scenario = c("baseline", "RCP85"),
@@ -96,7 +98,7 @@ cl = makeCluster(n, outfile = "") ##
 registerDoSNOW(cl)
 
 foreach(i = 1:nrow(simInfo)) %dopar% { 
-    
+    require(raster)
     simID <- as.character(simInfo[i,"simID"])
     areaName <- as.character(simInfo[i,"areaName"])
     scenario <- as.character(simInfo[i,"scenario"])
@@ -108,25 +110,51 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     
     ###############################################
     ### initial rasters and attribute files
+    if(cropped) {
+      mgmtR <- raster(paste0(inputDir, "/mgmt-areas_",
+                             areaName, "_", mgmt, ".tif"))
+      mgmtR[mgmtR<10000] <- NA
+      mgmtR <- trim(mgmtR)
+      e <- extent(mgmtR)
+      e <- e + 20000
+      
+    }
     
-    # initial communities
-    file.copy(paste0(inputDir, "/initial-communities_",
-                     areaName, ".tif"),
-              paste0(simID, "/initial-communities.tif"),
-              overwrite = T)
+    
+   
+    if(cropped) {
+      # initial communities
+      r <- raster(paste0(inputDir, "/initial-communities_", areaName, ".tif"))
+      r <- crop(r, e)
+      writeRaster(r, file = paste0(simID, "/initial-communities.tif"),
+                   datatype='INT4S', overwrite=TRUE, NAflag = 0)
+      # landtypes
+      r <- raster(paste0(inputDir, "/landtypes_", areaName, ".tif"))
+      r <- crop(r, e)
+      writeRaster(r, file = paste0(simID, "/landtypes.tif"),
+                  datatype='INT4S', overwrite=TRUE, NAflag = 0)
+      
+    } else {
+      # initial communities
+      file.copy(paste0(inputDir, "/landtypes_", areaName, ".tif"),
+                paste0(simID, "/initial-communities.tif"),
+                overwrite = T)
+      # landtypes
+      file.copy(paste0(inputDir, "/landtypes_",
+                       areaName, ".txt"),
+                paste0(simID, "/landtypes.txt"),
+                overwrite = T)
+    }
+    
     file.copy(paste0(inputDir, "/initial-communities_",
                      areaName, ".txt"),
               paste0(simID, "/initial-communities.txt"),
               overwrite = T)
     
-    # landtypes
+
     file.copy(paste0(inputDir, "/landtypes_",
                      areaName, ".txt"),
               paste0(simID, "/landtypes.txt"),
-              overwrite = T)
-    file.copy(paste0(inputDir, "/landtypes_",
-                     areaName, ".tif"),
-              paste0(simID, "/landtypes.tif"),
               overwrite = T)
     
     ###############################################
@@ -159,7 +187,23 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     ###############################################
     ### Disturbances
     if(!spinup) {
-        # ### Harvesting
+        
+      if(cropped) {
+        ### Harvesting
+        # stand map
+        r <- raster(paste0(inputDir, "/stand-map_",
+                           areaName, ".tif"))
+        r <- crop(r, e)
+        writeRaster(r, file = paste0(simID, "/stand-map.tif"),
+                    datatype='INT4S', overwrite=TRUE, NAflag = 0)
+        # management areas
+        r <- raster(paste0(inputDir, "/mgmt-areas_",
+                           areaName, "_", mgmt, ".tif"))
+        r <- crop(r, e)
+        writeRaster(r, file = paste0(simID, "/mgmt-areas.tif"),
+                    datatype='INT4S', overwrite=TRUE, NAflag = 0)
+        
+      } else {
         # stand map
         file.copy(paste0(inputDir, "/stand-map_",
                          areaName, ".tif"),
@@ -170,30 +214,43 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
                          areaName, "_", mgmt, ".tif"),
                   paste0(simID, "/mgmt-areas.tif"),
                   overwrite = T)
-        # base-harvest.txt
-        input <- paste0(inputDir, "/biomass-harvest_",
-                                      areaName, "_", mgmt, ".txt")
-        initBaseHarvest(input, writeToFile = paste0(simID, "/base-harvest.txt"))
+      }
+      # ### Harvesting
         
+      # base-harvest.txt
+      input <- paste0(inputDir, "/biomass-harvest_",
+                                    areaName, "_", mgmt, ".txt")
+      initBaseHarvest(input, writeToFile = paste0(simID, "/base-harvest.txt"))
       
-        ### Wind
-        file.copy(paste0(inputDir, "/base-wind_",
-                         areaName, ".txt"),
-                  paste0(simID, "/base-wind.txt"),
-                  overwrite = T)
-        
-        ### Fire
-        file.copy(paste0(inputDir, "/base-fire_",
-                         areaName, "_", scenario, ".txt"),
-                  paste0(simID, "/base-fire.txt"),
-                  overwrite = T)
-        for (y in c(0,10,40,70)) {
-            file.copy(paste0(inputDir, "/fire-regions_",
-                             areaName, "_", scenario, "_", y, ".tif"),
-                      paste0(simID, "/fire-regions_",
-                             y, ".tif"),
-                      overwrite = T)
+    
+      ### Wind
+      file.copy(paste0(inputDir, "/base-wind_",
+                       areaName, ".txt"),
+                paste0(simID, "/base-wind.txt"),
+                overwrite = T)
+      
+      ### Fire
+      file.copy(paste0(inputDir, "/base-fire_",
+                       areaName, "_", scenario, ".txt"),
+                paste0(simID, "/base-fire.txt"),
+                overwrite = T)
+      for (y in c(0,10,40,70)) {
+        if(cropped) {
+          r <-  raster(paste0(inputDir, "/fire-regions_",
+                              areaName, "_", scenario, "_", y, ".tif"))
+          r <- crop(r, e)
+          writeRaster(r, file = paste0(simID, "/fire-regions_",
+                                       y, ".tif"),
+                      datatype='INT4S', overwrite=TRUE, NAflag = 0)
+        } else {
+          file.copy(paste0(inputDir, "/fire-regions_",
+                           areaName, "_", scenario, "_", y, ".tif"),
+                    paste0(simID, "/fire-regions_",
+                           y, ".tif"),
+                    overwrite = T)
         }
+        
+      }
         
         ### BDA - Budworm
         file.copy(paste0(inputDir, "/base-bda.txt"),
