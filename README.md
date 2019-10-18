@@ -10,7 +10,7 @@ output:
     toc: no
 ---
 
-Updated on oct. 15 2019
+Updated on oct. 18 2019
 
 
 -------
@@ -30,9 +30,11 @@ This repository contains input files, documentation and compiled simulation outp
    
 ![](figures/fluxes_Summary.png)
 
+![](figures/fps_Stacked_Hereford.png)
+
 -----------  
 
-### Projected mean temperature - Forêt Hereford
+### Projected mean temperature - ForÃªt Hereford
 
 ![](figures/Tmean_Estrie.png)
 

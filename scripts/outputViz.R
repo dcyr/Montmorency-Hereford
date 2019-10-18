@@ -33,7 +33,7 @@ require(tidyr)
 df <- outputSummary %>%
     filter(Time >=1,
            mgmtID >= 10000,
-           #tenure == "PrivÃ©",
+           #tenure == "Privé",
            variable %in% c("ABio",  "BBio", "TotalDOM")) %>%
     group_by(areaName, scenario, mgmtScenario, mgmtID, Time, variable) %>%
     summarise(value = mean(value),
@@ -52,7 +52,7 @@ ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
               colour = as.factor(mgmtScenario))) +
     theme_dark() +
     facet_grid(variable ~ scenario, scale = "free_y") +
-    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
+    scale_color_manual(name = "Scénario\nd'aménagement",
                        values = c("red", "lightblue", "orange", "green"))+
     #facet_wrap(~ variable  ) +
     geom_line() +
@@ -98,7 +98,7 @@ dev.off()
 
 ### fluxes
 df <- outputSummary %>%
-    filter(#tenure == "PrivÃ©",
+    filter(#tenure == "Privé",
         #scenario == "baseline",
         Time >=1,   
         variable %in% c("DelBio",  "Turnover",
@@ -127,7 +127,7 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
     geom_hline(yintercept = 0, linetype = 1, color = "grey35", size = 0.35) +
     #stat_summary(fun.y="mean", geom="area", position = "stack") +
     geom_line() +
-    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
+    scale_color_manual(name = "Scénario\nd'aménagement",
                        values = c("red", "lightblue", "orange", "green"))+
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of global fluxes",
