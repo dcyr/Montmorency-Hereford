@@ -15,8 +15,10 @@ setwd(wwd)
 
 
 ### fetching outputs
-simDir <- "/media/dcyr/Seagate Data/2019-10-16"
-#simDir <- "D:/ForCS - Montmorency-Hereford/2019-09-25"
+#simDir <- "/media/dcyr/Seagate Data/2019-10-16"
+simDir <- "D:/ForCS - Montmorency-Hereford/prelimEnsemble"
+# simDir <- "H:/2019-11-02"
+
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
                     colClasses=c("simID"="character"))
 
@@ -31,11 +33,19 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("FPS") #"ageMax", "summary", "agbTotal", "FPS") #, "agbTotal", "ageMax")# c("agbTotal", "ageMax", "agbAgeClasses","summary")
+logs <- c("summary", "FPS") #c("ageMax",  "agbTotal","summary", "FPS") 
+
+### hereford
 mgmtLevels <- c("1" = "Intensif",
                 "3" = "Servitude",
                 "4" = "Nouveau zonage",
                 "2" = "Conservation")
+
+# ### ForMont
+# mgmtLevels <- c("1" = "Intensif",
+#                 "3" = "Servitude",
+#                 "4" = "Nouveau zonage",
+#                 "2" = "Conservation")
 
 if("summary" %in% logs) {
     source("../scripts/fetchHarvestImplementationFnc.R")
@@ -50,15 +60,13 @@ registerDoSNOW(cl)
 file.copy(paste(simDir, "simInfo.csv", sep = "/"),
           "simInfo.csv", overwrite = T)
 
-for (a in c("Hereford")) {#, "ForMont"
+for (a in c("ForMont")) {#, "ForMont"
     
     dirIndex <- which(simInfo$simID %in% x &
                           simInfo$areaName == a)
     
-    #output <- list()
-    output <- foreach(i = dirIndex) %dopar% { #dopar% {#index
-    #for (i in dirIndex) {
-        
+    
+    output <- foreach(i = dirIndex) %dopar% {
     
         require(dplyr)
         require(raster)
@@ -319,7 +327,6 @@ for (a in c("Hereford")) {#, "ForMont"
             ## focusing on targetted area
             FluxBio <- merge(FluxBio, xy, all.y = F)
             ### summarizing FPS
-            
             toFPS <- FluxBio %>%
                 group_by(Time, species) %>%
                 summarize(BioToFPS_tonnesCTotal = round(prod(res(mgmtAreas))/10000 * sum(BioToFPS)/100,2)) %>%
