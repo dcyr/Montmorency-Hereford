@@ -1,6 +1,6 @@
 ---
-title: "Simulations LANDIS-II / ForCS - Aménagement forestier, cycle du carbone et habitats fauniques"
-author: "Dominic Cyr, Yan Boulanger, et Évelyne Thiffault\nRepository maintained by Dominic Cyr"
+title: "Simulations LANDIS-II / ForCS - Amenagement forestier, cycle du carbone et habitats fauniques"
+author: "Dominic Cyr, Yan Boulanger, et Evelyne Thiffault\nRepository maintained by Dominic Cyr"
 output:
   html_document:
     keep_md: yes
@@ -10,11 +10,9 @@ output:
     toc: no
 ---
 
-Updated on oct. 18 2019
-
+Updated on d�c. 12 2019
 
 -------
-
 
 ### General description
 
@@ -28,13 +26,13 @@ This repository contains input files, documentation and compiled simulation outp
 
 
    
-![](figures/fluxes_Summary.png)
+![](figures/fluxes_Summary_Hereford.png)
 
 ![](figures/fps_Stacked_Hereford.png)
 
 -----------  
 
-### Projected mean temperature - ForÃªt Hereford
+### Projected mean temperature - Foret Hereford
 
 ![](figures/Tmean_Estrie.png)
 
