@@ -35,17 +35,17 @@ require(foreach)
 
 logs <- c("summary", "FPS") #c("ageMax",  "agbTotal","summary", "FPS") 
 
-### hereford
-mgmtLevels <- c("1" = "Intensif",
-                "3" = "Servitude",
-                "4" = "Nouveau zonage",
-                "2" = "Conservation")
-
-# ### ForMont
+# ### hereford
 # mgmtLevels <- c("1" = "Intensif",
 #                 "3" = "Servitude",
 #                 "4" = "Nouveau zonage",
 #                 "2" = "Conservation")
+
+# ### ForMont
+mgmtLevels <- c("1" = NA,
+                "3" = NA,
+                "4" = NA,
+                "2" = NA)
 
 if("summary" %in% logs) {
     source("../scripts/fetchHarvestImplementationFnc.R")
@@ -187,8 +187,8 @@ for (a in c("ForMont")) {#, "ForMont"
     
             ### tidying up...
             dfSummary <- melt(dfSummary, id.vars = c("simID",
-                                                     "areaName", "scenario", "mgmtScenario",  "replicate",
-                                                     "Time", "mgmtID", "mgmtArea_ha")) %>%
+                                                     "areaName", "scenario", "mgmtScenario", "mgmtScenarioName",
+                                                     "replicate", "Time", "mgmtID", "mgmtArea_ha")) %>%
                 arrange(simID, Time, mgmtID, variable)
     
             output[["summary"]] <- dfSummary

@@ -13,17 +13,42 @@ setwd(wwd)
 
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
 # outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
-a <- "Hereford"
+a <- "ForMont"
 outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
-### rename mgmt scenario...
-mgmtLevels <- c("1" = "Intensif",
-                "3" = "Servitude",
-                "4" = "Nouveau zonage",
-                "2" = "Conservation")
-
-outputSummary$mgmtScenario <- factor(mgmtLevels[as.character(outputSummary$mgmtScenario)],
-                                     levels = mgmtLevels)
 fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
+
+##########################################################
+##########################################################
+### tmp repair
+##########################################################
+outputSummary <- outputSummary %>%
+    filter(variable != "mgmtScenarioName") %>%
+    mutate(value = as.numeric(value))
+
+fps$mgmtScenarioName <- NA
+##########################################################
+
+### rename mgmt scenario...
+# mgmtLevels <- c("1" = "Intensif",
+#                 "3" = "Servitude",
+#                 "4" = "Nouveau zonage",
+#                 "2" = "Conservation")
+
+# mgmtLevels <- c("0" = "0",
+#                 "1" = "1",
+#                 "2.1" = "2.1",
+#                 "2.2" = "2.2",
+#                 "2.3" = "2.3",
+#                 "3.1" = "3.1",
+#                 "3.2" = "3.2",
+#                 "3.3" = "3.3",
+#                 "4.1" = "4.1",
+#                 "4.2" = "4.2",
+#                 "4.3" = "4.3")
+# 
+# outputSummary$mgmtScenario <- factor(mgmtLevels[as.character(outputSummary$mgmtScenario)],
+#                                      levels = mgmtLevels)
+
 
 require(ggplot2)
 require(dplyr)
@@ -42,6 +67,18 @@ df <- outputSummary %>%
     summarise(valueTotal = sum(value*mgmtArea_ha),
               mgmtArea_ha = sum(mgmtArea_ha)) %>%
     mutate(value = valueTotal/mgmtArea_ha)
+
+cols <- c("0" = "black",
+          "1" = "yellow",
+          "2.1" = "red2",
+          "2.2" = "red3",
+          "2.3" = "red4",
+          "3.1" = "darkolivegreen2",
+          "3.2" = "darkolivegreen3",
+          "3.3" = "darkolivegreen4",
+          "4.1" = "dodgerblue2",
+          "4.2" = "dodgerblue3",
+          "4.3" = "dodgerblue4")
     
     
 png(filename= paste0("pools_Summary_", a, ".png"),
@@ -53,8 +90,7 @@ ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
     theme_dark() +
     facet_grid(variable ~ scenario, scale = "free_y") +
     scale_color_manual(name = "Scénario\nd'aménagement",
-                       values = c("red", "lightblue", "orange", "green"))+
-    #facet_wrap(~ variable  ) +
+                       values = cols) +
     geom_line() +
     # scale_color_manual(values = c(firewoodSinglePass = "darkgoldenrod1",#"firebrick1",
     #                              noFirewood = "cyan")) +
@@ -116,7 +152,7 @@ df <- outputSummary %>%
     
 
     
-png(filename= paste0("fluxes_Summary.png"),
+png(filename= paste0("fluxes_Summary_", a, ".png"),
     width = 10, height = 6, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
@@ -128,7 +164,7 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
     #stat_summary(fun.y="mean", geom="area", position = "stack") +
     geom_line() +
     scale_color_manual(name = "Scénario\nd'aménagement",
-                       values = c("red", "lightblue", "orange", "green"))+
+                       values = cols)+
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of global fluxes",
          x = "",
@@ -150,19 +186,19 @@ dev.off()
 
 ### to PFS
 df <- fps %>%
-    filter(mgmtScenario != 2) %>%
-    group_by(areaName, scenario, mgmtScenarioName, Time, species) %>%
+    #filter(mgmtScenario != 2) %>%
+    group_by(areaName, scenario, mgmtScenario, Time, species) %>%
     summarise(BioToFPS_tonnesCTotal = mean(BioToFPS_tonnesCTotal),
               areaManagedTotal_ha = unique(areaManagedTotal_ha),
               areaHarvestedTotal_ha = mean(areaHarvestedTotal_ha))
 
 labdf <- df %>%
-    group_by(areaName, scenario, mgmtScenarioName) %>%
+    group_by(areaName, scenario, mgmtScenario) %>%
     summarise(areaManagedTotal_ha = unique(areaManagedTotal_ha),
               areaHarvestedTotal_ha = mean(areaHarvestedTotal_ha)) 
 
 yMax <- df %>%
-    group_by(areaName, scenario, mgmtScenarioName, Time) %>%
+    group_by(areaName, scenario, mgmtScenario, Time) %>%
     summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) %>%
     group_by() %>%
     summarise(yMax = max(BioToFPS_tonnesCTotal))
@@ -175,11 +211,11 @@ getPalette = colorRampPalette(brewer.pal(8, "Set1"))
 
 ### stacked (total)
 png(filename= paste0("fps_Stacked_", a, ".png"),
-    width = 8, height = 5, units = "in", res = 600, pointsize=10)
+    width = 16, height = 8, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
-    facet_grid(scenario ~ mgmtScenarioName) +
+    facet_grid(scenario ~ mgmtScenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
     theme_dark() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
