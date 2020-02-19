@@ -166,9 +166,13 @@ initBaseHarvest <-  function(input,
                         tmp <- paste(sp, ageClass)
                     } else {
                         if(prop>50) {
-                            stop("Don't know what to do when we want to harvest > 50% but less than 100%")
+                            warning(paste0("Don't know what to do when we want to harvest > 50% but less than 100%\n",
+                                           "Set harvest prescription to 100% removal..."))
+                            tmp <- paste(sp, ageClass)
+                        } else {
+                            tmp <- paste0(sp, " 1/", floor(100/prop))    
                         }
-                        tmp <- paste0(sp, " 1/", floor(100/prop))
+                        
                     }
                     
                 } 

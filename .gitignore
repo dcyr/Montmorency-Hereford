@@ -3,6 +3,7 @@
 outputSpatial
 temp
 test
+gis
 *.Rmd
 *.html
 *~

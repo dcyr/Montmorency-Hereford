@@ -1,6 +1,6 @@
-# df <- DOMPool_fetch(x = "C:/Users/cyrdo/Desktop/2019-09-17/0/log_Pools.csv",
-#               ltTxt = "C:/Users/cyrdo/Desktop/2019-09-17/0/landtypes.txt")
-# write.csv(df, file = "DOM-initPools_Hereford.csv", row.names = F)
+df <- DOMPool_fetch(x = "D:/ForCS - Montmorency-Hereford-Maskinongé/2020-02-18_spinup/0/log_Pools.csv",
+              ltTxt = "D:/ForCS - Montmorency-Hereford-Maskinongé/2020-02-18_spinup/0/landtypes.txt")
+write.csv(df, file = "DOM-initPools_Maskinonge.csv", row.names = F)
 
 DOMPool_fetch <- function(x = "log_Pools.csv",
                           ltTxt = "landtypes.txt") {

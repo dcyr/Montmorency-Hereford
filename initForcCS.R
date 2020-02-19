@@ -41,9 +41,10 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
 ################################################################################
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
-scenario <- c("baseline", "RCP45", "RCP85")
-area <-  c("Hereford", "ForMont")
-spinup <- F
+scenario <- c("baseline", "RCP45", "RCP85")#, 
+area <-  c("Hereford", "ForMont", "Maskinonge")
+t0 <- 2020
+spinup <- F 
 climate <- F
 
 
@@ -82,6 +83,7 @@ for(a in area) {
         initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT,
                   spinup = spinup,
                   climate = climate,
+                  t0 = t0,
                   scenario = s)
     }
 }

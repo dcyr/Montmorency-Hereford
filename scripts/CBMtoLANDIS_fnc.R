@@ -899,7 +899,7 @@ forCS_writeToFile <- function(x, file) {
 tMean_fetch <- function(landtypes, landtypes_AT,
                         scenario = "baseline", ## or "RCP45", "RCP85, etc...
                         area,
-                        t0 = 2000,
+                        t0,
                         timestep = 10,
                         writeToFile = F,
                         outputTable = F) {

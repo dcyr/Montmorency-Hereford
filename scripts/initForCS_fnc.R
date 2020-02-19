@@ -9,6 +9,7 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
                       climate = F,
                       spinup = F,
                       scenario,
+                      t0,
                       valuesSingleAll = c("Timestep", "SeedingAlgorithm", "ForCSClimateFile",
                                           "InitialCommunities", "InitialCommunitiesMap"),
                       tablesAll = c("ForCSOutput", "SoilSpinUp", "AvailableLightBiomass",
@@ -325,6 +326,7 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
         print(paste0("Producing forCS climate inputs and writing to file '", file, "'"))
         tMean_fetch(landtypes, landtypes_AT,
                     area = a,
+                    t0 = t0,
                     scenario = scenario,
                     writeToFile = file,
                     outputTable = F)

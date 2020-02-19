@@ -9,7 +9,8 @@ simDir <- simInfo$simID
 
 require(parallel)
 require(doSNOW)
-n <- 1 #floor(detectCores() * 0.90)
+n <- ifelse(Sys.info()["user"] == "dcyr-z840",
+            8 , 1)
 
 # #######
 cl = makeCluster(n, outfile = "") ## 
