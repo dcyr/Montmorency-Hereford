@@ -1,0 +1,13 @@
+LandisData Ecoregions
+
+no 0 none "non active cells"
+yes 8 8 "No Description"
+yes 9 9 "No Description"
+yes 16 16 "No Description"
+yes 17 17 "No Description"
+yes 58 58 "No Description"
+yes 59 59 "No Description"
+yes 65 65 "No Description"
+yes 66 66 "No Description"
+yes 67 67 "No Description"
+yes 68 68 "No Description"

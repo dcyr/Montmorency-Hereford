@@ -1,0 +1,15 @@
+LandisData "ForC Succession"
+
+ClimateTable
+>>Time	Eco	AvgT
+>>Step		(C)
+0	8	5.266
+0	9	5.281
+0	16	4.83
+0	17	4.852
+0	58	4.044
+0	59	4.389
+0	65	2.984
+0	66	3.08
+0	67	3.327
+0	68	3.344
