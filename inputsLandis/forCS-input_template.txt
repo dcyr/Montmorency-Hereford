@@ -20,7 +20,7 @@ SoilSpinUp
 >>	On/Off	Tolerance	Max
 >>	Flag	%			Iterations
 >>-------	---------	-------
-	0		1.0			20
+	0		0.5			50
 
 AvailableLightBiomass
 >>Shade									

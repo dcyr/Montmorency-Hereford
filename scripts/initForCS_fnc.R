@@ -113,7 +113,11 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
     ############################################################################
     ### Dompools - "Proportion of the decayed material that goes to the atmosphere'
     print("Preparing / updating 'Dompools'")
-    forCS$DOMPools$table[,3] <- DomFetch(aidbURL = aidbURL)$PropToAtmosphere
+    tmp <- forCS$DOMPools$table
+    # tmp[,3] <-  DomFetch(aidbURL = aidbURL)$PropToAtmosphere
+    # tmp[which(tmp$V2 == "Slow Aboveground"), 3] <- 0.83
+    forCS$DOMPools$table <- tmp
+    
     print("Done!")
     
     ############################################################################
@@ -129,7 +133,9 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
         forCS$EcoSppDOMParameters$table[,5] <- 0
     } else {
         tmp <- read.csv(paste0(inputPathLandis, "/DOM-initPools_", a, ".csv"))
-        
+        tmp <- tmp %>%
+            mutate(poolID = as.factor(poolID),
+                   landtype = as.factor(landtype))
         # merging in new data
         tmp  <- forCS$EcoSppDOMParameters$table %>%
             merge(tmp, by = c("landtype", "spp", "poolID"),
@@ -309,8 +315,8 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
     ## removing SnagData section
     forCS <- soilSpinUp(forCS,
                         soilSpinUp = spinup,
-                        tolerance = 1, 
-                        maxIter = 20)
+                        tolerance = 0.5, 
+                        maxIter = 100)
 
     ############################################################################
     #### Writing ForCS parameters to file

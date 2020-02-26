@@ -26,7 +26,7 @@ SoilSpinUp
 >>	On/Off	Tolerance	Max
 >>	Flag	%			Iterations
 >>-------	---------	-------
-1	1	20
+1	0.5	100
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -94,7 +94,7 @@ DOMPools
 3	"Fast Aboveground"	0.83
 4	"Fast Belowground"	0.83
 5	"Medium"	0.83
-6	"Slow Aboveground"	1
+6	"Slow Aboveground"	0.83
 7	"Slow Belowground"	1
 8	"Stem Snag"	0.83
 9	"Other Snag"	0.83

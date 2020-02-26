@@ -1,7 +1,13 @@
-df <- DOMPool_fetch(x = "D:/ForCS - Montmorency-Hereford-Maskinongé/2020-02-18_spinup/0/log_Pools.csv",
-              ltTxt = "D:/ForCS - Montmorency-Hereford-Maskinongé/2020-02-18_spinup/0/landtypes.txt")
+df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/0/log_Pools.csv",
+              ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/0/landtypes.txt")
+write.csv(df, file = "DOM-initPools_Hereford.csv", row.names = F)
+df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/1/log_Pools.csv",
+                    ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/1/landtypes.txt")
+write.csv(df, file = "DOM-initPools_ForMont.csv", row.names = F)
+df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/log_Pools.csv",
+                    ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/landtypes.txt")
 write.csv(df, file = "DOM-initPools_Maskinonge.csv", row.names = F)
-
+df %>% arrange(spp, landtype,  poolID)
 DOMPool_fetch <- function(x = "log_Pools.csv",
                           ltTxt = "landtypes.txt") {
     
@@ -54,10 +60,10 @@ DOMPool_fetch <- function(x = "log_Pools.csv",
     
     
     ### cleaning up
-    df <- data.frame(landtype = df$landtype,
+    df <- data.frame(landtype = as.factor(df$landtype),
                      spp = df$species,
-                     DOMName = df$DOMName,
-                     poolID = match(df$DOMName, domNames),
+                     #DOMName = df$DOMName,
+                     poolID = as.factor(match(df$DOMName, domNames)),
                      amountAtT0 = round(df$amountAtT0))
     
     df <- df %>%

@@ -24,25 +24,25 @@ require(dplyr)
 inputDir <- inputPathLandis
 
 
-simDuration <- 100
+simDuration <- 1
 expDesign <- list(#area = c("ForMont", "Hereford"),
-                  scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(#Hereford = c("1"),# "2", "3", "4"),
-                              #ForMont =  c("0"),
+                  scenario = c("baseline"),# "RCP45", "RCP85"),
+                  mgmt = list(Hereford = c("1"),# "2", "3", "4"),
+                              ForMont =  c("0"),
                                           #"1",
                                           # "2.1", "2.2", "2.3",
                                           # "3.1", "3.2", "3.3",
                                           # "4.1", "4.2", "4.3"),
                               Maskinonge = c("baseline")),
-                  spinup = F,
-                  cropped  = list(Hereford = T,
-                                ForMont = T,
+                  spinup = T,
+                  cropped  = list(Hereford = F,
+                                ForMont = F,
                                 Maskinonge = F),
                   fire = F,
                   BDA = T,
                   wind = T,
                   harvest = T,
-                  rep = 1:5)
+                  rep = 1)
 
 
 # ### 2019-09-24
