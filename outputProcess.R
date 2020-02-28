@@ -16,7 +16,7 @@ setwd(wwd)
 
 ### fetching outputs
 #simDir <- "/media/dcyr/Seagate Data/2019-10-16"
-simDir <- "D:/ForCS - Montmorency-Hereford/prelimEnsemble"
+simDir <- "D:/ForCS - Montmorency-Hereford-Maskinonge/2020-02-26/"
 # simDir <- "H:/2019-11-02"
 
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
@@ -33,7 +33,7 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("summary", "FPS") #c("ageMax",  "agbTotal","summary", "FPS") 
+logs <- c("agbAgeClasses") #c("ageMax",  "agbTotal","summary", "FPS") 
 
 # ### hereford
 # mgmtLevels <- c("1" = "Intensif",
@@ -42,17 +42,17 @@ logs <- c("summary", "FPS") #c("ageMax",  "agbTotal","summary", "FPS")
 #                 "2" = "Conservation")
 
 # ### ForMont
-mgmtLevels <- c("1" = NA,
-                "3" = NA,
-                "4" = NA,
-                "2" = NA)
+# mgmtLevels <- c("1" = NA,
+#                 "3" = NA,
+#                 "4" = NA,
+#                 "2" = NA)
 
 if("summary" %in% logs) {
     source("../scripts/fetchHarvestImplementationFnc.R")
 }
 
 
-clusterN <- 2
+clusterN <- 15
 #######
 cl = makeCluster(clusterN, outfile = "") ##
 registerDoSNOW(cl)
@@ -60,7 +60,7 @@ registerDoSNOW(cl)
 file.copy(paste(simDir, "simInfo.csv", sep = "/"),
           "simInfo.csv", overwrite = T)
 
-for (a in c("ForMont")) {#, "ForMont"
+for (a in c("Maskinonge")) {#, "ForMont"
     
     dirIndex <- which(simInfo$simID %in% x &
                           simInfo$areaName == a)
@@ -83,8 +83,7 @@ for (a in c("ForMont")) {#, "ForMont"
         areaName <- simInfo[i, "areaName"]
         scenario <- simInfo[i, "scenario"]
         mgmtScenario  <- simInfo[i, "mgmt"]
-        mgmtScenarioName <- factor(mgmtLevels[as.character(mgmtScenario)],
-                                             levels = mgmtLevels)
+        mgmtScenarioName <- mgmtScenario
         
         
         replicate <- simInfo[i, "replicate"]
@@ -304,7 +303,10 @@ for (a in c("ForMont")) {#, "ForMont"
             ### fetching targetted mgmt-areas
             ### fetching landtypes
             mgmtAreas <- raster(paste(sDir, "mgmt-areas.tif", sep = "/"))
-            mgmtAreas <- mgmtAreas >= 10000
+            if(a %in% c("Hereford", "ForMont")) {
+                mgmtAreas <- mgmtAreas >= 10000  
+            }
+            
             
             r <- mgmtAreas
             r[] <- 1:ncell(r)

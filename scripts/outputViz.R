@@ -9,11 +9,12 @@ setwd(paste(home, "Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/", sep = "/"
 wwd <- paste(getwd(), Sys.Date(), sep = "/")
 dir.create(wwd)
 setwd(wwd)
+require(dplyr)
 
 
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
 # outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
-a <- "ForMont"
+a <- "Maskinonge"
 outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
 fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
 
@@ -25,7 +26,6 @@ outputSummary <- outputSummary %>%
     filter(variable != "mgmtScenarioName") %>%
     mutate(value = as.numeric(value))
 
-fps$mgmtScenarioName <- NA
 ##########################################################
 
 ### rename mgmt scenario...
@@ -57,7 +57,7 @@ require(tidyr)
 ### pools
 df <- outputSummary %>%
     filter(Time >=1,
-           mgmtID >= 10000,
+           #mgmtID >= 10000,
            #tenure == "Privé",
            variable %in% c("ABio",  "BBio", "TotalDOM")) %>%
     group_by(areaName, scenario, mgmtScenario, mgmtID, Time, variable) %>%
@@ -67,19 +67,21 @@ df <- outputSummary %>%
     summarise(valueTotal = sum(value*mgmtArea_ha),
               mgmtArea_ha = sum(mgmtArea_ha)) %>%
     mutate(value = valueTotal/mgmtArea_ha)
+# 
+# cols <- c("0" = "black",
+#           "1" = "yellow",
+#           "2.1" = "red2",
+#           "2.2" = "red3",
+#           "2.3" = "red4",
+#           "3.1" = "darkolivegreen2",
+#           "3.2" = "darkolivegreen3",
+#           "3.3" = "darkolivegreen4",
+#           "4.1" = "dodgerblue2",
+#           "4.2" = "dodgerblue3",
+#           "4.3" = "dodgerblue4")
+#     
 
-cols <- c("0" = "black",
-          "1" = "yellow",
-          "2.1" = "red2",
-          "2.2" = "red3",
-          "2.3" = "red4",
-          "3.1" = "darkolivegreen2",
-          "3.2" = "darkolivegreen3",
-          "3.3" = "darkolivegreen4",
-          "4.1" = "dodgerblue2",
-          "4.2" = "dodgerblue3",
-          "4.3" = "dodgerblue4")
-    
+
     
 png(filename= paste0("pools_Summary_", a, ".png"),
     width = 7, height = 5, units = "in", res = 600, pointsize=10)
@@ -89,8 +91,8 @@ ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
               colour = as.factor(mgmtScenario))) +
     theme_dark() +
     facet_grid(variable ~ scenario, scale = "free_y") +
-    scale_color_manual(name = "Scénario\nd'aménagement",
-                       values = cols) +
+    # scale_color_manual(name = "Scénario\nd'aménagement",
+    #                    values = cols) +
     geom_line() +
     # scale_color_manual(values = c(firewoodSinglePass = "darkgoldenrod1",#"firebrick1",
     #                              noFirewood = "cyan")) +
@@ -163,8 +165,8 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, #group = simID,
     geom_hline(yintercept = 0, linetype = 1, color = "grey35", size = 0.35) +
     #stat_summary(fun.y="mean", geom="area", position = "stack") +
     geom_line() +
-    scale_color_manual(name = "Scénario\nd'aménagement",
-                       values = cols)+
+    # scale_color_manual(name = "Scénario\nd'aménagement",
+    #                    values = cols)+
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of global fluxes",
          x = "",
