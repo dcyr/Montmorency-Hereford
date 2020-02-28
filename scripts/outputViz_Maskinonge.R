@@ -13,58 +13,32 @@ require(dplyr)
 
 initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-# outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
 a <- "Maskinonge"
-outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
-fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
-AGB <- get(load(paste0("../outputCompiled/output_bio_", a, ".RData")))
-##########################################################
-##########################################################
-### tmp repair
-##########################################################
-outputSummary <- outputSummary %>%
-    filter(variable != "mgmtScenarioName") %>%
-    mutate(value = as.numeric(value))
-
-##########################################################
-
-### rename mgmt scenario...
-# mgmtLevels <- c("1" = "Intensif",
-#                 "3" = "Servitude",
-#                 "4" = "Nouveau zonage",
-#                 "2" = "Conservation")
-
-# mgmtLevels <- c("0" = "0",
-#                 "1" = "1",
-#                 "2.1" = "2.1",
-#                 "2.2" = "2.2",
-#                 "2.3" = "2.3",
-#                 "3.1" = "3.1",
-#                 "3.2" = "3.2",
-#                 "3.3" = "3.3",
-#                 "4.1" = "4.1",
-#                 "4.2" = "4.2",
-#                 "4.3" = "4.3")
-# 
-# outputSummary$mgmtScenario <- factor(mgmtLevels[as.character(outputSummary$mgmtScenario)],
-#                                      levels = mgmtLevels)
-
 
 require(ggplot2)
 require(dplyr)
 require(tidyr)
+
+################################################################################
+################################################################################
+################################################################################
+outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
+fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
+AGB <- get(load(paste0("../outputCompiled/output_bio_", a, ".RData")))
+################################################################################
+outputSummary <- outputSummary %>%
+    filter(variable != "mgmtScenarioName") %>%
+    mutate(value = as.numeric(value))
+
 ################################################################################
 ################################################################################
 ################################################################################
 ##### pools
-################################################################################
-
 variableLvl <- c("TotalDOM", "ABio", "BBio") ## ordering levels for plotting
 colScenarios <- c(baseline =  "lightblue2", ## colors for cc scenarios
                   RCP45 = "goldenrod1",
                   RCP85 = "red3")
-
-
+################################################################################
 df <- outputSummary %>%
     filter(Time >=1,
            variable %in% c("ABio",  "BBio", "TotalDOM")) %>%
@@ -77,12 +51,8 @@ df <- outputSummary %>%
     mutate(value = valueTotal/mgmtArea_ha,
            variable = factor(variableLvl[match(variable, variableLvl)],
                              levels = variableLvl))
-
-
 ################################################################################
 #### actual plotting 
-################################################################################
-
 #### Évolution des stocks moyens par ha
 png(filename= paste0("pools_Summary_", a, ".png"),
     width = 8, height = 5, units = "in", res = 600, pointsize=10)
@@ -107,10 +77,10 @@ ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,
 dev.off()
 
 
-
 ################################################################################
 #### Évolution des stocks moyens par ha - illustration alternative (stack)
 df$variable <- factor(df$variable, levels = variableLvl[c(2,3,1)])
+################################################################################
 
 png(filename= paste0("pools_Stacked_", a, ".png"),
     width = 10, height = 5, units = "in", res = 600, pointsize=10)
@@ -135,11 +105,8 @@ dev.off()
 
 ################################################################################
 #### Évolution des proportions des différents compartiments
-
-################################################################################
-#### Évolution des stocks moyens par ha - illustration alternative (stack)
 df$variable <- factor(df$variable, levels = variableLvl[c(2,3,1)])
-
+################################################################################
 png(filename= paste0("pools_Proportion_", a, ".png"),
     width = 10, height = 5, units = "in", res = 600, pointsize=10)
 
@@ -275,9 +242,9 @@ dev.off()
 ### Aboveground biomass
 ################################################################################
 
-totalManagedArea <- AGB %>%
+totalArea <- AGB %>%
     distinct(areaName, landtype, landtypeArea_ha)
-totalManagedArea <- sum(totalManagedArea$landtypeArea_ha)
+totalArea <- sum(totalArea$landtypeArea_ha)
 
 df <- AGB %>%
     group_by(areaName, scenario, mgmtScenario, Time, replicate, species, ageClass) %>%
@@ -295,7 +262,7 @@ getPalette = colorRampPalette(brewer.pal(9, "Set1"))
 png(filename= paste0("agb_TotalStacked_", a, ".png"),
     width = 10, height = 5, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea)) + 
+ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalArea)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
     facet_wrap(~ scenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
@@ -309,10 +276,10 @@ ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea)) +
     
 
 dev.off()
-
+################################################################################
 ### stacked (age classes)
-
 cols = brewer.pal(n = 9, name = 'Greens')[3:9]
+################################################################################
 png(filename= paste0("agb_AgeClassStacked_", a, ".png"),
     width = 10, height = 20, units = "in", res = 600, pointsize=10)
 
