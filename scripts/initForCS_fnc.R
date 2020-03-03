@@ -320,7 +320,12 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
 
     ############################################################################
     #### Writing ForCS parameters to file
-    file <- paste0("forCS-input_", a, "_", s, ".txt")
+    if(spinup) {
+        file <- paste0("forCS-input_", a, "_spinup.txt")
+    } else {
+        file <- paste0("forCS-input_", a, "_", s, ".txt")
+    }
+    
     print(paste0("Writing updated ForCS inputs to file '", file, "'"))
     forCS_writeToFile(x = forCS, file)
     print("Done!")

@@ -42,7 +42,7 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
 scenario <- c("baseline")#, "RCP45", "RCP85")#, 
-area <-  c("Hereford", "ForMont", "Maskinonge")
+area <-  c("Hereford", "ForMont")
 t0 <- 2020
 spinup <- T 
 climate <- F
