@@ -10,7 +10,9 @@ simDir <- simInfo$simID
 require(parallel)
 require(doSNOW)
 n <- ifelse(Sys.info()["user"] == "dcyr-z840",
-            8 , 1)
+            12 , 1)
+
+n <- min(n, nrow(simInfo))
 
 # #######
 cl = makeCluster(n, outfile = "") ## 

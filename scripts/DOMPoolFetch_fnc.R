@@ -1,13 +1,13 @@
-df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/0/log_Pools.csv",
-              ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/0/landtypes.txt")
-write.csv(df, file = "DOM-initPools_Hereford.csv", row.names = F)
-df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/1/log_Pools.csv",
-                    ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/1/landtypes.txt")
-write.csv(df, file = "DOM-initPools_ForMont.csv", row.names = F)
-df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/log_Pools.csv",
-                    ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/landtypes.txt")
-write.csv(df, file = "DOM-initPools_Maskinonge.csv", row.names = F)
-df %>% arrange(spp, landtype,  poolID)
+# df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-03-03/0/log_Pools.csv",
+#               ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-03-03/0/landtypes.txt")
+# write.csv(df, file = "DOM-initPools_Hereford.csv", row.names = F)
+# df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-03-03/1/log_Pools.csv",
+#                     ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-03-03/1/landtypes.txt")
+# write.csv(df, file = "DOM-initPools_ForMont.csv", row.names = F)
+# df <- DOMPool_fetch(x = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/log_Pools.csv",
+#                     ltTxt = "C:/Users/dcyr-z840/Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/2020-02-26/2/landtypes.txt")
+# write.csv(df, file = "DOM-initPools_Maskinonge.csv", row.names = F)
+# df %>% arrange(spp, landtype,  poolID)
 DOMPool_fetch <- function(x = "log_Pools.csv",
                           ltTxt = "landtypes.txt") {
     
