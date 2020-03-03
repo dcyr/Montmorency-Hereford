@@ -1,21 +1,10 @@
 LandisData "Biomass Succession"
-
->> WARNING - THIS IS A BIAS-CORRECTED MAIN INPUT FILE
-
->> THE FOLLOWING PARAMETERS WERE CHANGED TO THE ORIGINAL MAIN INPUT FILE
-
->>SPP MortalShape GrowthCurve
->>PICE.RUB 5 1
->>ACER.SAH 25 0
->>THUJ.SPP.ALL 5 1
->>TSUG.CAN 5 1
-
 Timestep 10 
 SeedingAlgorithm WardSeedDispersal
-InitialCommunities "U:\YBoulanger\LANDIS\Quebec\Hereford\initial-communities_Hereford.dat" 
-InitialCommunitiesMap "U:\YBoulanger\LANDIS\Quebec\Hereford\initial-communities_Hereford.tif" 
+InitialCommunities "..\..\..\..\initial-communities_Hereford.dat" 
+InitialCommunitiesMap "..\..\..\..\initial-communities_Hereford.tif" 
 CalibrateMode no
-SpinupMortalityFraction 0.01 
+SpinupMortalityFraction 0.006604108 
 >> **********************
 MinRelativeBiomass
 >> Shade
@@ -72,5 +61,5 @@ EcoregionParameters
 70 600
 71 600
 72 600
-DynamicInputFile "U:\YBoulanger\LANDIS\Quebec\Hereford\biomass-succession-dynamic-inputs_Hereford_baseline_BiasCorrected.txt" 
-AgeOnlyDisturbances:BiomassParameters "C:\YAN\LANDIS\Landis-II\AODist.txt"  
+DynamicInputFile "..\..\..\..\biomass-succession-dynamic-inputs_Hereford_baseline_BiasCorrected.txt" 
+AgeOnlyDisturbances:BiomassParameters "U:\YBoulanger\LANDIS\Landis-II\AODist.txt"  
