@@ -577,8 +577,3 @@ HarvestImplementations
 190 190_CPRS 7.5%
 2482 2482_CPRS 7.5%
 2483 2483_CPRS 7.5%
-
-PrescriptionMaps ".\harvest\prescripts-{timestep}.tif" 
-BiomassMaps ".\harvest\biomass-removed-{timestep}.tif" 
-EventLog ".\harvest\log.csv" 
-SummaryLog ".\harvest\summarylog.csv" 

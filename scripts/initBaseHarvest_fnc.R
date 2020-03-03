@@ -85,6 +85,13 @@ initBaseHarvest <-  function(input,
         tmp <- tmp[-index]   
     }
 
+    ### removing output file path typically contained in biomass-harvest input files
+    index <- which(as.logical(lapply(tmp, function(x) grepl("PrescriptionMaps|BiomassMaps|EventLog|SummaryLog", x[[1]]))))
+    if(length(index) > 0) {
+        tmp <- tmp[-index]    
+    }
+    
+    
     ### adapt code if there are some begin/end times
     # as.numeric(lapply(tmp, length))
     tmp <- lapply(tmp, function(x) data.frame(mgmtArea = x[[1]],

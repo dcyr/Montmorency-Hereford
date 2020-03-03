@@ -139,9 +139,10 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
         # merging in new data
         tmp  <- forCS$EcoSppDOMParameters$table %>%
             merge(tmp, by = c("landtype", "spp", "poolID"),
-                  all.y = T) %>%
+                  all = T) %>%
             arrange(spp, landtype, poolID) %>%
-            mutate(amountAtT0 = amountAtT0.y) %>%
+            mutate(amountAtT0 = ifelse(is.na(amountAtT0.y),
+                                       0, amountAtT0.y)) %>%
             select(landtype, spp, poolID,
                    OrganicMatterDecayRate,
                    amountAtT0, Q10)
@@ -312,7 +313,6 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
     
     ############################################################################
     #### SoilSpinUp
-    ## removing SnagData section
     forCS <- soilSpinUp(forCS,
                         soilSpinUp = spinup,
                         tolerance = 0.5, 

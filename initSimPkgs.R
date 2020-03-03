@@ -25,15 +25,15 @@ inputDir <- inputPathLandis
 
 
 simDuration <- 100
-expDesign <- list(#area = c("ForMont", "Hereford"),
+expDesign <- list(area = "Maskinonge",#c("ForMont", "Hereford"),
                   scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(Hereford = c("1", "2", "3", "4"),
-                              ForMont =  c("0",
-                                          "1",
-                                          "2.1", "2.2", "2.3",
-                                          "3.1", "3.2", "3.3",
-                                          "4.1", "4.2", "4.3")),
-                              #Maskinonge = c("baseline")),
+                  mgmt = list(#Hereford = c("1", "2", "3", "4"),
+                              #ForMont =  c("0",
+                                          # "1",
+                                          # "2.1", "2.2", "2.3",
+                                          # "3.1", "3.2", "3.3",
+                                          # "4.1", "4.2", "4.3")),
+                              Maskinonge = c("baseline")),
                   spinup = F,
                   cropped  = list(Hereford = T,
                                 ForMont = T,
