@@ -15,13 +15,10 @@ setwd(wwd)
 
 
 ### fetching outputs
-#simDir <- "/media/dcyr/Seagate Data/2019-10-16"
-simDir <- "D:/ForCS - Montmorency-Hereford-Maskinonge/2020-02-26/"
-# simDir <- "H:/2019-11-02"
+simDir <- "D:/ForCS - Maskinonge"#Montmorency-Hereford"#"D:/ForCS - "
 
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
                     colClasses=c("simID"="character"))
-
 x <- list.dirs(simDir, full.names = F, recursive = F)
 
 
@@ -33,7 +30,7 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("agbAgeClasses") #c("ageMax",  "agbTotal","summary", "FPS") 
+logs <- c("agbAgeClasses", "ageMax", "agbTotal","summary", "FPS") # 
 
 # ### hereford
 # mgmtLevels <- c("1" = "Intensif",
@@ -51,8 +48,8 @@ if("summary" %in% logs) {
     source("../scripts/fetchHarvestImplementationFnc.R")
 }
 
-
-clusterN <- 15
+require(stringr)
+clusterN <- 4
 #######
 cl = makeCluster(clusterN, outfile = "") ##
 registerDoSNOW(cl)
@@ -60,13 +57,15 @@ registerDoSNOW(cl)
 file.copy(paste(simDir, "simInfo.csv", sep = "/"),
           "simInfo.csv", overwrite = T)
 
-for (a in c("Maskinonge")) {#, "ForMont"
-    
-    dirIndex <- which(simInfo$simID %in% x &
+for (a in c("Maskinonge")) {#, "Hereford", "ForMont"
+    simIDs <- simInfo$simID
+    simIDs <- str_pad(simIDs, width = max(nchar(simIDs)),
+                      side = "left", pad = "0")
+    dirIndex <- which(simIDs  %in% x &
                           simInfo$areaName == a)
     
     
-    output <- foreach(i = dirIndex) %dopar% {
+    output <- foreach(i = dirIndex) %dopar% { #
     
         require(dplyr)
         require(raster)
@@ -78,12 +77,15 @@ for (a in c("Maskinonge")) {#, "ForMont"
         output <- list()
     
         ### sim variables
-        sDir <- paste(simDir, simInfo[i,"simID"], sep ="/")
-        simID <- simInfo[i, "simID"]
+        
+        
+        simID <-  simIDs[i]  
+        sDir <-    paste(simDir, simID, sep ="/")
         areaName <- simInfo[i, "areaName"]
         scenario <- simInfo[i, "scenario"]
         mgmtScenario  <- simInfo[i, "mgmt"]
         mgmtScenarioName <- mgmtScenario
+        harvest <- simInfo[i,"harvest"]
         
         
         replicate <- simInfo[i, "replicate"]
@@ -99,10 +101,16 @@ for (a in c("Maskinonge")) {#, "ForMont"
         landtypes_RAT <- landtypes_RAT[which(landtypes_RAT[,1] %in% c("yes", "y", "Yes", "Y")),]
     
         if("summary" %in% logs) {
-            ### fetching mgmt areas and harvest implementation table
-            mgmtAreas <- raster(paste(sDir, "mgmt-areas.tif", sep = "/"))
-            x <- paste(sDir, "base-harvest.txt", sep = "/")
-            harvImpl <- fetchHarvestImplementation(x)
+            if(harvest) {
+                ### fetching mgmt areas and harvest implementation table
+                mgmtAreas <- raster(paste(sDir, "mgmt-areas.tif", sep = "/"))
+                x <- paste(sDir, "base-harvest.txt", sep = "/")
+                harvImpl <- fetchHarvestImplementation(x) 
+            } else {
+                mgmtAreas <- !is.na(landtypes)
+                mgmtAreas[mgmtAreas == 0] <- NA
+            }
+
         }
     
     
@@ -299,12 +307,15 @@ for (a in c("Maskinonge")) {#, "ForMont"
             
         }
         
-        if("FPS"  %in% logs) {
+        if("FPS"  %in% logs
+           & harvest) {
             ### fetching targetted mgmt-areas
             ### fetching landtypes
             mgmtAreas <- raster(paste(sDir, "mgmt-areas.tif", sep = "/"))
             if(a %in% c("Hereford", "ForMont")) {
                 mgmtAreas <- mgmtAreas >= 10000  
+            } else {
+                mgmtAreas[!is.na(mgmtAreas)] <- 1
             }
             
             

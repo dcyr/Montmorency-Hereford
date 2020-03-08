@@ -11,17 +11,22 @@ dir.create(wwd)
 setwd(wwd)
 require(dplyr)
 
-
+initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-# outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
-a <- "Maskinonge"
+a <- "ForMont"
+
+require(ggplot2)
+require(dplyr)
+require(tidyr)
+
+################################################################################
+################################################################################
+################################################################################
 outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
 fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
+AGB <- get(load(paste0("../outputCompiled/output_bio_", a, ".RData")))
 
-##########################################################
-##########################################################
-### tmp repair
-##########################################################
+################################################################################
 outputSummary <- outputSummary %>%
     filter(variable != "mgmtScenarioName") %>%
     mutate(value = as.numeric(value))
@@ -34,17 +39,17 @@ outputSummary <- outputSummary %>%
 #                 "4" = "Nouveau zonage",
 #                 "2" = "Conservation")
 
-# mgmtLevels <- c("0" = "0",
-#                 "1" = "1",
-#                 "2.1" = "2.1",
-#                 "2.2" = "2.2",
-#                 "2.3" = "2.3",
-#                 "3.1" = "3.1",
-#                 "3.2" = "3.2",
-#                 "3.3" = "3.3",
-#                 "4.1" = "4.1",
-#                 "4.2" = "4.2",
-#                 "4.3" = "4.3")
+mgmtLevels <- c("0" = "0",
+                "1" = "1",
+                "2.1" = "2.1",
+                "2.2" = "2.2",
+                "2.3" = "2.3",
+                "3.1" = "3.1",
+                "3.2" = "3.2",
+                "3.3" = "3.3",
+                "4.1" = "4.1",
+                "4.2" = "4.2",
+                "4.3" = "4.3")
 # 
 # outputSummary$mgmtScenario <- factor(mgmtLevels[as.character(outputSummary$mgmtScenario)],
 #                                      levels = mgmtLevels)
@@ -68,25 +73,25 @@ df <- outputSummary %>%
               mgmtArea_ha = sum(mgmtArea_ha)) %>%
     mutate(value = valueTotal/mgmtArea_ha)
 # 
-# cols <- c("0" = "black",
-#           "1" = "yellow",
-#           "2.1" = "red2",
-#           "2.2" = "red3",
-#           "2.3" = "red4",
-#           "3.1" = "darkolivegreen2",
-#           "3.2" = "darkolivegreen3",
-#           "3.3" = "darkolivegreen4",
-#           "4.1" = "dodgerblue2",
-#           "4.2" = "dodgerblue3",
-#           "4.3" = "dodgerblue4")
-#     
+cols <- c("0" = "black",
+          "1" = "yellow",
+          "2.1" = "red2",
+          "2.2" = "red3",
+          "2.3" = "red4",
+          "3.1" = "darkolivegreen2",
+          "3.2" = "darkolivegreen3",
+          "3.3" = "darkolivegreen4",
+          "4.1" = "dodgerblue2",
+          "4.2" = "dodgerblue3",
+          "4.3" = "dodgerblue4")
+
 
 
     
 png(filename= paste0("pools_Summary_", a, ".png"),
     width = 7, height = 5, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
+ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,# group = group,
               #linetype = tenure,
               colour = as.factor(mgmtScenario))) +
     theme_dark() +
@@ -106,7 +111,6 @@ ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
                           "\nBBio : Belowground (root) biomass stocks.",
                           "\nTotalDOM : Total dead organic matter and soil stocks."))
 
-
 dev.off()
 
 
@@ -115,7 +119,7 @@ dev.off()
 png(filename= paste0("pools_Stacked_", a, ".png"),
     width = 8, height = 5, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2010+Time, y = value*unitConvFact,# group = group,
+ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,# group = group,
                #linetype = tenure,
                fill = variable)) + 
     stat_summary(fun.y="sum", geom="area", position = "stack") +

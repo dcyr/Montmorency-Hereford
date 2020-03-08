@@ -25,15 +25,15 @@ inputDir <- inputPathLandis
 
 
 simDuration <- 100
-expDesign <- list(area = "Maskinonge",#c("ForMont", "Hereford"),
-                  scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(#Hereford = c("1", "2", "3", "4"),
-                              #ForMont =  c("0",
-                                          # "1",
-                                          # "2.1", "2.2", "2.3",
-                                          # "3.1", "3.2", "3.3",
-                                          # "4.1", "4.2", "4.3")),
-                              Maskinonge = c("baseline")),
+expDesign <- list(area = c("ForMont", "Hereford"),#"Maskinonge",#
+                  scenario = c("RCP45", "RCP85"),
+                  mgmt = list(Hereford = c("1", "2", "3", "4"),
+                              ForMont =  c("0",
+                                          "1",
+                                          "2.1", "2.2", "2.3",
+                                          "3.1", "3.2", "3.3",
+                                          "4.1", "4.2", "4.3")),
+                              #Maskinonge = c("baseline")),
                   spinup = F,
                   cropped  = list(Hereford = T,
                                 ForMont = T,
@@ -74,7 +74,7 @@ for (a in names(expDesign$mgmt)) {
 simInfo <- do.call("rbind", simInfo) %>%
   arrange(replicate)
 
-sID <- (1:nrow(simInfo))-1
+sID <- ((1:nrow(simInfo))-1)+75
 simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),
                       simInfo)

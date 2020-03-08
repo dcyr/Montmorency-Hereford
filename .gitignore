@@ -11,5 +11,6 @@ gis
 *.html
 wc*
 documentation
-*agbTotal_*
-*ageMax_*
+old
+outputCompiled
+outputRenumberingFolder.R
