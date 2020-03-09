@@ -12,5 +12,6 @@ gis
 wc*
 documentation
 old
-outputCompiled
+outputCompiled/agbTotal*
+outputCompiled/ageMax*
 outputRenumberingFolder.R

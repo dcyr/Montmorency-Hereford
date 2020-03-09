@@ -28,29 +28,52 @@ AGB <- get(load(paste0("../outputCompiled/output_bio_", a, ".RData")))
 ################################################################################
 outputSummary <- outputSummary %>%
     filter(variable != "mgmtScenarioName") %>%
-    mutate(value = as.numeric(value))
+    mutate(value = as.numeric(value),
+           mgmtScenario = as.character(mgmtScenario),
+           mgmtScenario = ifelse(mgmtScenario == "baseline", "BAU", mgmtScenario),
+           mgmtScenarioName = paste(scenario, mgmtScenario))
 
 ################################################################################
 ################################################################################
 ################################################################################
 ##### pools
-variableLvl <- c("TotalDOM", "ABio", "BBio") ## ordering levels for plotting
-colScenarios <- c(baseline =  "lightblue2", ## colors for cc scenarios
-                  RCP45 = "goldenrod1",
-                  RCP85 = "red3")
+variableLvl <- c("TotalEcosys", "TotalDOM", "ABio", "BBio") ## ordering levels for plotting
+
+colScenarios <- c("baseline BAU" =  "lightblue1", ## colors for cc scenarios
+                  "baseline conservation" = "lightblue4",
+                  "RCP45 BAU" = "goldenrod1",
+                  "RCP45 conservation" = "goldenrod4",
+                  "RCP85 BAU" = "red2",
+                  "RCP85 conservation" = "red4")
+
 ################################################################################
 df <- outputSummary %>%
     filter(Time >=1,
-           variable %in% c("ABio",  "BBio", "TotalDOM")) %>%
-    group_by(areaName, scenario, mgmtScenario, mgmtID, Time, variable) %>%
+           variable %in% variableLvl)
+
+df <- df %>%
+    mutate(variable = factor(as.character(variable, levels = variableLvl))) %>%
+    group_by(areaName, scenario, mgmtScenario, mgmtScenarioName, mgmtID, Time, variable) %>%
     summarise(value = mean(value),
               mgmtArea_ha = unique(mgmtArea_ha)) %>%
-    group_by(areaName, scenario, mgmtScenario, Time, variable) %>%
+    group_by(areaName, scenario, mgmtScenario, mgmtScenarioName, Time, variable) %>%
     summarise(valueTotal = sum(value*mgmtArea_ha),
               mgmtArea_ha = sum(mgmtArea_ha)) %>%
     mutate(value = valueTotal/mgmtArea_ha,
            variable = factor(variableLvl[match(variable, variableLvl)],
-                             levels = variableLvl))
+                             levels = variableLvl)) %>%
+    as.data.frame()
+
+df <- df %>%
+    group_by(areaName, scenario, mgmtScenario, mgmtScenarioName, Time) %>%
+    summarise(valueTotal = sum(valueTotal),
+              mgmtArea_ha = unique(mgmtArea_ha)) %>%
+    mutate(value = valueTotal /mgmtArea_ha,
+           variable = "TotalEcosys") %>%
+    as.data.frame()%>%
+    rbind(df) %>%
+    mutate(variable = factor(variable, levels = variableLvl)) 
+
 ################################################################################
 #### actual plotting 
 #### Évolution des stocks moyens par ha
@@ -58,13 +81,13 @@ png(filename= paste0("pools_Summary_", a, ".png"),
     width = 8, height = 5, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,
-              colour = scenario,
+              colour = mgmtScenarioName,
               linetype = variable)) +
     theme_dark() +
-    scale_color_manual(name = "Scénario changement\nclimatique",
+    scale_color_manual(name = "Scénario",
                         values = colScenarios) +
     scale_linetype_manual(name = "Compartiment",
-                       values = c(2, 1, 3)) +
+                       values = c(1, 2, 3, 4)) +
     geom_line() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
@@ -83,13 +106,13 @@ df$variable <- factor(df$variable, levels = variableLvl[c(2,3,1)])
 ################################################################################
 
 png(filename= paste0("pools_Stacked_", a, ".png"),
-    width = 10, height = 5, units = "in", res = 600, pointsize=10)
+    width = 8, height = 8, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,# group = group,
                #linetype = tenure,
                fill = variable)) + 
     stat_summary(fun.y="sum", geom="area", position = "stack") +
-    facet_grid( ~ scenario) +
+    facet_grid(scenario ~ mgmtScenario) +
     scale_fill_manual(values = c("forestgreen","chocolate2", "coral4" )) +
     theme_dark() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
@@ -108,18 +131,18 @@ dev.off()
 df$variable <- factor(df$variable, levels = variableLvl[c(2,3,1)])
 ################################################################################
 png(filename= paste0("pools_Proportion_", a, ".png"),
-    width = 10, height = 5, units = "in", res = 600, pointsize=10)
+    width = 8, height = 8, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = initYear+Time, y = 100*value*unitConvFact,
                #linetype = tenure,
                fill = variable)) + 
     stat_summary(fun.y="sum", geom="area", position = "fill") +
-    facet_grid( ~ scenario) +
-    scale_fill_manual(values = c("forestgreen","chocolate2", "coral4" )) +
+    facet_grid(scenario ~ mgmtScenario) +
+    scale_fill_manual("compartiment", values = c("forestgreen","chocolate2", "coral4" )) +
     theme_dark() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(title = "Évolution de l'importance relative des compartiments de carbones forestiers de la MRC Maskinongé",
+    labs(title = "Évolution de l'importance relative des compartiments\nde carbones forestiers de la MRC Maskinongé",
          x = "",
          y = expression(paste("Proportion (%)")),
          caption = paste0("ABio : Biomasse aérienne",
@@ -139,6 +162,11 @@ variableLvl <- c(DelBio = "DelBio\n(Variation en biomasse)",
                  Rh = "Rh\n(Respiration hétérotrophe)",
                  NEP = "NEP\n(Productivité nette de l'écosystème)",
                  NBP = "NBP\n(Productivité nette du biome)")
+
+colScenarios <- c("baseline" = "lightblue2", ## colors for cc scenarios
+                  "RCP45" = "goldenrod2",
+                  "RCP85" = "red2")
+
 df <- outputSummary %>%
     filter(Time >=1,
            variable %in% c("DelBio",  "Turnover",
@@ -154,18 +182,20 @@ df <- outputSummary %>%
     group_by(areaName, scenario, mgmtScenario, Time, variable) %>%
     summarise(value = mean(value))
 
-    
 png(filename= paste0("fluxes_Summary_", a, ".png"),
     width = 9, height = 8, units = "in", res = 600, pointsize=10)
 
 ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,
-               colour = scenario)) +
+               colour = scenario,
+               linetype = mgmtScenario)) +
     facet_wrap( ~ variable, ncol = 3) +
     theme_dark() +
     geom_hline(yintercept = 0, linetype = 1, color = "grey35", size = 0.35) +
     geom_line() +
-    scale_color_manual(name = "",
+    scale_color_manual(name = "Scénario changement\nclimatique",
                        values = colScenarios)+
+    scale_linetype_manual(name = "Scénario d'aménagement",
+                          values = c(1,2))+
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
     labs(title = "Évolution de la dynamique du carbone dans la MRC Maskinongé",
@@ -191,6 +221,7 @@ dev.off()
 ################################################################################
 
 df <- fps %>%
+    filter(mgmtScenario != "conservation") %>%
     group_by(areaName, scenario, mgmtScenario, Time, species) %>%
     summarise(BioToFPS_tonnesCTotal = mean(BioToFPS_tonnesCTotal),
               areaManagedTotal_ha = unique(areaManagedTotal_ha),
@@ -219,7 +250,7 @@ png(filename= paste0("fps_Stacked_", a, ".png"),
 
 ggplot(df, aes(x = initYear+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
-    facet_wrap(~ scenario) +
+    facet_wrap( ~ scenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
     theme_dark() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
