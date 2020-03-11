@@ -40,7 +40,7 @@ outputSummary <- outputSummary %>%
 variableLvl <- c("TotalEcosys", "TotalDOM", "ABio", "BBio") ## ordering levels for plotting
 
 colScenarios <- c("baseline BAU" =  "lightblue1", ## colors for cc scenarios
-                  "baseline conservation" = "lightblue4",
+                  "baseline conservation" = "lightblue3",
                   "RCP45 BAU" = "goldenrod1",
                   "RCP45 conservation" = "goldenrod4",
                   "RCP85 BAU" = "red2",

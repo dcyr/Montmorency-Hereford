@@ -25,15 +25,16 @@ inputDir <- inputPathLandis
 
 
 simDuration <- 100
-expDesign <- list(area = c("ForMont", "Hereford"),#"Maskinonge",#
-                  scenario = c("RCP45", "RCP85"),
-                  mgmt = list(Hereford = c("1", "2", "3", "4"),
+expDesign <- list(area = c("ForMont"),#"ForMont", ),#", "Hereford"
+                  scenario = c("baseline", "RCP45", "RCP85"),
+                  mgmt = list(#Hereford = c("1", "2", "3", "4","conservation"),
                               ForMont =  c("0",
                                           "1",
                                           "2.1", "2.2", "2.3",
                                           "3.1", "3.2", "3.3",
-                                          "4.1", "4.2", "4.3")),
-                              #Maskinonge = c("baseline")),
+                                          "4.1", "4.2", "4.3",
+                                          "noHarvest")),
+                              # Maskinonge = c("conservation", )),
                   spinup = F,
                   cropped  = list(Hereford = T,
                                 ForMont = T,
@@ -41,7 +42,7 @@ expDesign <- list(area = c("ForMont", "Hereford"),#"Maskinonge",#
                   fire = F,
                   BDA = T,
                   wind = T,
-                  harvest = T,
+                  harvest = F,
                   rep = 1:5)
 
 
@@ -74,7 +75,7 @@ for (a in names(expDesign$mgmt)) {
 simInfo <- do.call("rbind", simInfo) %>%
   arrange(replicate)
 
-sID <- ((1:nrow(simInfo))-1)+75
+sID <- ((1:nrow(simInfo))-1)#+240
 simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),
                       simInfo)
@@ -97,7 +98,7 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     spinup <- simInfo[i,"spinup"]
     replicate <- as.character(simInfo[i,"replicate"])
     cropped <- simInfo[i,"cropped"]
-    fire <- simInfo[i,"cropped"]
+    fire <- simInfo[i,"fire"]
     harvest <- simInfo[i,"harvest"]
     wind <- simInfo[i,"wind"]
     BDA <- simInfo[i,"BDA"]
@@ -109,7 +110,7 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     ### initial rasters and attribute files
     
     if(cropped) {
-      
+    
       if(!spinup) {
         mgmtR <- raster(paste0(inputDir, "/mgmt-areas_",
                                areaName, "_", mgmt, ".tif"))
@@ -125,6 +126,7 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
       mgmtR <- trim(mgmtR)
       e <- extent(mgmtR)
       e <- e + 20000
+
     }  
     
     

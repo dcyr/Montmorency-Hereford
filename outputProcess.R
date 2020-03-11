@@ -15,7 +15,7 @@ setwd(wwd)
 
 
 ### fetching outputs
-simDir <- "D:/ForCS - Maskinonge"#Montmorency-Hereford"#"D:/ForCS - "
+simDir <- "D:/ForCS - Montmorency-Hereford/"#Montmorency-Hereford"#"D:/ForCS - "
 
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
                     colClasses=c("simID"="character"))
@@ -57,7 +57,7 @@ registerDoSNOW(cl)
 file.copy(paste(simDir, "simInfo.csv", sep = "/"),
           "simInfo.csv", overwrite = T)
 
-for (a in c("Maskinonge")) {#, "Hereford", "ForMont"
+for (a in c("Hereford")) {#, "Hereford", "ForMont" Maskinonge
     simIDs <- simInfo$simID
     simIDs <- str_pad(simIDs, width = max(nchar(simIDs)),
                       side = "left", pad = "0")
