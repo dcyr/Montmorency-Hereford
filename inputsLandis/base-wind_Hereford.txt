@@ -1,5 +1,5 @@
 LandisData "Base Wind" 
-Timestep  10 
+Timestep  1 
 >> Wind Event Parameters
 >> Wind
 >> Max Mean Min Rotation

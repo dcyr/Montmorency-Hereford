@@ -25,16 +25,16 @@ inputDir <- inputPathLandis
 
 
 simDuration <- 100
-expDesign <- list(area = c("ForMont"),#"ForMont", ),#", "Hereford"
+expDesign <- list(area = c("Hereford"),#"ForMont", ),#", "Hereford"
                   scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(#Hereford = c("1", "2", "3", "4","conservation"),
-                              ForMont =  c("0",
-                                          "1",
-                                          "2.1", "2.2", "2.3",
-                                          "3.1", "3.2", "3.3",
-                                          "4.1", "4.2", "4.3",
-                                          "noHarvest")),
-                              # Maskinonge = c("conservation", )),
+                  mgmt = list(Hereford = c("1", "2", "3", "4","noHarvest")),
+                              # ForMont =  c("0",
+                              #             "1",
+                              #             "2.1", "2.2", "2.3",
+                              #             "3.1", "3.2", "3.3",
+                              #             "4.1", "4.2", "4.3",
+                              #             "noHarvest")),
+                              # Maskinonge = c("noHarvest", )),
                   spinup = F,
                   cropped  = list(Hereford = T,
                                 ForMont = T,
@@ -42,7 +42,7 @@ expDesign <- list(area = c("ForMont"),#"ForMont", ),#", "Hereford"
                   fire = F,
                   BDA = T,
                   wind = T,
-                  harvest = F,
+                  harvest = T,
                   rep = 1:5)
 
 
@@ -79,6 +79,7 @@ sID <- ((1:nrow(simInfo))-1)#+240
 simInfo <- data.frame(simID = str_pad(sID, nchar(max(sID)),
                                       pad = "0"),
                       simInfo)
+simInfo[,"harvest"] <- simInfo[,"mgmt"]!= "noHarvest"
 row.names(simInfo) <- 1:nrow(simInfo)
 
 require(parallel)
@@ -98,11 +99,10 @@ foreach(i = 1:nrow(simInfo)) %dopar% {
     spinup <- simInfo[i,"spinup"]
     replicate <- as.character(simInfo[i,"replicate"])
     cropped <- simInfo[i,"cropped"]
-    fire <- simInfo[i,"fire"]
     harvest <- simInfo[i,"harvest"]
+    fire <- simInfo[i,"fire"]
     wind <- simInfo[i,"wind"]
     BDA <- simInfo[i,"BDA"]
-    
     
     dir.create(simID)
     
