@@ -26,8 +26,8 @@ require(tidyr)
 variableLvl <- c("TotalEcosys", "TotalDOM", "ABio", "BBio") ## ordering levels for plotting
 
 
-mgmtLevels <- list(ForMont = c("0" = "RÃ©fÃ©rence",
-                               "noHarvest" = "Aucune rÃ©colte",
+mgmtLevels <- list(ForMont = c("0" = "Référence",
+                               "noHarvest" = "Aucune récolte",
                                "1" = "Conservation",
                                "2.1" = "Extensif A - EPN",
                                "2.2" = "Extensif A - EPB",
@@ -44,13 +44,13 @@ mgmtLevels <- list(ForMont = c("0" = "RÃ©fÃ©rence",
                                 "3" = "Servitude",
                                 "1" = "Intensif"))
 
-mgmtLvls <- c("RÃ©fÃ©rence", "Aucune rÃ©colte", "Conservation", "Extensif A", "Extensif B", "Intensif")
+mgmtLvls <- c("Référence", "Aucune récolte", "Conservation", "Extensif A", "Extensif B", "Intensif")
 
 
 
 
-cols <- list(ForMont = c("RÃ©fÃ©rence" = "black",
-                         "Aucune rÃ©colte" = "darkgreen",
+cols <- list(ForMont = c("Référence" = "black",
+                         "Aucune récolte" = "darkgreen",
                          "Conservation" = "green",
                          "Extensif A" = "dodgerblue3",
                          "Extensif B" = "goldenrod3",
@@ -61,7 +61,8 @@ cols <- list(ForMont = c("RÃ©fÃ©rence" = "black",
                            "Allongement" = "goldenrod3",
                            "Intensif" = "red3"))
 
-
+scenRef <- list(ForMont = "Référence",
+                Hereford = "Servitude")
 ################################################################################
 ################################################################################
 ################################################################################
@@ -120,13 +121,34 @@ df <- df %>%
              Time) %>%
     summarise(valueTotal = sum(valueTotal),
               mgmtArea_ha = unique(mgmtArea_ha)) %>%
-    mutate(value = valueTotal /mgmtArea_ha,
+    mutate(value = valueTotal / mgmtArea_ha,
            variable = "TotalEcosys") %>%
     as.data.frame()%>%
     rbind(df) %>%
     mutate(variable = factor(variable, levels = variableLvl)) 
 
 
+dfRef <- df %>%
+    mutate(ref)
+
+dfRef <- list()
+for (a in names(scenRef)) {
+    
+    x <- df %>%
+        filter(areaName == a,
+               mgmt == scenRef[[a]])
+    #dfRef[[a]]
+    cNames <- colnames(df)
+    cNames <- cNames[-which(cNames %in% c("mgmtScenario", "mgmt", "valueTotal", "value", "mgmtArea_ha"))]
+    
+    dfRef <- merge(df, x,
+                 by = cNames,
+                 suffixes = c("",".ref"))
+    
+    cNames <- c(colnames(df), "value.ref")
+    dfRef <- dfRef[,cNames]
+}
+ref <- df
 
 
 if(a == "Hereford") {
@@ -144,23 +166,23 @@ if(a == "ForMont") {
 p <- p +
     facet_grid(variable ~ scenario, scale = "free") +
     theme_bw() +
-    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
+    scale_color_manual(name = "Scénario\nd'aménagement",
                        values = cols[[a]]) +
 
     geom_line(size = 0.5) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(title = "Ã‰volution de la densitÃ© moyenne en carbone",
+    labs(title = "Évolution de la densité moyenne en carbone",
          subtitle = areaName,
          x = "",
          y = expression(paste("tonnes C"," ha"^"-1","\n")),
-         caption = paste0("ABio : Biomasse aÃ©rienne",
+         caption = paste0("ABio : Biomasse aérienne",
                           "\nBBio : Biomasse souterraine",
-                          "\nTotalDOM : Bois mort, litiÃ¨re, humus et sol minÃ©ral"))
+                          "\nTotalDOM : Bois mort, litière, humus et sol minéral"))
 
 if(a == "ForMont") {
     p <- p +
-        scale_linetype_manual(name = "EspÃ¨ce plantÃ©e",
+        scale_linetype_manual(name = "Espèce plantée",
                               values = c(1, 2, 3, 4)) 
 }
     
@@ -234,9 +256,9 @@ p <- p + facet_grid(variable ~ scenario, scale = "free") +#facet_wrap( ~ scenari
     geom_line() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
+    scale_color_manual(name = "Scénario\nd'aménagement",
                        values = cols[[a]]) +
-    scale_linetype_manual(name = "EspÃ¨ce plantÃ©e",
+    scale_linetype_manual(name = "Espèce plantée",
                           values = 1:4) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = paste("Dynamique du carbone"),
@@ -312,8 +334,8 @@ ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) 
     labs(title = "Transfers vers les produits forestiers",
          subtitle = areaName,
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", "rÃ©coltÃ©","\n"))) +
-    geom_text(data = labdf, aes(label = paste("Superficie amÃ©nagÃ©e:", areaManagedTotal_ha, "ha"),
+         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n"))) +
+    geom_text(data = labdf, aes(label = paste("Superficie aménagée:", areaManagedTotal_ha, "ha"),
                                 y = yMax, x = 2010),
               hjust = 0, vjust = 1, size = 2)
     
@@ -334,7 +356,7 @@ if(a == "ForMont") {
 
 p <- p + geom_line()+
     facet_wrap( ~ scenario) +
-    scale_color_manual(name = "ScÃ©nario\nd'amÃ©nagement",
+    scale_color_manual(name = "Scénario\nd'aménagement",
                        values = cols[[a]]) +
     theme_dark() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
@@ -342,7 +364,7 @@ p <- p + geom_line()+
     labs(title = "Transfers vers les produits forestiers",
          subtitle = areaName,
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", "rÃ©coltÃ©","\n")))
+         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n")))
 
 
 png(filename= paste0("fps_total_", a, ".png"),
@@ -425,11 +447,11 @@ ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea)) +
     theme_bw() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(title = "Ã‰volution de la composition forestiÃ¨re  - Biomasse aÃ©rienne*",
+    labs(title = "Évolution de la composition forestière  - Biomasse aérienne*",
          subtitle = paste(areaName, " (incluant les environs)"),
          x = "",
          y = expression(paste("tonnes"," ha"^"-1")),
-         caption = "*Les valeurs sont exprimÃ©es ici en terme de poids sec (biomasse), et non de carbone")
+         caption = "*Les valeurs sont exprimées ici en terme de poids sec (biomasse), et non de carbone")
 
 
 dev.off()
@@ -454,11 +476,11 @@ ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea,
     theme_bw() +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(title = "Ã‰volution de la composition forestiÃ¨re  - Biomasse aÃ©rienne*",
+    labs(title = "Évolution de la composition forestière  - Biomasse aérienne*",
          subtitle = paste(areaName, " (incluant les environs)"),
          x = "",
          y = expression(paste("tonnes"," ha"^"-1")),
-         caption = "*Les valeurs sont exprimÃ©es ici en terme de poids sec (biomasse), et non de carbone")
+         caption = "*Les valeurs sont exprimées ici en terme de poids sec (biomasse), et non de carbone")
 
 
 dev.off()
@@ -477,7 +499,7 @@ dev.off()
 #     theme_dark() +
 #     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
 #           axis.text.x = element_text(angle = 45, hjust = 1)) +
-#     labs(title = "Ã‰volution de la composition forestiÃ¨re de la MRC Maskinong?\nBiomasse a?rienne* par classes d'?ge",
+#     labs(title = "Évolution de la composition forestière de la MRC Maskinong?\nBiomasse a?rienne* par classes d'?ge",
 #          x = "",
 #          y = expression(paste("tonnes"," ha"^"-1")),
 #          caption = "*Les valeurs sont exprim?es ici en terme de poids sec (biomasse), et non de carbone")

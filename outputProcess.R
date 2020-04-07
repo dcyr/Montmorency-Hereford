@@ -31,7 +31,7 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("agbAgeClasses")# c("agbAgeClasses", "agbTotal","ageMax", "summary", "FPS") #
+logs <- c( "summary") #"FPS" , "agbAgeClasses", "agbAgeClasses", "agbTotal","ageMax",
 
 # ### hereford
 # mgmtLevels <- c("1" = "Intensif",
@@ -65,7 +65,7 @@ dirIndex <- which(simIDs  %in% x &
                       simInfo$areaName == a)
 
 
-output <- foreach(i = dirIndex) %dopar% { #
+outputList <- foreach(i = dirIndex) %dopar% { #
 
     require(dplyr)
     require(raster)
@@ -107,8 +107,7 @@ output <- foreach(i = dirIndex) %dopar% { #
             x <- paste(sDir, "base-harvest.txt", sep = "/")
             harvImpl <- fetchHarvestImplementation(x) 
         } else {
-            mgmtAreas <- !is.na(landtypes)
-            mgmtAreas[mgmtAreas == 0] <- NA
+            mgmtAreas <- raster(paste0("../inputsLandis/studyArea_", a, ".tif"))
         }
 
     }
@@ -377,12 +376,13 @@ output <- foreach(i = dirIndex) %dopar% { #
     return(output)
     
 }
+stopCluster(cl)
 
 if("summary"  %in% logs ) {
     ### summary
     outputSummary <- list()
-    for(i in seq_along(output)) {
-        outputSummary[[i]] <- output[[i]][["summary"]]
+    for(i in seq_along(outputList)) {
+        outputSummary[[i]] <- outputList[[i]][["summary"]]
         
     }
     outputSummary <-do.call("rbind", outputSummary)
@@ -392,8 +392,8 @@ if("summary"  %in% logs ) {
 if("agbAgeClasses"  %in% logs ) {
     ### agbAgeClasses
     output_agbAgeClasses <- list()
-    for(i in seq_along(output)) {
-        output_agbAgeClasses[[i]] <- output[[i]][["agbAgeClasses"]]
+    for(i in seq_along(outputList)) {
+        output_agbAgeClasses[[i]] <- outputList[[i]][["agbAgeClasses"]]
         
     }
     output_agbAgeClasses <- do.call("rbind", output_agbAgeClasses)
@@ -402,8 +402,8 @@ if("agbAgeClasses"  %in% logs ) {
 if("FPS"  %in% logs ) {
     ### summary
     outputSummary <- list()
-    for(i in seq_along(output)) {
-        outputSummary[[i]] <- output[[i]][["FPS"]]
+    for(i in seq_along(outputList)) {
+        outputSummary[[i]] <- outputList[[i]][["FPS"]]
         
     }
     outputSummary <-do.call("rbind", outputSummary)
