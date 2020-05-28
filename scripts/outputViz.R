@@ -13,9 +13,9 @@ require(dplyr)
 
 initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-a <- "ForMont"
-areaName <- ifelse(a == "ForMont", "ForÃªt Montmorency",
-                   ifelse(a == "Hereford", "ForÃªt Hereford", "[placeholder]"))
+a <- "Hereford"
+areaName <- ifelse(a == "ForMont", "Forêt Montmorency",
+                   ifelse(a == "Hereford", "Forêt Hereford", "[placeholder]"))
 require(ggplot2)
 require(dplyr)
 require(tidyr)
@@ -128,26 +128,20 @@ df <- df %>%
     mutate(variable = factor(variable, levels = variableLvl)) 
 
 
-dfRef <- df %>%
-    mutate(ref)
 
-dfRef <- list()
-for (a in names(scenRef)) {
-    
-    x <- df %>%
-        filter(areaName == a,
-               mgmt == scenRef[[a]])
-    #dfRef[[a]]
-    cNames <- colnames(df)
-    cNames <- cNames[-which(cNames %in% c("mgmtScenario", "mgmt", "valueTotal", "value", "mgmtArea_ha"))]
-    
-    dfRef <- merge(df, x,
-                 by = cNames,
-                 suffixes = c("",".ref"))
-    
-    cNames <- c(colnames(df), "value.ref")
-    dfRef <- dfRef[,cNames]
-}
+x <- df %>%
+    filter(areaName == a,
+           mgmt == scenRef[[a]])
+cNames <- colnames(df)
+cNames <- cNames[-which(cNames %in% c("mgmtScenario", "mgmt", "valueTotal", "value", "mgmtArea_ha"))]
+
+dfRef <- merge(df, x,
+             by = cNames,
+             suffixes = c("",".ref"))
+
+cNames <- c(colnames(df), "value.ref")
+dfRef <- dfRef[,cNames]
+
 ref <- df
 
 
@@ -382,27 +376,27 @@ dev.off()
 ### Aboveground biomass
 ################################################################################
 require(raster)
-
-### must correct this
-
+# 
+# ### must correct this
+# 
 if(a == "ForMont") {
-    r <- raster("../inputsLandis/landtypes_ForMont_cropped.tif")    
+    r <- raster("../inputsLandis/landtypes_ForMont_cropped.tif")
 }
 if(a == "Hereford") {
-    r <- raster("../inputsLandis/landtypes_Hereford_cropped.tif")    
+    r <- raster("../inputsLandis/landtypes_Hereford_cropped.tif")
 }
-
-# totalArea <- AGB %>%
-#     distinct(areaName, landtype, landtypeArea_ha)
-# totalArea <- sum(totalArea$landtypeArea_ha)
-
 # 
-# foo <- filter(AGB,
-#               scenario == "baseline",
-#               mgmtScenario == "0",
-#               replicate == 1, Time == 10, species == "ABIE.BAL")
-
-# sum(foo$agb_tonnesTotal)/totalArea
+# # totalArea <- AGB %>%
+# #     distinct(areaName, landtype, landtypeArea_ha)
+# # totalArea <- sum(totalArea$landtypeArea_ha)
+# 
+# # 
+# # foo <- filter(AGB,
+# #               scenario == "baseline",
+# #               mgmtScenario == "0",
+# #               replicate == 1, Time == 10, species == "ABIE.BAL")
+# 
+# # sum(foo$agb_tonnesTotal)/totalArea
 
 
 
@@ -417,19 +411,24 @@ df <- AGB %>%
     group_by(areaName, scenario, mgmtScenario,
              ##################
              plantedSp, mgmt,
+             Time, replicate) %>%
+    group_by(areaName, scenario, mgmtScenario,
+             ##################
+             plantedSp, mgmt,
              Time, replicate,
              # ageClass,
              species) %>%
-    summarise(agb_tonnesTotal = sum(agb_tonnesTotal)) %>%
+    summarise(agb_tonnesTotal = sum(agb_tonnesTotal),
+              areaTotal_ha = sum(unique(landtypeArea_ha))) %>%
     group_by(areaName, scenario, mgmtScenario,
              ##################
              plantedSp, mgmt,
              #ageClass.
              Time, species) %>%
-    summarise(agb_tonnesTotal = mean(agb_tonnesTotal)) %>%
+    summarise(agb_tonnesTotal = mean(agb_tonnesTotal),
+              areaTotal_ha = unique(areaTotal_ha)) %>%
     as.data.frame()
 
-totalManagedArea <- sum(values(r) %in% unique(AGB$landtype)) * 6.25
 require(RColorBrewer)
 
 ### stacked (total)
@@ -439,7 +438,7 @@ pHeight <- 2 * length(unique(df$mgmtScenario))
 png(filename= paste0("agb_sppStack_", a, ".png"),
     width = 8, height = pHeight, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea)) + 
+ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/areaTotal_ha)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
     facet_grid(mgmtScenario ~ scenario) +
     scale_fill_manual("",
@@ -464,7 +463,7 @@ getPalette = colorRampPalette(brewer.pal(9, "Set1"))
 png(filename= paste0("agb_sppLine_", a, ".png"),
     width = 8, height = pHeight, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalManagedArea,
+ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/areaTotal_ha,
                colour = species,
                group = species)) + 
     geom_line() +
