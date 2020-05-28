@@ -15,7 +15,7 @@ setwd(wwd)
 
 
 ### fetching outputs
-a <- "ForMont"
+a <- "Maskinonge"
 simDir <- paste0("D:/ForCS - ", a)#"#Montmorency-Hereford"#"D:/ForCS - "
 
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
@@ -31,7 +31,7 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c( "summary") #"FPS" , "agbAgeClasses", "agbAgeClasses", "agbTotal","ageMax",
+logs <- c( "agbAgeClasses") #"FPS" ,"summary", "agbAgeClasses", "agbAgeClasses", "agbTotal","ageMax",
 
 # ### hereford
 # mgmtLevels <- c("1" = "Intensif",
@@ -65,7 +65,7 @@ dirIndex <- which(simIDs  %in% x &
                       simInfo$areaName == a)
 
 
-outputList <- foreach(i = dirIndex) %dopar% { #
+outputList <- foreach(i = dirIndex)  %dopar% { ##dirIndex)  %dopar% {
 
     require(dplyr)
     require(raster)
@@ -99,7 +99,19 @@ outputList <- foreach(i = dirIndex) %dopar% { #
     landtypes_RAT <- read.table(paste(sDir, "landtypes.txt", sep = "/"),
                                 skip = 1, comment.char = ">")
     landtypes_RAT <- landtypes_RAT[which(landtypes_RAT[,1] %in% c("yes", "y", "Yes", "Y")),]
-
+    
+    studyArea <- raster(paste0("../inputsLandis/studyArea_", a, ".tif"))
+    landtypes[is.na(studyArea)] <- NA
+    
+    ## fetching lantypes values
+    index <- which(!is.na(values(landtypes)))
+    ltVal <- values(landtypes)[index]
+    XY_lt <- rowColFromCell(landtypes, index)
+    colnames(XY_lt) <- c("row", "column")
+    XY_lt <- data.frame(XY_lt,
+                        ltID = ltVal) #
+    
+    
     if("summary" %in% logs) {
         if(harvest) {
             ### fetching mgmt areas and harvest implementation table
@@ -107,7 +119,7 @@ outputList <- foreach(i = dirIndex) %dopar% { #
             x <- paste(sDir, "base-harvest.txt", sep = "/")
             harvImpl <- fetchHarvestImplementation(x) 
         } else {
-            mgmtAreas <- raster(paste0("../inputsLandis/studyArea_", a, ".tif"))
+            mgmtAreas <- studyArea
         }
 
     }
@@ -122,13 +134,6 @@ outputList <- foreach(i = dirIndex) %dopar% { #
                                   ltArea_ha = areaSize_lt$area_ha)
         areaSize_lt <- areaSize_lt[complete.cases(areaSize_lt),]
 
-        ## fetching lantypes values
-        index <- which(!is.na(values(landtypes)))
-        ltVal <- values(landtypes)[index]
-        XY_lt <- rowColFromCell(landtypes, index)
-        colnames(XY_lt) <- c("row", "column")
-        XY_lt <- data.frame(XY_lt,
-                            ltID = ltVal) #
         if(!("summary" %in% logs)) {
             XY <- XY_lt
         }
@@ -208,7 +213,10 @@ outputList <- foreach(i = dirIndex) %dopar% { #
        "ageMax"  %in% logs) {
         ####
         agb <- fread(file = paste(sDir, "log_BiomassC.csv", sep = "/"))
-
+        #### focusing on study area
+        XY_studyArea <- XY[!is.na(XY$mgmtID),]
+        agb <- agb %>%
+            merge(XY, all.x = F)
 
         if("agbAgeClasses"  %in% logs) {
             # first reduce the size of the table (before merging the XY df)
@@ -227,8 +235,10 @@ outputList <- foreach(i = dirIndex) %dopar% { #
                                      agb_tonnesTotal = NA)
 
             ### summarizing by landtype
+            
+            
             agbSummary <- agb %>%
-                mutate(landtype = ltVals[ecoregion],
+                mutate(landtype = ltID,
                        agb_tonnes = prod(res(landtypes))/10000*
                            2*(Wood + Leaf)/100) %>%
                 group_by(landtype, Time, species, ageClass) %>%
@@ -286,7 +296,6 @@ outputList <- foreach(i = dirIndex) %dopar% { #
         }
 
         if("ageMax" %in% logs) {
-            ### summarizing by landtype
             ageMax <- agb %>%
                 group_by(row, column, Time) %>%
                 summarise(ageMax = max(Age))
