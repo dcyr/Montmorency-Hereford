@@ -67,7 +67,7 @@ scenRef <- list(ForMont = "Référence",
 ################################################################################
 ################################################################################
 outputSummary <- get(load(paste0("../outputCompiled/output_summary_", a, ".RData")))
-fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))
+fps <- read.csv(paste0("../outputCompiled/output_BioToFPS_", a, ".csv"))#read.csv("output_BioToFPS_Hereford.csv")#
 AGB <- get(load(paste0("../outputCompiled/output_bio_", a, ".RData")))
 
 ################################################################################
@@ -318,7 +318,8 @@ pHeight <- 1.5*length(levels(df$mgmtScenario))
 png(filename= paste0("fps_spp_", a, ".png"),
     width = 8, height = pHeight, units = "in", res = 600, pointsize=10)
 
-ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
+#ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
+ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
     facet_grid(mgmtScenario ~ scenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
@@ -328,7 +329,7 @@ ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) 
     labs(title = "Transfers vers les produits forestiers",
          subtitle = areaName,
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n"))) +
+         y = expression(paste("tonnes C récoltées","\n"))) +
     geom_text(data = labdf, aes(label = paste("Superficie aménagée:", areaManagedTotal_ha, "ha"),
                                 y = yMax, x = 2010),
               hjust = 0, vjust = 1, size = 2)
@@ -339,11 +340,11 @@ dev.off()
 
 ### total
 if(a == "Hereford") {
-    p <- ggplot(dfTotal, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha,
+    p <- ggplot(dfTotal, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal,
                              colour = mgmtScenario))
 }
 if(a == "ForMont") {
-    p <- ggplot(dfTotal, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha,
+    p <- ggplot(dfTotal, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal,
                              colour = mgmt,
                              linetype = plantedSp))
 }
@@ -358,7 +359,8 @@ p <- p + geom_line()+
     labs(title = "Transfers vers les produits forestiers",
          subtitle = areaName,
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n")))
+         y = expression(paste("tonnes C récoltées","\n")))
+         #y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n")))
 
 
 png(filename= paste0("fps_total_", a, ".png"),
