@@ -254,6 +254,9 @@ landisInputFetch <- function(input, type) { ## 'type' is one of 'BiomassSuccessi
     
     for (i in seq_along(tablesAll)) {
         v <- tablesAll[i]
+        if (i > length(tableHeaderFlags)) {
+          next
+        }
         index <- tableHeaderFlags[i]
         if(index < max(flagsAll)) {
             index <- index : (flagsAll[which(flagsAll>index)][1]-1)
