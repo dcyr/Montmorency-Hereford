@@ -2,7 +2,7 @@
 [0-9]*
 outputSpatial
 temp
-test
+*test*
 gis
 *.Rmd
 *.html
@@ -12,6 +12,7 @@ gis
 wc*
 documentation
 *old
+
 outputCompiled/agbTotal*
 outputCompiled/ageMax*
 outputRenumberingFolder.R

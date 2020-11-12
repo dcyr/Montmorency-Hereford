@@ -35,8 +35,8 @@ aidbURL <- inputPathAIDB
 spuURL <- inputPathSPU
 ################################################################################
 #### Sourcing scripts
-source(paste(scriptPath, "CBMtoLANDIS_fnc.R", sep = "/"))
-source(paste(scriptPath, "initForCS_fnc.R", sep = "/"))
+source(paste(scriptPath, "CBMtoLANDIS_fnc.R", sep = "/"), encoding = "Windows-1252")
+source(paste(scriptPath, "initForCS_fnc.R", sep = "/"), encoding = "Windows-1252")
 
 ################################################################################
 landisInputs <- list.files(inputPathLandis)
@@ -50,7 +50,7 @@ climate <- F
 
 ################################################################################
 # might want to create loops here, or a function
-
+#a <- area
 for(a in area) {
         
     ### fetch species.txt
@@ -68,7 +68,8 @@ for(a in area) {
     landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
     
     landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
-
+    
+    #s <- "baseline"
     for(s in scenario) {
         
         ### fetching succession extensions inputs and template
@@ -83,6 +84,7 @@ for(a in area) {
         initForCS(forCSInput, bsMainInput, bsDynInput, landtypes, landtypes_AT,
                   spinup = spinup,
                   climate = climate,
+                  allometry = T,
                   t0 = t0,
                   scenario = s)
     }

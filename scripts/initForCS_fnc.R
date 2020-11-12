@@ -10,6 +10,7 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
                       spinup = F,
                       scenario,
                       t0,
+                      allometry,
                       valuesSingleAll = c("Timestep", "SeedingAlgorithm", "ForCSClimateFile",
                                           "InitialCommunities", "InitialCommunitiesMap"),
                       tablesAll = c("ForCSOutput", "SoilSpinUp", "AvailableLightBiomass",
@@ -48,7 +49,7 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
     ############################################################################
     ### updating file names (if necessary)
     print("Preparing / updating 'ForCSClimateFile'...")
-    forCS$ForCSClimateFile <- "forCS-climate.txt"
+    forCS$ForCSClimateFile <-  "forCS-climate.txt"
     print("Done!")
     
     ############################################################################
@@ -82,39 +83,107 @@ initForCS <- function(forCSInput, ### a formatted Forest Carbon Succession input
                                                            aidbURL = aidbURL)
     
     ## minimum age for merchantable stems
-    # (should be revised - using Romain's values for now,
-    # i.e. 30 for hardwoods (and Thuja & Tsuga), 10 for softwood (and Aspen)
+    # (should be revised
     
-    merchMinAge <- c("ABIE.BAL" = 10,
-                     "ACER.RUB" = 30,
-                     "ACER.SAH" = 30,
-                     "BETU.ALL" = 30,
-                     "BETU.PAP" = 30,
-                     "FAGU.GRA" = 30,
-                     "LARI.LAR" = 10,
-                     "PICE.GLA" = 10,
-                     "PICE.MAR" = 10,
-                     "PICE.RUB" = 10,
-                     "PINU.BAN" = 10,
-                     "PINU.RES" = 10,
-                     "PINU.STR" = 10,
-                     "POPU.TRE" = 10,
-                     "QUER.RUB" = 30,
-                     "THUJ.SPP.ALL" = 30,
-                     "TSUG.CAN" = 30)
+    # merchMinAge <- c("ABIE.BAL" = 20,
+    #                  "ACER.RUB" = 20,
+    #                  "ACER.SAH" = 20,
+    #                  "BETU.ALL" = 20,
+    #                  "BETU.PAP" = 20,
+    #                  "FAGU.GRA" = 20,
+    #                  "LARI.LAR" = 20,
+    #                  "PICE.GLA" = 20,
+    #                  "PICE.MAR" = 20,
+    #                  "PICE.RUB" = 20,
+    #                  "PINU.BAN" = 20,
+    #                  "PINU.RES" = 20,
+    #                  "PINU.STR" = 20,
+    #                  "POPU.TRE" = 20,
+    #                  "QUER.RUB" = 20,
+    #                  "THUJ.SPP.ALL" = 20,
+    #                  "TSUG.CAN" = 20)
+    # 
+    #forCS$SpeciesParameters$table[,4] <- merchMinAge[forCS$SpeciesParameters$table[,1]]
     
-    forCS$SpeciesParameters$table[,4] <- merchMinAge[forCS$SpeciesParameters$table[,1]]
+    if (allometry) {
+      source("../scripts/dhpToAge_fnc.R")
+      dhpToAge <- dhpToAge_fnc(sp = spp, landtypes = landtypes)
+      source("../scripts/allometry.R")
+      vegCodes <- read.csv("../scripts/data/vegCodes.csv")
+      sppLandis <- forCS$SpeciesParameters$table[,1]
+      
+      
+      dhp <- 1:100 # cm
+      for(i in seq_along(dhpToAge)) {
+        fit <-  dhpToAge[[i]][["model"]]
+        age <- ((dhp*10)^2)/fit$coefficients
+        #age[age<0] <- 0
+        #age <- sar_pred(fit, dbh)
+        for (sp in dhpToAge[[i]][["sppLandis"]]) {
+          ageCorr <- age + dhpToAge[[i]]$ageDelta[[sp]]
+          ageCorr <- data.frame(dhp, ageCorr)
+          sppAllo <- vegCodes[match(sp, vegCodes$LandisCode), "allometryCode"]
+          x <- biomass_tree_fcn(sp = sppAllo,
+                                dbh = dhp)
+          x <- x %>%
+            group_by(Species_en, dbh) %>%
+            mutate(ratio = biomass_kg/sum(biomass_kg),
+                   biomassTotal_kg = sum(biomass_kg))
+          
+          
+          ### Woody biomass total
+          x <- x %>%
+            filter(Component_en != "Foliage") %>%
+            group_by(Species_en, dbh) %>%
+            mutate(woodyBiomassRatio = biomass_kg/sum(biomass_kg)) %>%
+            filter(Component_en == "Wood") %>%
+            mutate(merchProp = volM_to_volTot(dbh = dbh,
+                                              dTop = 7,
+                                              stumpHeight = .15,
+                                              height = 15)) %>%
+            mutate(propStem = woodyBiomassRatio*merchProp)  %>%
+            merge(ageCorr, by.x = "dbh", by.y = "dhp") %>%
+            filter(ageCorr <= 250)
+
+          ## pred
+          index <- which.max(x$propStem)
+          aParam <- round(x[index, "propStem"], 3) 
+          minAge <- round(x[min(which(x$propStem >0)), "ageCorr"])
+          bParam <- ifelse(minAge>25, 0.97,
+                      ifelse(minAge>20, 0.95, 0.925))
+          
+          # pred <-  aParam*(1-bParam^x$ageCorr)   
+          # plot(x$ageCorr, x$propStem, type = "l", xlim = c(0,250))
+          # lines(x$ageCorr, pred, col = "red")
+          # predThresh <- pred
+          # predThresh[x$age<minAge] <- 0
+          # lines(x$age, predThresh, col = "blue")
+        
+          index <- which(forCS$SpeciesParameters$table[,1] == sp)
+          forCS$SpeciesParameters$table[index,4] <- minAge
+          forCS$SpeciesParameters$table[index,5] <- aParam
+          forCS$SpeciesParameters$table[index,6] <- bParam
+        }
+      }
+      
+      print("Done!")
+    } else {
+      # Merch Curve shape params a and b (from Dymond et al 2016)
+      #forCS$SpeciesParameters$table[,4] <- minAge
+      forCS$SpeciesParameters$table[,5] <- NA#0.7546 #Merch curve shape param 'a'
+      forCS$SpeciesParameters$table[,6] <- NA#0.983 #Merch curve shape param 'b'
+      print("Done!")
+      
+    }
     
-    # Merch Curve shape params a and b (from Dymond et al 2016)
-    forCS$SpeciesParameters$table[,5] <- 0.7546 #Merch curve shape param 'a'
-    forCS$SpeciesParameters$table[,6] <- 0.983 #Merch curve shape param 'b'
-    print("Done!")
     
+    
+   
     ############################################################################
     ### Dompools - "Proportion of the decayed material that goes to the atmosphere'
     print("Preparing / updating 'Dompools'")
     tmp <- forCS$DOMPools$table
-    # tmp[,3] <-  DomFetch(aidbURL = aidbURL)$PropToAtmosphere
+    tmp[,3] <-  DomFetch(aidbURL = aidbURL)$PropToAtmosphere
     # tmp[which(tmp$V2 == "Slow Aboveground"), 3] <- 0.83
     forCS$DOMPools$table <- tmp
     
