@@ -40,11 +40,11 @@ outputSummary <- outputSummary %>%
 variableLvl <- c("TotalEcosys", "TotalDOM", "ABio", "BBio") ## ordering levels for plotting
 
 colScenarios <- c("baseline BAU" =  "lightblue1", ## colors for cc scenarios
-                  "baseline conservation" = "lightblue3",
+                  "baseline noHarvest" = "lightblue3",
                   "RCP45 BAU" = "goldenrod1",
-                  "RCP45 conservation" = "goldenrod4",
+                  "RCP45 noHarvest" = "goldenrod4",
                   "RCP85 BAU" = "red2",
-                  "RCP85 conservation" = "red4")
+                  "RCP85 noHarvest" = "red4")
 
 
 ################################################################################
@@ -162,21 +162,21 @@ dev.off()
 #### fluxes
 ################################################################################
 variableLvl <- c(DelBio = "DelBio\n(Variation en biomasse)",
-                 Turnover = "Turnover\n(Production de mati?re\norganique morte)",
+                 Turnover = "Turnover\n(Production de matiére\norganique morte)",
                  NetGrowth = "NetGrowth\n(Croissance nette)",
-                 NPP = "NPP\n(Productivit? primaire nette)",
-                 Rh = "Rh\n(Respiration h?t?rotrophe)",
-                 NEP = "NEP\n(Productivit? nette de\nl'?osyst?me)",
-                 NBP = "NBP\n(Productivit? nette du biome)")
+                 NPP = "NPP\n(Productivité primaire nette)",
+                 Rh = "Rh\n(Respiration hétérotrophe)",
+                 NEP = "NEP\n(Productivité nette de\nl'écosystème)",
+                 NBP = "NBP\n(Productivité nette du biome)")
 
 colScenarios <- c("baseline" = "lightblue2", ## colors for cc scenarios
                   "RCP45" = "goldenrod2",
                   "RCP85" = "red2")
 
-colMgmt <- c("conservation" = "darkgreen",
+colMgmt <- c("noHarvest" = "darkgreen",
              "BAU" = "goldenrod3")
-labMgmt <- c("conservation" = "Aucune r?colte",
-             "BAU" = "R?f?rence")
+labMgmt <- c("noHarvest" = "Aucune récolte",
+             "BAU" = "Référence")
 
 df <- outputSummary %>%
     filter(Time >=1,
@@ -206,7 +206,7 @@ ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,
     geom_line() +
     # scale_color_manual(name = "Sc?nario changement\nclimatique",
     #                    values = colScenarios)+
-    scale_color_manual(name = "Sc?nario d'am?nagement",
+    scale_color_manual(name = "Scénario d'aménagement",
                        values = colMgmt,
                        labels = labMgmt)+
     # scale_linetype_manual(name = "Sc?nario d'am?nagement",
@@ -215,9 +215,9 @@ ggplot(df, aes(x = initYear+Time, y = value*unitConvFact,
           axis.text.x = element_text(angle = 45, hjust = 1),
           strip.text.y = element_text(size = rel(1)),
           strip.text.x = element_text(size = rel(1.5))) +
-    labs(title = "?volution de la dynamique du carbone dans la MRC Maskinong?",
+    labs(title = "Évolution de la dynamique du carbone dans la MRC Maskinong?",
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", " ann?e"^"-1", "\n")),
+         y = expression(paste("tonnes C"," ha"^"-1", " année"^"-1", "\n")),
          caption = paste0("DelBio: Annual change in biomass stocks",
                      "\nTurnover: Annual transfer of biomass (above-and belowground) to dead organic matter and soil pools before disturbances occur",
                      "\nNetGrowth: Change in biomass from growth alone: the difference between the biomass at the beginning and the end of the growth routine in the timestep. This value could be negative\n         as the stand ages and mortality outpaces growth. DelBio and NetGrowth will be the same when there are no losses caused by disturbances.",
@@ -238,7 +238,7 @@ dev.off()
 ################################################################################
 
 df <- fps %>%
-    filter(mgmtScenario != "conservation") %>%
+    filter(mgmtScenario != "noHarvest") %>%
     group_by(areaName, scenario, mgmtScenario, Time, species) %>%
     summarise(BioToFPS_tonnesCTotal = mean(BioToFPS_tonnesCTotal),
               areaManagedTotal_ha = unique(areaManagedTotal_ha),
@@ -274,7 +274,7 @@ ggplot(df, aes(x = initYear+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_h
           axis.text.x = element_text(angle = 45, hjust = 1)) +
     labs(title = "Transfers de carbone vers les produits forestiers",
          x = "",
-         y = expression(paste("tonnes C"," ha"^"-1", "r?colt?","\n"))) +
+         y = expression(paste("tonnes C"," ha"^"-1", "récolté","\n"))) +
     geom_text(data = labdf, aes(label = paste(areaManagedTotal_ha, "ha"),
                                 y = 1, x = initYear),
               hjust = 0, vjust = 1, size = 2)
@@ -323,10 +323,10 @@ ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/totalArea)) +
     scale_fill_manual(values = getPalette(colourCount)) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
           axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(title = "?volution de la composition foresti?re de la MRC Maskinong?\nBiomasse a?rienne*",
+    labs(title = "Évolution de la composition forestière de la MRC Maskinongé\nBiomasse aérienne*",
          x = "",
          y = expression(paste("tonnes"," ha"^"-1")),
-         caption = "*Les valeurs sont exprim?es ici en terme de poids sec (biomasse), et non de carbone")
+         caption = "*Les valeurs sont exprimées ici en terme de poids sec (biomasse), et non de carbone")
     
 
 dev.off()
@@ -359,16 +359,16 @@ for (m in unique(df$mgmtLabel)) {
         p <- ggplot(dfX, aes(x = 2020+Time, y = agb_tonnesTotal/totalArea)) + 
             stat_summary(aes(fill = ageClass), fun.y="sum", geom="area", position = "stack") +
             facet_grid(species ~ scenario, scales = "free_y") +
-            scale_fill_manual("Classe d'?ge",
+            scale_fill_manual("Classe d'âge",
                               values = cols)+
             theme_bw() +
             theme(plot.caption = element_text(size = rel(1), hjust = 0),
                   axis.text.x = element_text(angle = 45, hjust = 1)) +
-            labs(title = paste0("?volution de la composition foresti?re de la MRC Maskinong? (", i, " de 2)"),
-                 subtitle = paste0("Biomasse a?rienne* par classes d'?ge - Scenario '", m, "'"),
+            labs(title = paste0("Évolution de la composition forestière de la MRC Maskinongé (", i, " de 2)"),
+                 subtitle = paste0("Biomasse aérienne* par classes d'âge - Scenario '", m, "'"),
                  x = "",
                  y = expression(paste("tonnes"," ha"^"-1")),
-                 caption = "*Les valeurs sont exprim?es ici en terme de poids sec (biomasse), et non de carbone")
+                 caption = "*Les valeurs sont exprimées ici en terme de poids sec (biomasse), et non de carbone")
         
         png(filename= paste0("agb_AgeClassStacked_", a, "_", names(labMgmt)[match(m, labMgmt)], "_", letters[i], ".png"),
             width = 10, height = 12, units = "in", res = 600, pointsize=10)

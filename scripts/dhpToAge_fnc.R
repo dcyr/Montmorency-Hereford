@@ -1,10 +1,13 @@
+# rm(list = ls())
 # ################################################################################
 # home <- path.expand("~")
 # home <- gsub("/Documents", "", home) # for my Windows machine
-# wwd <- paste(home, "Sync/Travail/ECCC/Allométrie", Sys.Date() ,sep ="/")
+# wwd <- paste(home, "Sync/Travail/ECCC/Landis-II/Montmorency-Hereford/", Sys.Date() ,sep ="/")
 # dir.create(wwd)
 # setwd(wwd)
-# #################
+# source("../scripts/allometry.R")
+#################
+
 
 dhpToAge_fnc <- function(sp,
                          landtypes,
@@ -12,7 +15,7 @@ dhpToAge_fnc <- function(sp,
     
     
     require(tidyverse)
-    require("sars") 
+    #require(sars) 
 
     df <- read.csv(paste(dataPath, "DHP_AGE_brut_qc.csv", sep = "/")) %>%
         filter(!is.na(AGE),
@@ -140,6 +143,10 @@ dhpToAge_fnc <- function(sp,
     }
     return(CR_Fit)
 }
+
+
+
+
 # #### test et visualisation
 # sp <- c("Deciduous", "Conifers", "All", "Balsam fir", "American beech", "Black spruce", "Sugar maple", "Trembling aspen")
 # dbh <- 1:50
