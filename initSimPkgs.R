@@ -27,14 +27,15 @@ inputDir <- inputPathLandis
 simDuration <- 100
 expDesign <- list(area = c("Maskinonge"),#"ForMont", ),#", "Hereford"
                   scenario = c("baseline", "RCP45", "RCP85"),
-                  mgmt = list(# Hereford = c("1", "2", "3", "4", "noHarvest")),
+                  mgmt = list(Hereford = c("1", "2", "3", "4", "noHarvest")),
                               # ForMont =  c("0",
                               #             "1",
                               #             "2.1", "2.2", "2.3",
                               #             "3.1", "3.2", "3.3",
                               #             "4.1", "4.2", "4.3",
                               #             "noHarvest")),
-                              Maskinonge = c("noHarvest", "baseline")),#c("noHarvest", "baseline")
+                              #Maskinonge = c("noHarvest", "baseline")
+                  #c("noHarvest", "baseline")
                   spinup = F,
                   cropped  = list(Hereford = T,
                                 ForMont = T,

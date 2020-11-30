@@ -42,7 +42,7 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"), encoding = "Windows-1252
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
 scenario <- c("baseline","RCP45", "RCP85")#, 
-area <-  "Maskinonge"#c("Hereford", "ForMont")
+area <-  "Hereford"#c("Hereford", "ForMont")#"Maskinonge"
 t0 <- 2020
 spinup <- F
 climate <- F
@@ -65,6 +65,7 @@ for(a in area) {
     landtypes_AT <- read.table(paste(inputPathLandis, landtypes_AT, sep = "/"),
                                skip = 1, comment.char = ">")
     landtypes <- landtypes[grep("tif", landtypes)]
+    landtypes <- landtypes[-grep("cropped", landtypes)]
     landtypes <- raster(paste(inputPathLandis, landtypes, sep = "/"))
     
     landtypeNames <- landtypes_AT[which(landtypes_AT$V1 == "yes"), "V3"]
