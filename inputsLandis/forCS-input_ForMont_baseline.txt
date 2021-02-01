@@ -64,23 +64,23 @@ SpeciesParameters
 >>          Long   Shape                  Curve Shape Curve Shape Non-merch.	Shape
 >>                  Param   Min Age         Param a     Param b     to FastAG	Param
 >> -------  ----   ------      ------------    ----------- ----------- ----------
-ABIE.BAL	3	25	10	0.7546	0.983	0.25
-ACER.RUB	1	25	30	0.7546	0.983	0.25
-ACER.SAH	1	25	30	0.7546	0.983	0.25
-BETU.ALL	1	15	30	0.7546	0.983	0.25
-BETU.PAP	1	25	30	0.7546	0.983	0.25
-FAGU.GRA	1	15	30	0.7546	0.983	0.25
-LARI.LAR	1	25	10	0.7546	0.983	0.25
-PICE.GLA	3	15	10	0.7546	0.983	0.25
-PICE.MAR	3	15	10	0.7546	0.983	0.25
-PICE.RUB	3	5	10	0.7546	0.983	0.25
-PINU.BAN	2	25	10	0.7546	0.983	0.25
-PINU.RES	2	15	10	0.7546	0.983	0.25
-PINU.STR	2	15	10	0.7546	0.983	0.25
-POPU.TRE	1	25	10	0.7546	0.983	0.25
-QUER.RUB	1	15	30	0.7546	0.983	0.25
-THUJ.SPP.ALL	3	5	30	0.7546	0.983	0.25
-TSUG.CAN	3	5	30	0.7546	0.983	0.25
+ABIE.BAL	3	25	25	0.684	0.95	0.25
+ACER.RUB	1	25	16	0.681	0.925	0.25
+ACER.SAH	1	25	18	0.667	0.925	0.25
+BETU.ALL	1	15	16	0.633	0.925	0.25
+BETU.PAP	1	25	18	0.668	0.925	0.25
+FAGU.GRA	1	15	28	0.687	0.97	0.25
+LARI.LAR	1	25	21	0.766	0.95	0.25
+PICE.GLA	3	15	32	0.753	0.97	0.25
+PICE.MAR	3	15	26	0.764	0.97	0.25
+PICE.RUB	3	5	32	0.755	0.97	0.25
+PINU.BAN	2	25	20	0.814	0.925	0.25
+PINU.RES	2	15	20	0.758	0.925	0.25
+PINU.STR	2	15	22	0.714	0.95	0.25
+POPU.TRE	1	25	17	0.698	0.925	0.25
+QUER.RUB	1	15	21	0.619	0.95	0.25
+THUJ.SPP.ALL	3	5	38	0.72	0.97	0.25
+TSUG.CAN	3	5	37	0.675	0.97	0.25
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -89,13 +89,13 @@ DOMPools
 >>  ID      Name                        Prop to
 >>                                      Atm
 >>  ----    -------------------------   ---------
-1	"Very Fast Aboveground"	0.815
+1	"Very Fast Aboveground"	0.81
 2	"Very Fast Belowground"	0.83
 3	"Fast Aboveground"	0.83
 4	"Fast Belowground"	0.83
 5	"Medium"	0.83
-6	"Slow Aboveground"	0.83
-7	"Slow Belowground"	0.83
+6	"Slow Aboveground"	1
+7	"Slow Belowground"	1
 8	"Stem Snag"	0.83
 9	"Other Snag"	0.83
 10	"Extra pool"	0.83
@@ -3501,8 +3501,8 @@ ANPPTimeSeries
 >> ANPP 
 >>  Yr      Ecoregion   Spp             ANPP(g/m2/yr)   ANPP-Std
 >> -----    ---------   ------------    -------------   --------       
-0	28	ABIE.BAL	719	1
 0	28	ACER.RUB	585	1
+0	28	ABIE.BAL	719	1
 0	28	ACER.SAH	698	1
 0	28	BETU.ALL	612	1
 0	28	BETU.PAP	388	1
@@ -3831,8 +3831,8 @@ ANPPTimeSeries
 MaxBiomassTimeSeries
 >>  Yr      Ecoregion   Spp       MaxBiomass(g/m2)  
 >> -----    ---------   ------    -------------  
-0	28	ABIE.BAL	5190
 0	28	ACER.RUB	3908
+0	28	ABIE.BAL	5190
 0	28	ACER.SAH	5654
 0	28	BETU.ALL	4058
 0	28	BETU.PAP	2244
@@ -4161,8 +4161,8 @@ MaxBiomassTimeSeries
 EstablishProbabilities
 >>  Yr   Ecoregion   Spp         Prob
 >> ------------------------- ---------------
-0	28	ABIE.BAL	0.143
 0	28	ACER.RUB	0.167
+0	28	ABIE.BAL	0.143
 0	28	ACER.SAH	0.125
 0	28	BETU.ALL	0.125
 0	28	BETU.PAP	0.2

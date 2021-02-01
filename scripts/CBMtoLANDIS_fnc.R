@@ -14,15 +14,20 @@ sppConvert <- function(spp, inputCode, ### where "inputCode" is either "CBM" or 
                            aidbURL = aidbURL) {  
     
     ### convert to character if that's not already the case
+    library (readr)  
     spp <- as.character(spp)
     
     ### fetching species lookup tables
     vegCodesURL <- paste(landisURL, "vegCodes.csv", sep="/")
-    vegCodes <- read.csv(text = getURL(vegCodesURL))  
-
+    #vegCodes <- read.csv(text = getURL(vegCodesURL))  
+    vegCodes <- as.data.frame(read_csv(url(vegCodesURL)))
+    
     if(strsplit(aidbURL, "/")[[1]][1] %in% c("https:", "http:")) {
-      tblSpeciesTypeDefault <- read.csv(text = getURL(paste(aidbURL,
-                                                  "tblSpeciesTypeDefault.txt", sep="/"))) 
+      #tblSpeciesTypeDefault <- read.csv(text = getURL(paste(aidbURL,
+      #                                            "tblSpeciesTypeDefault.txt", sep="/"))) 
+      tblSpeciesTypeDefault <- read_csv(url(paste(aidbURL,
+                                                            "tblSpeciesTypeDefault.txt", sep="/")))
+      
     } else {
       tblSpeciesTypeDefault <- read.csv(paste(aidbURL,"tblSpeciesTypeDefault.txt", sep="/")) 
     }
@@ -750,10 +755,16 @@ rootBiomassParamsFetch <- function(spp, landtypes_AT, breaks,
                                    landisURL = "https://raw.githubusercontent.com/dcyr/LANDIS-II_IA_generalUseFiles/master") {  ### estimates from Li et al 2003
     
     
+    library(readr)
     
-    #### fetching species types
+  #### fetching species types
+  
     vegCodesURL <- paste(landisURL, "vegCodes.csv", sep="/")
-    vegCodes <- read.csv(text = getURL(vegCodesURL))  
+    
+    #vegCodes <- read.csv(text = getURL(vegCodesURL))  
+    vegCodes <- as.data.frame(read_csv(url(vegCodesURL)))
+    
+
     if(strsplit(aidbURL, "/")[[1]][1] %in% c("https:", "http:")) {
         
         tblSpeciesTypeDefault <- read.csv(text = getURL(paste(aidbURL,
@@ -765,8 +776,11 @@ rootBiomassParamsFetch <- function(spp, landtypes_AT, breaks,
     
     
     ### limiting the number of breaks to 6 (including zero)
-    index <- which(breaks>10000)
-    breaks <- c(breaks[-index], breaks[max(index)])
+    if(max(breaks)>10000) {
+      index <- which(breaks>10000)
+      breaks <- c(breaks[-index], breaks[max(index)])
+    }
+    
     
     #### midpoints
     mid <- breaks[-length(breaks)]+diff(breaks)/2

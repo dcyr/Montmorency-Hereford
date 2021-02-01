@@ -42,10 +42,10 @@ source(paste(scriptPath, "initForCS_fnc.R", sep = "/"), encoding = "Windows-1252
 landisInputs <- list.files(inputPathLandis)
 ### experiment specifics
 scenario <- c("baseline","RCP45", "RCP85")#, 
-area <-  "Hereford"#c("Hereford", "ForMont")#"Maskinonge"
+area <-  c("Hereford", "ForMont")#"Maskinonge"
 t0 <- 2020
 spinup <- F
-climate <- F
+climate <- T
 
 
 ################################################################################
