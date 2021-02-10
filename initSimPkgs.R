@@ -25,7 +25,7 @@ inputDir <- inputPathLandis
 
 
 simDuration <- 100
-expDesign <- list(area = c("Maskinonge"),#"ForMont", ),#", "Hereford"
+expDesign <- list(area = c("Hereford"),#"ForMont", ),#", "Hereford"
                   scenario = c("baseline", "RCP45", "RCP85"),
                   mgmt = list(Hereford = c("1", "2", "3", "4", "noHarvest")),
                               # ForMont =  c("0",

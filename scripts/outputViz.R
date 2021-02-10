@@ -13,7 +13,7 @@ require(dplyr)
 
 initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-a <- "Hereford"
+a <- "ForMont"
 areaName <- ifelse(a == "ForMont", "Forêt Montmorency",
                    ifelse(a == "Hereford", "Forêt Hereford", "[placeholder]"))
 require(ggplot2)
@@ -303,7 +303,7 @@ labdf <- df %>%
 
 yMax <- df %>%
     group_by(areaName, scenario, mgmtScenario, Time) %>%
-    summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) %>%
+    summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal)) %>%
     group_by() %>%
     summarise(yMax = max(BioToFPS_tonnesCTotal))
 yMax <- as.numeric(yMax)
@@ -319,7 +319,7 @@ png(filename= paste0("fps_spp_", a, ".png"),
     width = 8, height = pHeight, units = "in", res = 600, pointsize=10)
 
 #ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
-ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal)) + 
+ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
     facet_grid(mgmtScenario ~ scenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
