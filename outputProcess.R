@@ -31,7 +31,12 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-logs <- c("summary", "agbAgeClasses", "agbTotal","ageMax", "FPS") #"FPS" ,"summary", "agbAgeClasses", "agbAgeClasses", "agbTotal","ageMax",
+logs <- c("summary",
+          "agbAgeClasses",
+          "agbTotal",
+          "ageMax",
+          "FPS"
+          ) #"FPS" ,"summary", "agbAgeClasses", "agbAgeClasses", "agbTotal","ageMax",
 
 # ### hereford
 # mgmtLevels <- c("1" = "Intensif",
@@ -65,7 +70,7 @@ dirIndex <- which(simIDs  %in% x &
                       simInfo$areaName == a)
 
 
-outputList <- foreach(i = dirIndex)  %dopar% { ##dirIndex)  %dopar% {
+outputList <- foreach(i = 1:4)  %dopar% { ##dirIndex)  %dopar% {
 
     require(dplyr)
     require(raster)
@@ -216,7 +221,7 @@ outputList <- foreach(i = dirIndex)  %dopar% { ##dirIndex)  %dopar% {
         #### focusing on study area
         XY_studyArea <- XY[!is.na(XY$mgmtID),]
         agb <- agb %>%
-            merge(XY, all.x = F)
+            merge(XY_studyArea, all.x = F)
 
         if("agbAgeClasses"  %in% logs) {
             # first reduce the size of the table (before merging the XY df)

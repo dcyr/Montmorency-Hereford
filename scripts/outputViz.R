@@ -13,7 +13,7 @@ require(dplyr)
 
 initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-a <- "ForMont"
+a <- "Hereford"
 areaName <- ifelse(a == "ForMont", "Forêt Montmorency",
                    ifelse(a == "Hereford", "Forêt Hereford", "[placeholder]"))
 require(ggplot2)
@@ -303,7 +303,7 @@ labdf <- df %>%
 
 yMax <- df %>%
     group_by(areaName, scenario, mgmtScenario, Time) %>%
-    summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal)) %>%
+    summarise(BioToFPS_tonnesCTotal = sum(BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) %>%
     group_by() %>%
     summarise(yMax = max(BioToFPS_tonnesCTotal))
 yMax <- as.numeric(yMax)
@@ -319,7 +319,7 @@ png(filename= paste0("fps_spp_", a, ".png"),
     width = 8, height = pHeight, units = "in", res = 600, pointsize=10)
 
 #ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
-ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal/areaHarvestedTotal_ha)) + 
+ggplot(df, aes(x = 2010+Time, y = BioToFPS_tonnesCTotal)) + 
     stat_summary(aes(fill = species), fun.y="sum", geom="area", position = "stack") +
     facet_grid(mgmtScenario ~ scenario) +
     scale_fill_manual(values = getPalette(colourCount)) +
@@ -413,10 +413,6 @@ df <- AGB %>%
     group_by(areaName, scenario, mgmtScenario,
              ##################
              plantedSp, mgmt,
-             Time, replicate) %>%
-    group_by(areaName, scenario, mgmtScenario,
-             ##################
-             plantedSp, mgmt,
              Time, replicate,
              # ageClass,
              species) %>%
@@ -500,10 +496,125 @@ dev.off()
 #     theme_dark() +
 #     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
 #           axis.text.x = element_text(angle = 45, hjust = 1)) +
-#     labs(title = "Évolution de la composition forestière de la MRC Maskinong?\nBiomasse a?rienne* par classes d'?ge",
+#     labs(title = "?volution de la composition forestière de la MRC Maskinong?\nBiomasse aérienne* par classes d'?ge",
 #          x = "",
 #          y = expression(paste("tonnes"," ha"^"-1")),
 #          caption = "*Les valeurs sont exprim?es ici en terme de poids sec (biomasse), et non de carbone")
 # 
 # 
 # dev.off()
+
+
+################################################################################
+################################################################################
+################################################################################
+### Aboveground biomass (by age classes)
+################################################################################
+####
+
+
+
+
+# df <- AGB %>%
+#     mutate(mgmtScenario = factor(mgmtLevels[[a]][match(as.character(mgmtScenario), names(mgmtLevels[[a]]))],
+#                                  levels = mgmtLevels[[a]])) %>%
+#     mutate(plantedSp = ifelse(grepl("EPB", mgmtScenario), "P. glauca",
+#                           ifelse(grepl( "EPN", mgmtScenario), "P. mariana",
+#                                  ifelse(grepl("EPR", mgmtScenario), "P. rubens", "N/A"))),
+#        mgmt = factor(gsub(" - |EPN|EPB|EPR", "", mgmtScenario), levels = mgmtLvls)) %>%
+#     group_by(areaName, scenario, mgmtScenario,
+#              ##################
+#              plantedSp, ageClass, mgmt,
+#              Time, replicate,
+#              # ageClass,
+#              species) %>%
+#     summarise(agb_tonnesTotal = sum(agb_tonnesTotal),
+#               areaTotal_ha = sum(unique(landtypeArea_ha))) %>%
+#     group_by(areaName, scenario, mgmtScenario,
+#              ##################
+#              plantedSp, ageClass, mgmt,
+#              #ageClass.
+#              Time, species) %>%
+#     summarise(agb_tonnesTotal = mean(agb_tonnesTotal),
+#               areaTotal_ha = unique(areaTotal_ha)) %>%
+#     group_by(areaName, scenario, mgmtScenario,
+#              ##################
+#              plantedSp, ageClass, mgmt,
+#              #ageClass.
+#              Time) %>%
+#     summarise(agb_tonnesTotal = sum(agb_tonnesTotal),
+#               areaTotal_ha = unique(areaTotal_ha)) %>%
+#     as.data.frame()
+
+
+
+df <- AGB %>%
+    mutate(mgmtScenario = factor(mgmtLevels[[a]][match(as.character(mgmtScenario), names(mgmtLevels[[a]]))],
+                                 levels = mgmtLevels[[a]]))
+
+if (a == "ForMont") {
+   df <- df %>% mutate(plantedSp = ifelse(grepl("EPB", mgmtScenario), "P. glauca",
+                                          ifelse(grepl( "EPN", mgmtScenario), "P. mariana",
+                                                 ifelse(grepl("EPR", mgmtScenario), "P. rubens", "N/A"))),
+                       mgmt =  factor(gsub(" - |EPN|EPB|EPR", "", mgmtScenario), levels = mgmtLvls))
+}
+if (a == "Hereford") {
+    df <- df %>% mutate(mgmt =  mgmtScenario)
+    
+}
+
+
+
+df <- df %>% 
+    group_by(areaName, scenario, mgmtScenario,
+             mgmt,
+             Time, replicate,
+             ageClass,
+             species) %>%
+    summarise(agb_tonnesTotal = sum(agb_tonnesTotal),
+              areaTotal_ha = sum(unique(landtypeArea_ha))) %>%
+    group_by(areaName, scenario, mgmt,
+             ageClass,
+             Time, species) %>%
+    summarise(agb_tonnesTotal = mean(agb_tonnesTotal),
+              areaTotal_ha = unique(areaTotal_ha)) %>%
+    as.data.frame()
+
+
+require(RColorBrewer)
+
+
+################################################################################
+### stacked (age classes, global)
+cols = rev(brewer.pal(n = 9, name = 'Greens')[3:9])
+
+# ################################################################################
+
+
+acLvls <- levels(df$ageClass)
+acLvls <- rev(acLvls)
+df[,"ageClass"] <- factor(df$ageClass, levels = acLvls)
+
+
+#### mgmt ~ scenario
+    
+p <- ggplot(df, aes(x = 2020+Time, y = agb_tonnesTotal/areaTotal_ha)) + 
+    stat_summary(aes(fill = ageClass), fun.y="sum", geom="area", position = "stack") +
+    facet_grid(scenario ~ mgmt, scales = "fixed") +#scales = "free_y") +
+    scale_fill_manual("Classe d'âge",
+                      values = cols)+
+    theme_bw() +
+    theme(plot.caption = element_text(size = rel(1), hjust = 0),
+          axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(title = paste0("Évolution de la structure d'âge de la ", areaName),
+         subtitle = paste0("Biomasse aérienne* par classes d'âge"),
+         x = "",
+         y = expression(paste("tonnes"," ha"^"-1")),
+         caption = "*Les valeurs sont exprimées ici en terme de poids sec (biomasse), et non de carbone")
+
+png(filename= paste0("agb_AgeClassStacked_",a, ".png"),
+    width = 10, height = 6, units = "in", res = 600, pointsize=10)
+    print(p)
+dev.off()
+
+
