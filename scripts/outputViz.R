@@ -13,7 +13,7 @@ require(dplyr)
 
 initYear <- 2020
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
-a <- "Hereford"
+a <- "ForMont"
 areaName <- ifelse(a == "ForMont", "Forêt Montmorency",
                    ifelse(a == "Hereford", "Forêt Hereford", "[placeholder]"))
 require(ggplot2)
@@ -27,33 +27,33 @@ variableLvl <- c("TotalEcosys", "TotalDOM", "ABio", "BBio") ## ordering levels f
 
 
 mgmtLevels <- list(ForMont = c("0" = "Référence",
-                               "noHarvest" = "Aucune récolte",
-                               "1" = "Conservation",
-                               "2.1" = "Extensif A - EPN",
-                               "2.2" = "Extensif A - EPB",
-                               "2.3" = "Extensif A - EPR",
-                               "3.1" = "Extensif B - EPN",
-                               "3.2" = "Extensif B - EPB",
-                               "3.3" = "Extensif B - EPR",
+                               "noHarvest" = "Conservation totale",
+                               "1" = "Extensif 1",
+                               "2.1" = "Extensif 2 - EPN",
+                               "2.2" = "Extensif 2 - EPB",
+                               "2.3" = "Extensif 2 - EPR",
+                               "3.1" = "Extensif 3 - EPN",
+                               "3.2" = "Extensif 3 - EPB",
+                               "3.3" = "Extensif 3 - EPR",
                                "4.1" = "Intensif - EPN",
                                "4.2" = "Intensif - EPB",
                                "4.3" = "Intensif - EPR"),
-                   Hereford = c("noHarvest" = "Conservation",
+                   Hereford = c("3" = "Référence",
+                                "noHarvest" = "Conservation",
                                 "4" = "Nouveau zonage",
                                 "2" = "Allongement",
-                                "3" = "Servitude",
                                 "1" = "Intensif"))
 
-mgmtLvls <- c("Référence", "Aucune récolte", "Conservation", "Extensif A", "Extensif B", "Intensif")
+mgmtLvls <- c("Référence", "Conservation totale", "Extensif 1", "Extensif 2", "Extensif 3", "Intensif")
 
 
 
 
 cols <- list(ForMont = c("Référence" = "black",
-                         "Aucune récolte" = "darkgreen",
-                         "Conservation" = "green",
-                         "Extensif A" = "dodgerblue3",
-                         "Extensif B" = "goldenrod3",
+                         "Conservation totale" = "darkgreen",
+                         "Extensif 1" = "green",
+                         "Extensif 2" = "dodgerblue3",
+                         "Extensif 3" = "goldenrod3",
                          "Intensif" = "red3"),
              Hereford =  c("Nouveau zonage" = "dodgerblue3",
                            "Conservation" = "darkolivegreen3",
@@ -62,7 +62,7 @@ cols <- list(ForMont = c("Référence" = "black",
                            "Intensif" = "red3"))
 
 scenRef <- list(ForMont = "Référence",
-                Hereford = "Servitude")
+                Hereford = "Référence")
 ################################################################################
 ################################################################################
 ################################################################################
